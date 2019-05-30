@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cefec74f28a547009c94ef00d16c77ff" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="DimeDBModel.Clanarina" Width="1.5" PointX="9.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.ClanarinaIgraca" Width="1.5" PointX="9.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.Igrac" Width="1.625" PointX="6.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.Klub" Width="1.5" PointX="5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.Korisnik" Width="1.5" PointX="1.125" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.StatistikaIgraca" Width="1.5" PointX="6.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.sysdiagram" Width="1.5" PointX="9.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.TipTreninga" Width="1.5" PointX="1.125" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.TipUtakmice" Width="1.5" PointX="3.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.Trening" Width="1.625" PointX="1.125" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.TreningPrisustvo" Width="1.75" PointX="3.875" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.UlogaKorisnika" Width="1.5" PointX="1.125" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DimeDBModel.Utakmica" Width="1.5" PointX="4.125" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="DimeDBModel.FK_ClanarinaIgraca_Clanarina" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_ClanarinaIgraca_Igrac" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_StatistikaIgraca_Igrac" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_TreningPrisustvo_Igrac" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_Utakmica_Klub" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_Korisnik_UlogaKorisnika" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_Trening_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_Utakmica_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_StatistikaIgraca_Utakmica" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_Trening_TipTreninga" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_Utakmica_TipUtakmice" ManuallyRouted="false" />
+        <AssociationConnector Association="DimeDBModel.FK_TreningPrisustvo_Trening" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

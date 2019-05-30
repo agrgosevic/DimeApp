@@ -1,1 +1,11 @@
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\bin\Debug\Dime.exe.config
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\bin\Debug\Dime.exe.config
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\bin\Debug\Dime.exe
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\bin\Debug\Dime.pdb
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.csprojAssemblyReference.cache
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Form1.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Properties.Resources.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.csproj.GenerateResource.cache
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.csproj.CoreCompileInputs.cache
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.exe
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.pdb
