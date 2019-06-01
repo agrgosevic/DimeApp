@@ -75,11 +75,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DimeModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FrmDodajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmDodajKorisnika.Designer.cs">
+      <DependentUpon>FrmDodajKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FrmPopisAktivnosti.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\FrmPopisAktivnosti.Designer.cs">
       <DependentUpon>FrmPopisAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmPopisIgraca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmPopisIgraca.Designer.cs">
+      <DependentUpon>FrmPopisIgraca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmPopisKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmPopisKorisnika.Designer.cs">
+      <DependentUpon>FrmPopisKorisnika.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\FrmStatistikeUtakmica.cs">
       <SubType>Form</SubType>
@@ -134,8 +152,17 @@
     <Compile Include="Utakmica.cs">
       <DependentUpon>DimeModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forme\FrmDodajKorisnika.resx">
+      <DependentUpon>FrmDodajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmPopisAktivnosti.resx">
       <DependentUpon>FrmPopisAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmPopisIgraca.resx">
+      <DependentUpon>FrmPopisIgraca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmPopisKorisnika.resx">
+      <DependentUpon>FrmPopisKorisnika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmStatistikeUtakmica.resx">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
@@ -164,6 +191,7 @@
       <DependentUpon>DimeModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Korisnik.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -34,5 +34,18 @@ namespace Dime
             FrmPopisAktivnosti forma = new FrmPopisAktivnosti();
             forma.ShowDialog();
         }
+
+        private void btnIgraci_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKorisnici_Click(object sender, EventArgs e)
+        {
+            FrmPopisKorisnika forma = new FrmPopisKorisnika();
+            this.Hide();
+            forma.ShowDialog();
+            this.Show();
+        }
     }
 }

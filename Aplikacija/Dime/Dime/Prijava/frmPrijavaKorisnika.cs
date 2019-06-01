@@ -20,6 +20,10 @@ namespace Dime.Prijava
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
+            Prijava();
+        }
+        public void Prijava()
+        {
             DimeEntities db = new DimeEntities();
             int kontrolniBroj = 0;
             foreach (var item in db.Korisnici)
@@ -42,6 +46,8 @@ namespace Dime.Prijava
                 MessageBox.Show("Pogrešno korisničko ime ili lozinka.", "Greška!");
                 txtLozinka.Clear();
             }
+
         }
+
     }
 }

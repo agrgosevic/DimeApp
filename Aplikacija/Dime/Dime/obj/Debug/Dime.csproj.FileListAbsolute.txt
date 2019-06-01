@@ -33,3 +33,7 @@ C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Prij
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Prijava.FrmPrijavaKorisnika.resources
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmStatistikeUtakmica.resources
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisAktivnosti.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisAktivnosti.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmStatistikeUtakmica.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisIgraca.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisKorisnika.resources
