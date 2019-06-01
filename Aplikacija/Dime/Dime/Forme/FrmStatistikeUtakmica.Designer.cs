@@ -36,6 +36,7 @@
             // 
             // dgvOdigraneUtakmice
             // 
+            this.dgvOdigraneUtakmice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOdigraneUtakmice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOdigraneUtakmice.Location = new System.Drawing.Point(13, 13);
             this.dgvOdigraneUtakmice.Name = "dgvOdigraneUtakmice";
@@ -65,6 +66,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmStatistikeUtakmica";
             this.Text = "Odigrane utakmice";
+            this.Load += new System.EventHandler(this.FrmStatistikeUtakmica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdigraneUtakmice)).EndInit();
             this.ResumeLayout(false);
 

@@ -37,3 +37,6 @@ C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Form
 C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmStatistikeUtakmica.resources
 C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisIgraca.resources
 C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisKorisnika.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmDodajKorisnika.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisIgraca.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisKorisnika.resources
