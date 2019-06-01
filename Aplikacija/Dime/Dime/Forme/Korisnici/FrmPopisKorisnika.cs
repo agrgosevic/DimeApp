@@ -20,12 +20,12 @@ namespace Dime.Forme
 
         private void PrikaziKorisnike()
         {
-            List<Korisnik> korisnici;
+            BindingList<Korisnik> listaKorisnika = null;
             using (var db = new DimeEntities())
             {
-                korisnici = db.Korisnici.ToList();
+                listaKorisnika = new BindingList<Korisnik>(db.Korisnici.ToList());
             }
-            dgvPopisKorisnika.DataSource = korisnici;
+            korisnikBindingSource2.DataSource = listaKorisnika;
         }
 
         private void frmDodajZaposlenika_Click(object sender, EventArgs e)
