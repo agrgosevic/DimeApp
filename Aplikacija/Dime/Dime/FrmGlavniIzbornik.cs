@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dime.Forme;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,18 @@ namespace Dime
             ime = imeKorisnika;
             prezime = prezimeKorisnika;
             lblImeKorisnika.Text = ime + " " + prezime;
+        }
+
+        private void btnStatistika_Click(object sender, EventArgs e)
+        {
+            FrmStatistikeUtakmica forma = new FrmStatistikeUtakmica();
+            forma.ShowDialog();
+        }
+
+        private void btnAktivnosti_Click(object sender, EventArgs e)
+        {
+            FrmPopisAktivnosti forma = new FrmPopisAktivnosti();
+            forma.ShowDialog();
         }
     }
 }

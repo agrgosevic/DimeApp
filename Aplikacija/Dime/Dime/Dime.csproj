@@ -75,6 +75,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DimeModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FrmPopisAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmPopisAktivnosti.Designer.cs">
+      <DependentUpon>FrmPopisAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmStatistikeUtakmica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmStatistikeUtakmica.Designer.cs">
+      <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGlavniIzbornik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     <Compile Include="Utakmica.cs">
       <DependentUpon>DimeModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forme\FrmPopisAktivnosti.resx">
+      <DependentUpon>FrmPopisAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmStatistikeUtakmica.resx">
+      <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGlavniIzbornik.resx">
       <DependentUpon>FrmGlavniIzbornik.cs</DependentUpon>
     </EmbeddedResource>

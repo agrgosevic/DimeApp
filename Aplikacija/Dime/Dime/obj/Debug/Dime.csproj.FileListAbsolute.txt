@@ -31,3 +31,5 @@ C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.exe
 C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.pdb
 C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Prijava.FrmPrijavaKorisnika.resources
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Prijava.FrmPrijavaKorisnika.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmStatistikeUtakmica.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.FrmPopisAktivnosti.resources
