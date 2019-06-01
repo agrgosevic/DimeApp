@@ -48,7 +48,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 40);
+            this.label1.Size = new System.Drawing.Size(254, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Glavni izbornik";
             // 
@@ -83,6 +83,7 @@
             // btnIgraci
             // 
             this.btnIgraci.BackgroundImage = global::Dime.Properties.Resources.Igraci;
+            this.btnIgraci.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnIgraci.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIgraci.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnIgraci.Location = new System.Drawing.Point(20, 100);
@@ -96,6 +97,7 @@
             // btnTreninzi
             // 
             this.btnTreninzi.BackgroundImage = global::Dime.Properties.Resources.Treninzi;
+            this.btnTreninzi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnTreninzi.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTreninzi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnTreninzi.Location = new System.Drawing.Point(413, 100);
@@ -109,6 +111,7 @@
             // btnStatistika
             // 
             this.btnStatistika.BackgroundImage = global::Dime.Properties.Resources.Statistika;
+            this.btnStatistika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnStatistika.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnStatistika.Location = new System.Drawing.Point(20, 312);
@@ -122,6 +125,7 @@
             // btnKorisnici
             // 
             this.btnKorisnici.BackgroundImage = global::Dime.Properties.Resources.Korisnici;
+            this.btnKorisnici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnKorisnici.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKorisnici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnKorisnici.Location = new System.Drawing.Point(20, 206);
@@ -135,6 +139,7 @@
             // btnUtakmice
             // 
             this.btnUtakmice.BackgroundImage = global::Dime.Properties.Resources.Utakmice;
+            this.btnUtakmice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUtakmice.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUtakmice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnUtakmice.Location = new System.Drawing.Point(413, 206);
@@ -148,6 +153,7 @@
             // btnAktivnosti
             // 
             this.btnAktivnosti.BackgroundImage = global::Dime.Properties.Resources.Aktivnosti;
+            this.btnAktivnosti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAktivnosti.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktivnosti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnAktivnosti.Location = new System.Drawing.Point(413, 312);
@@ -172,6 +178,7 @@
             this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.grpKorisnik);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
