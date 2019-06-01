@@ -34,8 +34,10 @@
             this.frmDodajZaposlenika = new System.Windows.Forms.Button();
             this.btnObrisiKorisnika = new System.Windows.Forms.Button();
             this.btnUrediKorisnika = new System.Windows.Forms.Button();
-            this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.korisnikBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSet = new Dime._19008_DBDataSet();
+            this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ulogaKorisnikaTableAdapter = new Dime._19008_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             this.idkorisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,12 +45,13 @@
             this.korisnickoimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ulogaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ulogaKorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ulogaKorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treninziDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisKorisnika)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPopisKorisnika
@@ -103,13 +106,23 @@
             this.btnUrediKorisnika.UseVisualStyleBackColor = true;
             this.btnUrediKorisnika.Click += new System.EventHandler(this.btnUrediKorisnika_Click);
             // 
-            // ulogaKorisnikaBindingSource
-            // 
-            this.ulogaKorisnikaBindingSource.DataSource = typeof(Dime.UlogaKorisnika);
-            // 
             // korisnikBindingSource2
             // 
             this.korisnikBindingSource2.DataSource = typeof(Dime.Korisnik);
+            // 
+            // _19008_DBDataSet
+            // 
+            this._19008_DBDataSet.DataSetName = "_19008_DBDataSet";
+            this._19008_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ulogaKorisnikaBindingSource
+            // 
+            this.ulogaKorisnikaBindingSource.DataMember = "UlogaKorisnika";
+            this.ulogaKorisnikaBindingSource.DataSource = this._19008_DBDataSet;
+            // 
+            // ulogaKorisnikaTableAdapter
+            // 
+            this.ulogaKorisnikaTableAdapter.ClearBeforeFill = true;
             // 
             // idkorisnikDataGridViewTextBoxColumn
             // 
@@ -159,19 +172,13 @@
             this.ulogaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ulogaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ulogaDataGridViewTextBoxColumn.ValueMember = "id_uloga";
-            this.ulogaDataGridViewTextBoxColumn.Visible = false;
             // 
             // ulogaKorisnikaDataGridViewTextBoxColumn
             // 
             this.ulogaKorisnikaDataGridViewTextBoxColumn.DataPropertyName = "UlogaKorisnika";
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.DataSource = this.ulogaKorisnikaBindingSource;
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.DisplayMember = "naziv";
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.ulogaKorisnikaDataGridViewTextBoxColumn.HeaderText = "UlogaKorisnika";
             this.ulogaKorisnikaDataGridViewTextBoxColumn.Name = "ulogaKorisnikaDataGridViewTextBoxColumn";
             this.ulogaKorisnikaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.ValueMember = "id_uloga";
             this.ulogaKorisnikaDataGridViewTextBoxColumn.Visible = false;
             // 
             // treninziDataGridViewTextBoxColumn
@@ -200,9 +207,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPopisKorisnika";
             this.Text = "Korisnici";
+            this.Load += new System.EventHandler(this.FrmPopisKorisnika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisKorisnika)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,7 +223,9 @@
         private System.Windows.Forms.Button btnObrisiKorisnika;
         private System.Windows.Forms.Button btnUrediKorisnika;
         private System.Windows.Forms.BindingSource korisnikBindingSource2;
+        private _19008_DBDataSet _19008_DBDataSet;
         private System.Windows.Forms.BindingSource ulogaKorisnikaBindingSource;
+        private _19008_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter ulogaKorisnikaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idkorisnikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
@@ -222,7 +233,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnickoimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lozinkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn ulogaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ulogaKorisnikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ulogaKorisnikaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn treninziDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn utakmiceDataGridViewTextBoxColumn;
     }

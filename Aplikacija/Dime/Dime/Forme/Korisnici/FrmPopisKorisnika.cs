@@ -26,6 +26,7 @@ namespace Dime.Forme
                 listaKorisnika = new BindingList<Korisnik>(db.Korisnici.ToList());
             }
             korisnikBindingSource2.DataSource = listaKorisnika;
+
         }
 
         private void frmDodajZaposlenika_Click(object sender, EventArgs e)
@@ -65,6 +66,15 @@ namespace Dime.Forme
                     PrikaziKorisnike();
                 }
             }
+
+        }
+
+        private void FrmPopisKorisnika_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_19008_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
+            this.ulogaKorisnikaTableAdapter.Fill(this._19008_DBDataSet.UlogaKorisnika);
+            // TODO: This line of code loads data into the '_19008_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
+            this.ulogaKorisnikaTableAdapter.Fill(this._19008_DBDataSet.UlogaKorisnika);
 
         }
     }
