@@ -12,9 +12,14 @@ namespace Dime
 {
     public partial class FrmGlavniIzbornik : Form
     {
-        public FrmGlavniIzbornik()
+        string ime = "";
+        string prezime = "";
+        public FrmGlavniIzbornik(string imeKorisnika, string prezimeKorisnika)
         {
             InitializeComponent();
+            ime = imeKorisnika;
+            prezime = prezimeKorisnika;
+            lblImeKorisnika.Text = ime + " " + prezime;
         }
     }
 }
