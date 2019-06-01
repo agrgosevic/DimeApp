@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DimeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clanarina">
+    <Key>
+      <PropertyRef Name="id_clanarina" />
+    </Key>
+    <Property Name="id_clanarina" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mjesec" Type="int" Nullable="false" />
+    <Property Name="rok_uplate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClanarinaIgraca">
+    <Key>
+      <PropertyRef Name="id_clanarine" />
+      <PropertyRef Name="id_igraca" />
+    </Key>
+    <Property Name="id_clanarine" Type="int" Nullable="false" />
+    <Property Name="id_igraca" Type="int" Nullable="false" />
+    <Property Name="uplaceno" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Igrac">
+    <Key>
+      <PropertyRef Name="id_igrac" />
+    </Key>
+    <Property Name="id_igrac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ime" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="prezime" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="datum_rodenja" Type="date" Nullable="false" />
+    <Property Name="visina" Type="int" Nullable="false" />
+    <Property Name="tezina" Type="int" Nullable="false" />
+    <Property Name="broj" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klub">
+    <Key>
+      <PropertyRef Name="id_klub" />
+    </Key>
+    <Property Name="id_klub" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naziv" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Korisnik">
+    <Key>
+      <PropertyRef Name="id_korisnik" />
+    </Key>
+    <Property Name="id_korisnik" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ime" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="prezime" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="korisnicko_ime" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="lozinka" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="uloga" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatistikaIgraca">
+    <Key>
+      <PropertyRef Name="id_utakmice" />
+      <PropertyRef Name="id_igraca" />
+    </Key>
+    <Property Name="id_utakmice" Type="int" Nullable="false" />
+    <Property Name="id_igraca" Type="int" Nullable="false" />
+    <Property Name="minutaza" Type="int" Nullable="false" />
+    <Property Name="sb_zabijeni" Type="int" Nullable="false" />
+    <Property Name="sb_pokusaji" Type="int" Nullable="false" />
+    <Property Name="p2_zabijeni" Type="int" Nullable="false" />
+    <Property Name="p2_pokusaji" Type="int" Nullable="false" />
+    <Property Name="p3_zabijeni" Type="int" Nullable="false" />
+    <Property Name="p3_pokusaji" Type="int" Nullable="false" />
+    <Property Name="asistencije" Type="int" Nullable="false" />
+    <Property Name="skokovi" Type="int" Nullable="false" />
+    <Property Name="prekrsaji" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TipTreninga">
+    <Key>
+      <PropertyRef Name="id_tipa_treninga" />
+    </Key>
+    <Property Name="id_tipa_treninga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naziv_tipa" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipUtakmice">
+    <Key>
+      <PropertyRef Name="id_tipa_utakmice" />
+    </Key>
+    <Property Name="id_tipa_utakmice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naziv_tipa" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trening">
+    <Key>
+      <PropertyRef Name="id_trening" />
+    </Key>
+    <Property Name="id_trening" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datum" Type="date" Nullable="false" />
+    <Property Name="vrijeme" Type="time" Precision="7" Nullable="false" />
+    <Property Name="napomena" Type="varchar" MaxLength="100" />
+    <Property Name="tip_treninga" Type="int" Nullable="false" />
+    <Property Name="korisnik" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TreningPrisustvo">
+    <Key>
+      <PropertyRef Name="id_treninga" />
+      <PropertyRef Name="id_igraca" />
+    </Key>
+    <Property Name="id_treninga" Type="int" Nullable="false" />
+    <Property Name="id_igraca" Type="int" Nullable="false" />
+    <Property Name="prisustvo" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UlogaKorisnika">
+    <Key>
+      <PropertyRef Name="id_uloga" />
+    </Key>
+    <Property Name="id_uloga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naziv" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utakmica">
+    <Key>
+      <PropertyRef Name="id_utakmica" />
+    </Key>
+    <Property Name="id_utakmica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datum" Type="date" Nullable="false" />
+    <Property Name="vrijeme" Type="time" Precision="7" Nullable="false" />
+    <Property Name="opis" Type="varchar" MaxLength="100" />
+    <Property Name="zabijeni_poeni" Type="int" Nullable="false" />
+    <Property Name="primljeni_poeni" Type="int" Nullable="false" />
+    <Property Name="tip_utakmice" Type="int" Nullable="false" />
+    <Property Name="protivnik" Type="int" Nullable="false" />
+    <Property Name="korisnik" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ClanarinaIgraca_Clanarina">
+    <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="1" />
+    <End Role="ClanarinaIgraca" Type="Self.ClanarinaIgraca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clanarina">
+        <PropertyRef Name="id_clanarina" />
+      </Principal>
+      <Dependent Role="ClanarinaIgraca">
+        <PropertyRef Name="id_clanarine" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClanarinaIgraca_Igrac">
+    <End Role="Igrac" Type="Self.Igrac" Multiplicity="1" />
+    <End Role="ClanarinaIgraca" Type="Self.ClanarinaIgraca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Igrac">
+        <PropertyRef Name="id_igrac" />
+      </Principal>
+      <Dependent Role="ClanarinaIgraca">
+        <PropertyRef Name="id_igraca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnik_UlogaKorisnika">
+    <End Role="UlogaKorisnika" Type="Self.UlogaKorisnika" Multiplicity="1" />
+    <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UlogaKorisnika">
+        <PropertyRef Name="id_uloga" />
+      </Principal>
+      <Dependent Role="Korisnik">
+        <PropertyRef Name="uloga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatistikaIgraca_Igrac">
+    <End Role="Igrac" Type="Self.Igrac" Multiplicity="1" />
+    <End Role="StatistikaIgraca" Type="Self.StatistikaIgraca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Igrac">
+        <PropertyRef Name="id_igrac" />
+      </Principal>
+      <Dependent Role="StatistikaIgraca">
+        <PropertyRef Name="id_igraca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatistikaIgraca_Utakmica">
+    <End Role="Utakmica" Type="Self.Utakmica" Multiplicity="1" />
+    <End Role="StatistikaIgraca" Type="Self.StatistikaIgraca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utakmica">
+        <PropertyRef Name="id_utakmica" />
+      </Principal>
+      <Dependent Role="StatistikaIgraca">
+        <PropertyRef Name="id_utakmice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trening_Korisnik">
+    <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+    <End Role="Trening" Type="Self.Trening" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnik">
+        <PropertyRef Name="id_korisnik" />
+      </Principal>
+      <Dependent Role="Trening">
+        <PropertyRef Name="korisnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trening_TipTreninga">
+    <End Role="TipTreninga" Type="Self.TipTreninga" Multiplicity="1" />
+    <End Role="Trening" Type="Self.Trening" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipTreninga">
+        <PropertyRef Name="id_tipa_treninga" />
+      </Principal>
+      <Dependent Role="Trening">
+        <PropertyRef Name="tip_treninga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TreningPrisustvo_Igrac">
+    <End Role="Igrac" Type="Self.Igrac" Multiplicity="1" />
+    <End Role="TreningPrisustvo" Type="Self.TreningPrisustvo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Igrac">
+        <PropertyRef Name="id_igrac" />
+      </Principal>
+      <Dependent Role="TreningPrisustvo">
+        <PropertyRef Name="id_igraca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TreningPrisustvo_Trening">
+    <End Role="Trening" Type="Self.Trening" Multiplicity="1" />
+    <End Role="TreningPrisustvo" Type="Self.TreningPrisustvo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trening">
+        <PropertyRef Name="id_trening" />
+      </Principal>
+      <Dependent Role="TreningPrisustvo">
+        <PropertyRef Name="id_treninga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Utakmica_Klub">
+    <End Role="Klub" Type="Self.Klub" Multiplicity="1" />
+    <End Role="Utakmica" Type="Self.Utakmica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klub">
+        <PropertyRef Name="id_klub" />
+      </Principal>
+      <Dependent Role="Utakmica">
+        <PropertyRef Name="protivnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Utakmica_Korisnik">
+    <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+    <End Role="Utakmica" Type="Self.Utakmica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnik">
+        <PropertyRef Name="id_korisnik" />
+      </Principal>
+      <Dependent Role="Utakmica">
+        <PropertyRef Name="korisnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Utakmica_TipUtakmice">
+    <End Role="TipUtakmice" Type="Self.TipUtakmice" Multiplicity="1" />
+    <End Role="Utakmica" Type="Self.Utakmica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipUtakmice">
+        <PropertyRef Name="id_tipa_utakmice" />
+      </Principal>
+      <Dependent Role="Utakmica">
+        <PropertyRef Name="tip_utakmice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DimeDBModelStoreContainer">
+    <EntitySet Name="Clanarina" EntityType="Self.Clanarina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClanarinaIgraca" EntityType="Self.ClanarinaIgraca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Igrac" EntityType="Self.Igrac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klub" EntityType="Self.Klub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatistikaIgraca" EntityType="Self.StatistikaIgraca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipTreninga" EntityType="Self.TipTreninga" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipUtakmice" EntityType="Self.TipUtakmice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trening" EntityType="Self.Trening" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreningPrisustvo" EntityType="Self.TreningPrisustvo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UlogaKorisnika" EntityType="Self.UlogaKorisnika" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utakmica" EntityType="Self.Utakmica" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ClanarinaIgraca_Clanarina" Association="Self.FK_ClanarinaIgraca_Clanarina">
+      <End Role="Clanarina" EntitySet="Clanarina" />
+      <End Role="ClanarinaIgraca" EntitySet="ClanarinaIgraca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClanarinaIgraca_Igrac" Association="Self.FK_ClanarinaIgraca_Igrac">
+      <End Role="Igrac" EntitySet="Igrac" />
+      <End Role="ClanarinaIgraca" EntitySet="ClanarinaIgraca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnik_UlogaKorisnika" Association="Self.FK_Korisnik_UlogaKorisnika">
+      <End Role="UlogaKorisnika" EntitySet="UlogaKorisnika" />
+      <End Role="Korisnik" EntitySet="Korisnik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatistikaIgraca_Igrac" Association="Self.FK_StatistikaIgraca_Igrac">
+      <End Role="Igrac" EntitySet="Igrac" />
+      <End Role="StatistikaIgraca" EntitySet="StatistikaIgraca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatistikaIgraca_Utakmica" Association="Self.FK_StatistikaIgraca_Utakmica">
+      <End Role="Utakmica" EntitySet="Utakmica" />
+      <End Role="StatistikaIgraca" EntitySet="StatistikaIgraca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trening_Korisnik" Association="Self.FK_Trening_Korisnik">
+      <End Role="Korisnik" EntitySet="Korisnik" />
+      <End Role="Trening" EntitySet="Trening" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trening_TipTreninga" Association="Self.FK_Trening_TipTreninga">
+      <End Role="TipTreninga" EntitySet="TipTreninga" />
+      <End Role="Trening" EntitySet="Trening" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TreningPrisustvo_Igrac" Association="Self.FK_TreningPrisustvo_Igrac">
+      <End Role="Igrac" EntitySet="Igrac" />
+      <End Role="TreningPrisustvo" EntitySet="TreningPrisustvo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TreningPrisustvo_Trening" Association="Self.FK_TreningPrisustvo_Trening">
+      <End Role="Trening" EntitySet="Trening" />
+      <End Role="TreningPrisustvo" EntitySet="TreningPrisustvo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Utakmica_Klub" Association="Self.FK_Utakmica_Klub">
+      <End Role="Klub" EntitySet="Klub" />
+      <End Role="Utakmica" EntitySet="Utakmica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Utakmica_Korisnik" Association="Self.FK_Utakmica_Korisnik">
+      <End Role="Korisnik" EntitySet="Korisnik" />
+      <End Role="Utakmica" EntitySet="Utakmica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Utakmica_TipUtakmice" Association="Self.FK_Utakmica_TipUtakmice">
+      <End Role="TipUtakmice" EntitySet="TipUtakmice" />
+      <End Role="Utakmica" EntitySet="Utakmica" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
