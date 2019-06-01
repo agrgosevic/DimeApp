@@ -16,7 +16,7 @@ namespace Dime
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forme.FrmPopisKorisnika());
+            Application.Run(new Prijava.FrmPrijavaKorisnika());
         }
     }
 }

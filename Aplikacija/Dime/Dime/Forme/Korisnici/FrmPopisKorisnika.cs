@@ -43,7 +43,7 @@ namespace Dime.Forme
             Korisnik odabraniKorisnik = dgvPopisKorisnika.CurrentRow.DataBoundItem as Korisnik;
             if (odabraniKorisnik != null)
             {
-                FrmDodajKorisnika formaDodajKorisnika = new FrmDodajKorisnika();
+                FrmDodajKorisnika formaDodajKorisnika = new FrmDodajKorisnika(odabraniKorisnik);
                 this.Hide();
                 formaDodajKorisnika.ShowDialog();
                 this.Show();
@@ -60,13 +60,19 @@ namespace Dime.Forme
                     using (var db = new DimeEntities())
                     {
                         db.Korisnici.Attach(odabraniKorisnik);
-                        db.Korisnici.Remove(odabraniKorisnik);
-                        db.SaveChanges();
+                        if (odabraniKorisnik.Utakmice.Count == 0 && odabraniKorisnik.Treninzi.Count == 0)
+                        {
+                            db.Korisnici.Remove(odabraniKorisnik);
+                            db.SaveChanges();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nije moguće obrisati Korisnika koji ima kreirane utakmice ili treninge!", "Nedozvoljena radnja");
+                        }
                     }
                     PrikaziKorisnike();
                 }
             }
-
         }
 
         private void FrmPopisKorisnika_Load(object sender, EventArgs e)
@@ -75,7 +81,6 @@ namespace Dime.Forme
             this.ulogaKorisnikaTableAdapter.Fill(this._19008_DBDataSet.UlogaKorisnika);
             // TODO: This line of code loads data into the '_19008_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
             this.ulogaKorisnikaTableAdapter.Fill(this._19008_DBDataSet.UlogaKorisnika);
-
         }
     }
 }
