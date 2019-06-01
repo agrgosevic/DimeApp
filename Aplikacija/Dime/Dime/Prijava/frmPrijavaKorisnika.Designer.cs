@@ -1,6 +1,6 @@
 ﻿namespace Dime.Prijava
 {
-    partial class frmPrijavaKorisnika
+    partial class FrmPrijavaKorisnika
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrijavaKorisnika));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrijavaKorisnika));
             this.btnPrijava = new System.Windows.Forms.Button();
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,9 +43,10 @@
             this.btnPrijava.Location = new System.Drawing.Point(23, 241);
             this.btnPrijava.Name = "btnPrijava";
             this.btnPrijava.Size = new System.Drawing.Size(75, 23);
-            this.btnPrijava.TabIndex = 0;
+            this.btnPrijava.TabIndex = 4;
             this.btnPrijava.Text = "Prijavi se";
             this.btnPrijava.UseVisualStyleBackColor = false;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // txtKorisnickoIme
             // 
@@ -92,9 +93,9 @@
             this.txtLozinka.Multiline = true;
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(150, 28);
-            this.txtLozinka.TabIndex = 7;
+            this.txtLozinka.TabIndex = 3;
             // 
-            // frmPrijavaKorisnika
+            // FrmPrijavaKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,8 +107,8 @@
             this.Controls.Add(this.txtKorisnickoIme);
             this.Controls.Add(this.btnPrijava);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmPrijavaKorisnika";
-            this.Text = "frmPrijavaKorisnika";
+            this.Name = "FrmPrijavaKorisnika";
+            this.Text = "Prijava";
             this.ResumeLayout(false);
             this.PerformLayout();
 
