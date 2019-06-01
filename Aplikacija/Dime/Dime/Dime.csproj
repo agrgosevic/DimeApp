@@ -75,34 +75,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DimeModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FrmDodajKorisnika.cs">
+    <Compile Include="Forme\Korisnici\FrmDodajKorisnika.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmDodajKorisnika.Designer.cs">
+    <Compile Include="Forme\Korisnici\FrmDodajKorisnika.Designer.cs">
       <DependentUpon>FrmDodajKorisnika.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FrmPopisAktivnosti.cs">
+    <Compile Include="Forme\Aktivnosti\FrmPopisAktivnosti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmPopisAktivnosti.Designer.cs">
+    <Compile Include="Forme\Aktivnosti\FrmPopisAktivnosti.Designer.cs">
       <DependentUpon>FrmPopisAktivnosti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FrmPopisIgraca.cs">
+    <Compile Include="Forme\Igraci\FrmPopisIgraca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmPopisIgraca.Designer.cs">
+    <Compile Include="Forme\Igraci\FrmPopisIgraca.Designer.cs">
       <DependentUpon>FrmPopisIgraca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FrmPopisKorisnika.cs">
+    <Compile Include="Forme\Korisnici\FrmPopisKorisnika.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmPopisKorisnika.Designer.cs">
+    <Compile Include="Forme\Korisnici\FrmPopisKorisnika.Designer.cs">
       <DependentUpon>FrmPopisKorisnika.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FrmStatistikeUtakmica.cs">
+    <Compile Include="Forme\Statistika\FrmStatistikeUtakmica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmStatistikeUtakmica.Designer.cs">
+    <Compile Include="Forme\Statistika\FrmStatistikeUtakmica.Designer.cs">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGlavniIzbornik.cs">
@@ -152,19 +152,19 @@
     <Compile Include="Utakmica.cs">
       <DependentUpon>DimeModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forme\FrmDodajKorisnika.resx">
+    <EmbeddedResource Include="Forme\Korisnici\FrmDodajKorisnika.resx">
       <DependentUpon>FrmDodajKorisnika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\FrmPopisAktivnosti.resx">
+    <EmbeddedResource Include="Forme\Aktivnosti\FrmPopisAktivnosti.resx">
       <DependentUpon>FrmPopisAktivnosti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\FrmPopisIgraca.resx">
+    <EmbeddedResource Include="Forme\Igraci\FrmPopisIgraca.resx">
       <DependentUpon>FrmPopisIgraca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\FrmPopisKorisnika.resx">
+    <EmbeddedResource Include="Forme\Korisnici\FrmPopisKorisnika.resx">
       <DependentUpon>FrmPopisKorisnika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\FrmStatistikeUtakmica.resx">
+    <EmbeddedResource Include="Forme\Statistika\FrmStatistikeUtakmica.resx">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGlavniIzbornik.resx">
@@ -225,6 +225,10 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forme\Treninzi\" />
+    <Folder Include="Forme\Utakmice\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
