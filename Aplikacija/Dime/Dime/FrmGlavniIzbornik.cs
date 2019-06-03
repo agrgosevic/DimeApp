@@ -1,4 +1,5 @@
 ﻿using Dime.Forme;
+using Dime.Forme.Treninzi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +47,12 @@ namespace Dime
             this.Hide();
             forma.ShowDialog();
             this.Show();
+        }
+
+        private void btnTreninzi_Click(object sender, EventArgs e)
+        {
+            FrmUpravljanjeTreninzima forma = new FrmUpravljanjeTreninzima();
+            forma.ShowDialog();
         }
     }
 }

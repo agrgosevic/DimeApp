@@ -105,6 +105,18 @@
     <Compile Include="Forme\Statistika\FrmStatistikeUtakmica.Designer.cs">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Treninzi\FrmDodajIzmijeniTrening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Treninzi\FrmDodajIzmijeniTrening.Designer.cs">
+      <DependentUpon>FrmDodajIzmijeniTrening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Treninzi\FrmUpravljanjeTreninzima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Treninzi\FrmUpravljanjeTreninzima.Designer.cs">
+      <DependentUpon>FrmUpravljanjeTreninzima.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGlavniIzbornik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +189,12 @@
     <EmbeddedResource Include="Forme\Statistika\FrmStatistikeUtakmica.resx">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Treninzi\FrmDodajIzmijeniTrening.resx">
+      <DependentUpon>FrmDodajIzmijeniTrening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Treninzi\FrmUpravljanjeTreninzima.resx">
+      <DependentUpon>FrmUpravljanjeTreninzima.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGlavniIzbornik.resx">
       <DependentUpon>FrmGlavniIzbornik.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +220,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Korisnik.datasource" />
+    <None Include="Properties\DataSources\Trening.datasource" />
     <None Include="Properties\DataSources\UlogaKorisnika.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -260,7 +279,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forme\Treninzi\" />
     <Folder Include="Forme\Utakmice\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

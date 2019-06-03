@@ -57,9 +57,9 @@
             // 
             this.grpKorisnik.Controls.Add(this.lblImeKorisnika);
             this.grpKorisnik.Location = new System.Drawing.Point(421, 11);
-            this.grpKorisnik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpKorisnik.Margin = new System.Windows.Forms.Padding(2);
             this.grpKorisnik.Name = "grpKorisnik";
-            this.grpKorisnik.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpKorisnik.Padding = new System.Windows.Forms.Padding(2);
             this.grpKorisnik.Size = new System.Drawing.Size(138, 41);
             this.grpKorisnik.TabIndex = 1;
             this.grpKorisnik.TabStop = false;
@@ -78,7 +78,7 @@
             // 
             this.btnPomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPomoc.Location = new System.Drawing.Point(563, 15);
-            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnPomoc.Name = "btnPomoc";
             this.btnPomoc.Size = new System.Drawing.Size(33, 36);
             this.btnPomoc.TabIndex = 2;
@@ -162,6 +162,7 @@
             this.btnTreninzi.Text = "Treninzi";
             this.btnTreninzi.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnTreninzi.UseVisualStyleBackColor = true;
+            this.btnTreninzi.Click += new System.EventHandler(this.btnTreninzi_Click);
             // 
             // btnIgraci
             // 
