@@ -16,5 +16,12 @@ namespace Dime.Forme
         {
             InitializeComponent();
         }
+
+        private void FrmPopisIgraca_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.Igrac' table. You can move, or remove it, as needed.
+            this.igracTableAdapter.Fill(this._19008_DBDataSetPrimary.Igrac);
+
+        }
     }
 }

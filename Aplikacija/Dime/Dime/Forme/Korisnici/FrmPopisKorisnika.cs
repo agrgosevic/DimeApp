@@ -28,16 +28,6 @@ namespace Dime.Forme
             korisnikBindingSource2.DataSource = listaKorisnika;
 
         }
-
-        private void frmDodajZaposlenika_Click(object sender, EventArgs e)
-        {
-            FrmDodajKorisnika formaDodajKorisnika = new FrmDodajKorisnika();
-            this.Hide();
-            formaDodajKorisnika.ShowDialog();
-            this.Show();
-            PrikaziKorisnike();
-        }
-
         private void btnUrediKorisnika_Click(object sender, EventArgs e)
         {
             Korisnik odabraniKorisnik = dgvPopisKorisnika.CurrentRow.DataBoundItem as Korisnik;
@@ -60,7 +50,7 @@ namespace Dime.Forme
                     using (var db = new DimeEntities())
                     {
                         db.Korisnici.Attach(odabraniKorisnik);
-                        if (odabraniKorisnik.Utakmice.Count == 0 && odabraniKorisnik.Treninzi.Count == 0)
+                        if (true/*odabraniKorisnik.Utakmice.Count == 0 && odabraniKorisnik.Treninzi.Count == 0*/)
                         {
                             db.Korisnici.Remove(odabraniKorisnik);
                             db.SaveChanges();
@@ -81,6 +71,15 @@ namespace Dime.Forme
             this.ulogaKorisnikaTableAdapter.Fill(this._19008_DBDataSet.UlogaKorisnika);
             // TODO: This line of code loads data into the '_19008_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
             this.ulogaKorisnikaTableAdapter.Fill(this._19008_DBDataSet.UlogaKorisnika);
+        }
+
+        private void btnDodajKorisnika_Click(object sender, EventArgs e)
+        {
+            FrmDodajKorisnika formaDodajKorisnika = new FrmDodajKorisnika();
+            this.Hide();
+            formaDodajKorisnika.ShowDialog();
+            this.Show();
+            PrikaziKorisnike();
         }
     }
 }
