@@ -38,5 +38,12 @@ namespace Dime.Forme.Treninzi
             forma.ShowDialog();
             PrikaziSveTreninge();
         }
+
+        private void btnIzmijeniTrening_Click(object sender, EventArgs e)
+        {
+            FrmDodajIzmijeniTrening forma = new FrmDodajIzmijeniTrening(treningBindingSource.Current as Trening);
+            forma.ShowDialog();
+            PrikaziSveTreninge();
+        }
     }
 }

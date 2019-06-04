@@ -15,9 +15,26 @@ namespace Dime.Forme.Treninzi
         public FrmDodajIzmijeniTrening()
         {
             InitializeComponent();
-            
         }
-        
+        private Trening odabranitrening;
+        public FrmDodajIzmijeniTrening(Trening trening)
+        {
+            InitializeComponent();
+            odabranitrening = trening;
+            PopuniPodatkeOdabranimTreningom();
+        }
+
+        private void PopuniPodatkeOdabranimTreningom()
+        {
+            if (odabranitrening != null)
+            {
+                dtpDatum.Value = odabranitrening.datum;
+                txtNapomena.Text = odabranitrening.napomena;
+                cmbTipTreninga.Text = odabranitrening.tip_treninga.ToString();
+                cmbKorisnik.Text = odabranitrening.korisnik.ToString();
+            }
+        }
+
         private void btnDodajTrening_Click(object sender, EventArgs e)
         {
             string v = $"{dtpDatum.Value.Hour}:{dtpDatum.Value.Minute}:{dtpDatum.Value.Second}";
@@ -26,16 +43,28 @@ namespace Dime.Forme.Treninzi
             DateTime dat = DateTime.Parse(d);
             using (var db = new DimeEntities())
             {
-                Trening noviTrening = new Trening();
-                noviTrening.datum = dat;
-                noviTrening.vrijeme = vrijeme;
-                noviTrening.napomena = txtNapomena.Text;
-                noviTrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
-                noviTrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
+                if (odabranitrening == null)
+                {
+                    Trening noviTrening = new Trening();
+                    noviTrening.datum = dat;
+                    noviTrening.vrijeme = vrijeme;
+                    noviTrening.napomena = txtNapomena.Text;
+                    noviTrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
+                    noviTrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
 
-
-                db.Treninzi.Add(noviTrening);
-                db.SaveChanges();
+                    db.Treninzi.Add(noviTrening);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    db.Treninzi.Attach(odabranitrening);
+                    odabranitrening.datum = dat;
+                    odabranitrening.vrijeme = vrijeme;
+                    odabranitrening.napomena = txtNapomena.Text;
+                    odabranitrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
+                    odabranitrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
+                    db.SaveChanges();
+                }
             }
             Close();
 

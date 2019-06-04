@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpravljanjeTreninzima));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnNoviTrening = new System.Windows.Forms.Button();
-            this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idtreningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +40,9 @@
             this.korisnikDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipTreningaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treningPrisustvaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNoviTrening = new System.Windows.Forms.Button();
+            this.btnIzmijeniTrening = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -66,20 +67,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(656, 219);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnNoviTrening
-            // 
-            this.btnNoviTrening.Location = new System.Drawing.Point(135, 270);
-            this.btnNoviTrening.Name = "btnNoviTrening";
-            this.btnNoviTrening.Size = new System.Drawing.Size(113, 40);
-            this.btnNoviTrening.TabIndex = 1;
-            this.btnNoviTrening.Text = "Dodaj trening";
-            this.btnNoviTrening.UseVisualStyleBackColor = true;
-            this.btnNoviTrening.Click += new System.EventHandler(this.btnNoviTrening_Click);
-            // 
-            // treningBindingSource
-            // 
-            this.treningBindingSource.DataSource = typeof(Dime.Trening);
             // 
             // idtreningDataGridViewTextBoxColumn
             // 
@@ -139,11 +126,36 @@
             this.treningPrisustvaDataGridViewTextBoxColumn.Name = "treningPrisustvaDataGridViewTextBoxColumn";
             this.treningPrisustvaDataGridViewTextBoxColumn.Visible = false;
             // 
+            // treningBindingSource
+            // 
+            this.treningBindingSource.DataSource = typeof(Dime.Trening);
+            // 
+            // btnNoviTrening
+            // 
+            this.btnNoviTrening.Location = new System.Drawing.Point(12, 263);
+            this.btnNoviTrening.Name = "btnNoviTrening";
+            this.btnNoviTrening.Size = new System.Drawing.Size(113, 40);
+            this.btnNoviTrening.TabIndex = 1;
+            this.btnNoviTrening.Text = "Dodaj trening";
+            this.btnNoviTrening.UseVisualStyleBackColor = true;
+            this.btnNoviTrening.Click += new System.EventHandler(this.btnNoviTrening_Click);
+            // 
+            // btnIzmijeniTrening
+            // 
+            this.btnIzmijeniTrening.Location = new System.Drawing.Point(157, 263);
+            this.btnIzmijeniTrening.Name = "btnIzmijeniTrening";
+            this.btnIzmijeniTrening.Size = new System.Drawing.Size(107, 40);
+            this.btnIzmijeniTrening.TabIndex = 2;
+            this.btnIzmijeniTrening.Text = "Izmijeni";
+            this.btnIzmijeniTrening.UseVisualStyleBackColor = true;
+            this.btnIzmijeniTrening.Click += new System.EventHandler(this.btnIzmijeniTrening_Click);
+            // 
             // FrmUpravljanjeTreninzima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 433);
+            this.ClientSize = new System.Drawing.Size(724, 378);
+            this.Controls.Add(this.btnIzmijeniTrening);
             this.Controls.Add(this.btnNoviTrening);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -170,5 +182,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipTreningaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn treningPrisustvaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnIzmijeniTrening;
     }
 }
