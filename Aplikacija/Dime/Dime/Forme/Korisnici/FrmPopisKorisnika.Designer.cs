@@ -75,6 +75,7 @@
             this.dgvPopisKorisnika.Name = "dgvPopisKorisnika";
             this.dgvPopisKorisnika.Size = new System.Drawing.Size(701, 426);
             this.dgvPopisKorisnika.TabIndex = 0;
+            this.dgvPopisKorisnika.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPopisKorisnika_DataError);
             // 
             // idkorisnikDataGridViewTextBoxColumn
             // 
