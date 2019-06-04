@@ -75,6 +75,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DimeModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Igraci\FrmDodajIgraca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Igraci\FrmDodajIgraca.Designer.cs">
+      <DependentUpon>FrmDodajIgraca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Korisnici\FrmDodajKorisnika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_19008_DBDataSetPrimary.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forme\Igraci\FrmDodajIgraca.resx">
+      <DependentUpon>FrmDodajIgraca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Korisnici\FrmDodajKorisnika.resx">
       <DependentUpon>FrmDodajKorisnika.cs</DependentUpon>
     </EmbeddedResource>
