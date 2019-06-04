@@ -20,7 +20,6 @@ namespace Dime.Forme.Treninzi
         
         private void btnDodajTrening_Click(object sender, EventArgs e)
         {
-            
             string v = $"{dtpDatum.Value.Hour}:{dtpDatum.Value.Minute}:{dtpDatum.Value.Second}";
             TimeSpan vrijeme = TimeSpan.Parse(v);
             string d = $"{dtpDatum.Value.Year}-{dtpDatum.Value.Month}-{dtpDatum.Value.Day}";
