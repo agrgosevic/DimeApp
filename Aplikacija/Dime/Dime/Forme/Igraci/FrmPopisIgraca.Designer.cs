@@ -34,9 +34,6 @@
             this.btnObrisiIgraca = new System.Windows.Forms.Button();
             this.btnDodajIgraca = new System.Windows.Forms.Button();
             this.dgvPopisIgraca = new System.Windows.Forms.DataGridView();
-            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
-            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
             this.idigracDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +41,12 @@
             this.visinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tezinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
+            this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisIgraca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUrediIgraca
@@ -75,6 +75,7 @@
             this.btnDodajIgraca.TabIndex = 6;
             this.btnDodajIgraca.Text = "Dodaj igraca";
             this.btnDodajIgraca.UseVisualStyleBackColor = true;
+            this.btnDodajIgraca.Click += new System.EventHandler(this.btnDodajIgraca_Click);
             // 
             // dgvPopisIgraca
             // 
@@ -94,20 +95,6 @@
             this.dgvPopisIgraca.Name = "dgvPopisIgraca";
             this.dgvPopisIgraca.Size = new System.Drawing.Size(701, 426);
             this.dgvPopisIgraca.TabIndex = 5;
-            // 
-            // _19008_DBDataSetPrimary
-            // 
-            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
-            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // igracBindingSource
-            // 
-            this.igracBindingSource.DataMember = "Igrac";
-            this.igracBindingSource.DataSource = this._19008_DBDataSetPrimary;
-            // 
-            // igracTableAdapter
-            // 
-            this.igracTableAdapter.ClearBeforeFill = true;
             // 
             // idigracDataGridViewTextBoxColumn
             // 
@@ -153,6 +140,20 @@
             this.brojDataGridViewTextBoxColumn.HeaderText = "Broj";
             this.brojDataGridViewTextBoxColumn.Name = "brojDataGridViewTextBoxColumn";
             // 
+            // igracBindingSource
+            // 
+            this.igracBindingSource.DataMember = "Igrac";
+            this.igracBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            // 
+            // _19008_DBDataSetPrimary
+            // 
+            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
+            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // igracTableAdapter
+            // 
+            this.igracTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmPopisIgraca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,8 +168,8 @@
             this.Text = "Igrači";
             this.Load += new System.EventHandler(this.FrmPopisIgraca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisIgraca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
             this.ResumeLayout(false);
 
         }

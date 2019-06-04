@@ -23,5 +23,19 @@ namespace Dime.Forme
             this.igracTableAdapter.Fill(this._19008_DBDataSetPrimary.Igrac);
 
         }
+
+        private void btnDodajIgraca_Click(object sender, EventArgs e)
+        {
+            Igraci.FrmDodajIgraca fromaDodajIgraca = new Igraci.FrmDodajIgraca();
+            this.Hide();
+            fromaDodajIgraca.ShowDialog();
+            this.Show();
+
+        }
+
+        public void PrikaziIgrace()
+        {
+            this.igracTableAdapter.Fill(this._19008_DBDataSetPrimary.Igrac);
+        }
     }
 }

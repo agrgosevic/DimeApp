@@ -38,7 +38,10 @@ namespace Dime
 
         private void btnIgraci_Click(object sender, EventArgs e)
         {
-
+            FrmPopisIgraca forma = new FrmPopisIgraca();
+            this.Hide();
+            forma.ShowDialog();
+            this.Show();
         }
 
         private void btnKorisnici_Click(object sender, EventArgs e)

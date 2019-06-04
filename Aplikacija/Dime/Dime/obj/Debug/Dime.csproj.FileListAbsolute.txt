@@ -61,3 +61,6 @@ C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Pri
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Properties.Resources.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.csproj.GenerateResource.Cache
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Treninzi.FrmDodajIzmijeniTrening.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Igraci.FrmDodajIgraca.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Treninzi.FrmDodajIzmijeniTrening.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Treninzi.FrmUpravljanjeTreninzima.resources
