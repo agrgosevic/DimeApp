@@ -15,6 +15,7 @@ namespace Dime.Forme
         public FrmPopisIgraca()
         {
             InitializeComponent();
+            PrikaziIgrace();
         }
 
         private void FrmPopisIgraca_Load(object sender, EventArgs e)
@@ -30,12 +31,50 @@ namespace Dime.Forme
             this.Hide();
             fromaDodajIgraca.ShowDialog();
             this.Show();
-
+            PrikaziIgrace();
         }
 
         public void PrikaziIgrace()
         {
-            this.igracTableAdapter.Fill(this._19008_DBDataSetPrimary.Igrac);
+            BindingList<Igrac> listaIgraca = null;
+            using (var db = new DimeEntities())
+            {
+                listaIgraca = new BindingList<Igrac>(db.Igraci.ToList());
+            }
+            igracBindingSource.DataSource = listaIgraca;
+        }
+
+        private void btnUrediIgraca_Click(object sender, EventArgs e)
+        {
+            Igrac odabraniIgrac = dgvPopisIgraca.CurrentRow.DataBoundItem as Igrac;
+            if (odabraniIgrac != null)
+            {
+                Igraci.FrmDodajIgraca formaDodajIgraca = new Igraci.FrmDodajIgraca(odabraniIgrac);
+                this.Hide();
+                formaDodajIgraca.ShowDialog();
+                this.Show();
+                PrikaziIgrace();
+            }
+        }
+
+        private void btnObrisiIgraca_Click(object sender, EventArgs e)
+        {
+            Igrac odabraniIgrac = dgvPopisIgraca.CurrentRow.DataBoundItem as Igrac;
+            if (odabraniIgrac != null)
+            {
+                if (MessageBox.Show("Jeste li sigurni?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    using (var db = new DimeEntities())
+                    {
+                        db.Igraci.Attach(odabraniIgrac);
+
+                        db.Igraci.Remove(odabraniIgrac);
+                        db.SaveChanges();
+
+                    }
+                    PrikaziIgrace();
+                }
+            }
         }
     }
 }

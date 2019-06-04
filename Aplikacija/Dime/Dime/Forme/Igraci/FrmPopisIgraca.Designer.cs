@@ -57,6 +57,7 @@
             this.btnUrediIgraca.TabIndex = 8;
             this.btnUrediIgraca.Text = "Uredi igraca";
             this.btnUrediIgraca.UseVisualStyleBackColor = true;
+            this.btnUrediIgraca.Click += new System.EventHandler(this.btnUrediIgraca_Click);
             // 
             // btnObrisiIgraca
             // 
@@ -66,6 +67,7 @@
             this.btnObrisiIgraca.TabIndex = 7;
             this.btnObrisiIgraca.Text = "Obriši igraca";
             this.btnObrisiIgraca.UseVisualStyleBackColor = true;
+            this.btnObrisiIgraca.Click += new System.EventHandler(this.btnObrisiIgraca_Click);
             // 
             // btnDodajIgraca
             // 

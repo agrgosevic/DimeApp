@@ -81,5 +81,10 @@ namespace Dime.Forme
             this.Show();
             PrikaziKorisnike();
         }
+
+        private void dgvPopisKorisnika_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }
