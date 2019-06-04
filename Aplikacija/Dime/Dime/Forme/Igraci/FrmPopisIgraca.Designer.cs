@@ -57,6 +57,7 @@
             this.btnUrediIgraca.TabIndex = 8;
             this.btnUrediIgraca.Text = "Uredi igraca";
             this.btnUrediIgraca.UseVisualStyleBackColor = true;
+            this.btnUrediIgraca.Click += new System.EventHandler(this.btnUrediIgraca_Click);
             // 
             // btnObrisiIgraca
             // 
@@ -66,6 +67,7 @@
             this.btnObrisiIgraca.TabIndex = 7;
             this.btnObrisiIgraca.Text = "Obriši igraca";
             this.btnObrisiIgraca.UseVisualStyleBackColor = true;
+            this.btnObrisiIgraca.Click += new System.EventHandler(this.btnObrisiIgraca_Click);
             // 
             // btnDodajIgraca
             // 
@@ -125,13 +127,13 @@
             // visinaDataGridViewTextBoxColumn
             // 
             this.visinaDataGridViewTextBoxColumn.DataPropertyName = "visina";
-            this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina";
+            this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina (cm)";
             this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
             // 
             // tezinaDataGridViewTextBoxColumn
             // 
             this.tezinaDataGridViewTextBoxColumn.DataPropertyName = "tezina";
-            this.tezinaDataGridViewTextBoxColumn.HeaderText = "Težina";
+            this.tezinaDataGridViewTextBoxColumn.HeaderText = "Težina (kg)";
             this.tezinaDataGridViewTextBoxColumn.Name = "tezinaDataGridViewTextBoxColumn";
             // 
             // brojDataGridViewTextBoxColumn
