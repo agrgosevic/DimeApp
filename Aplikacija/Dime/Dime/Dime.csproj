@@ -81,6 +81,18 @@
     <Compile Include="Forme\Igraci\FrmDodajIgraca.Designer.cs">
       <DependentUpon>FrmDodajIgraca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Igraci\FrmDodajIgracaPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Igraci\FrmDodajIgracaPomoc.Designer.cs">
+      <DependentUpon>FrmDodajIgracaPomoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Igraci\FrmPopisIgracaPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Igraci\FrmPopisIgracaPomoc.Designer.cs">
+      <DependentUpon>FrmPopisIgracaPomoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Korisnici\FrmDodajKorisnika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,11 +111,23 @@
     <Compile Include="Forme\Igraci\FrmPopisIgraca.Designer.cs">
       <DependentUpon>FrmPopisIgraca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Korisnici\FrmDodajKorisnikaPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Korisnici\FrmDodajKorisnikaPomoc.Designer.cs">
+      <DependentUpon>FrmDodajKorisnikaPomoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Korisnici\FrmPopisKorisnika.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\Korisnici\FrmPopisKorisnika.Designer.cs">
       <DependentUpon>FrmPopisKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Korisnici\FrmPopisKorisnikaPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Korisnici\FrmPopisKorisnikaPomoc.Designer.cs">
+      <DependentUpon>FrmPopisKorisnikaPomoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\Statistika\FrmStatistikeUtakmica.cs">
       <SubType>Form</SubType>
@@ -143,6 +167,12 @@
     </Compile>
     <Compile Include="Prijava\FrmPrijavaKorisnika.Designer.cs">
       <DependentUpon>FrmPrijavaKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijava\FrmPrijavaKorisnikaPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijava\FrmPrijavaKorisnikaPomoc.Designer.cs">
+      <DependentUpon>FrmPrijavaKorisnikaPomoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava\FrmPrijavaKorisnika.resx">
       <DependentUpon>FrmPrijavaKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijava\FrmPrijavaKorisnikaPomoc.resx">
+      <DependentUpon>FrmPrijavaKorisnikaPomoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

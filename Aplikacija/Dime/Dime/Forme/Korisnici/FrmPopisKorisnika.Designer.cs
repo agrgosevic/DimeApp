@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPopisKorisnika));
             this.dgvPopisKorisnika = new System.Windows.Forms.DataGridView();
+            this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSet = new Dime._19008_DBDataSet();
+            this.korisnikBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDodajKorisnika = new System.Windows.Forms.Button();
+            this.btnObrisiKorisnika = new System.Windows.Forms.Button();
+            this.btnUrediKorisnika = new System.Windows.Forms.Button();
+            this.ulogaKorisnikaTableAdapter = new Dime._19008_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             this.idkorisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,16 +45,9 @@
             this.korisnickoimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lozinkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ulogaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._19008_DBDataSet = new Dime._19008_DBDataSet();
             this.ulogaKorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treninziDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDodajKorisnika = new System.Windows.Forms.Button();
-            this.btnObrisiKorisnika = new System.Windows.Forms.Button();
-            this.btnUrediKorisnika = new System.Windows.Forms.Button();
-            this.ulogaKorisnikaTableAdapter = new Dime._19008_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisKorisnika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSet)).BeginInit();
@@ -77,55 +77,6 @@
             this.dgvPopisKorisnika.TabIndex = 0;
             this.dgvPopisKorisnika.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPopisKorisnika_DataError);
             // 
-            // idkorisnikDataGridViewTextBoxColumn
-            // 
-            this.idkorisnikDataGridViewTextBoxColumn.DataPropertyName = "id_korisnik";
-            this.idkorisnikDataGridViewTextBoxColumn.HeaderText = "id_korisnik";
-            this.idkorisnikDataGridViewTextBoxColumn.Name = "idkorisnikDataGridViewTextBoxColumn";
-            this.idkorisnikDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // imeDataGridViewTextBoxColumn
-            // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            // 
-            // prezimeDataGridViewTextBoxColumn
-            // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // korisnickoimeDataGridViewTextBoxColumn
-            // 
-            this.korisnickoimeDataGridViewTextBoxColumn.DataPropertyName = "korisnicko_ime";
-            this.korisnickoimeDataGridViewTextBoxColumn.HeaderText = "korisnicko_ime";
-            this.korisnickoimeDataGridViewTextBoxColumn.Name = "korisnickoimeDataGridViewTextBoxColumn";
-            // 
-            // lozinkaDataGridViewTextBoxColumn
-            // 
-            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
-            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "lozinka";
-            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
-            // 
-            // ulogaDataGridViewTextBoxColumn
-            // 
-            this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "uloga";
-            this.ulogaDataGridViewTextBoxColumn.DataSource = this.ulogaKorisnikaBindingSource;
-            this.ulogaDataGridViewTextBoxColumn.DisplayMember = "naziv";
-            this.ulogaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ulogaDataGridViewTextBoxColumn.HeaderText = "uloga";
-            this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
-            this.ulogaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ulogaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ulogaDataGridViewTextBoxColumn.ValueMember = "id_uloga";
-            // 
             // ulogaKorisnikaBindingSource
             // 
             this.ulogaKorisnikaBindingSource.DataMember = "UlogaKorisnika";
@@ -135,28 +86,6 @@
             // 
             this._19008_DBDataSet.DataSetName = "_19008_DBDataSet";
             this._19008_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ulogaKorisnikaDataGridViewTextBoxColumn
-            // 
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.DataPropertyName = "UlogaKorisnika";
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.HeaderText = "UlogaKorisnika";
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.Name = "ulogaKorisnikaDataGridViewTextBoxColumn";
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ulogaKorisnikaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // treninziDataGridViewTextBoxColumn
-            // 
-            this.treninziDataGridViewTextBoxColumn.DataPropertyName = "Treninzi";
-            this.treninziDataGridViewTextBoxColumn.HeaderText = "Treninzi";
-            this.treninziDataGridViewTextBoxColumn.Name = "treninziDataGridViewTextBoxColumn";
-            this.treninziDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // utakmiceDataGridViewTextBoxColumn
-            // 
-            this.utakmiceDataGridViewTextBoxColumn.DataPropertyName = "Utakmice";
-            this.utakmiceDataGridViewTextBoxColumn.HeaderText = "Utakmice";
-            this.utakmiceDataGridViewTextBoxColumn.Name = "utakmiceDataGridViewTextBoxColumn";
-            this.utakmiceDataGridViewTextBoxColumn.Visible = false;
             // 
             // korisnikBindingSource2
             // 
@@ -195,6 +124,77 @@
             // ulogaKorisnikaTableAdapter
             // 
             this.ulogaKorisnikaTableAdapter.ClearBeforeFill = true;
+            // 
+            // idkorisnikDataGridViewTextBoxColumn
+            // 
+            this.idkorisnikDataGridViewTextBoxColumn.DataPropertyName = "id_korisnik";
+            this.idkorisnikDataGridViewTextBoxColumn.HeaderText = "id_korisnik";
+            this.idkorisnikDataGridViewTextBoxColumn.Name = "idkorisnikDataGridViewTextBoxColumn";
+            this.idkorisnikDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // korisnickoimeDataGridViewTextBoxColumn
+            // 
+            this.korisnickoimeDataGridViewTextBoxColumn.DataPropertyName = "korisnicko_ime";
+            this.korisnickoimeDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
+            this.korisnickoimeDataGridViewTextBoxColumn.Name = "korisnickoimeDataGridViewTextBoxColumn";
+            // 
+            // lozinkaDataGridViewTextBoxColumn
+            // 
+            this.lozinkaDataGridViewTextBoxColumn.DataPropertyName = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.HeaderText = "Lozinka";
+            this.lozinkaDataGridViewTextBoxColumn.Name = "lozinkaDataGridViewTextBoxColumn";
+            // 
+            // ulogaDataGridViewTextBoxColumn
+            // 
+            this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "uloga";
+            this.ulogaDataGridViewTextBoxColumn.DataSource = this.ulogaKorisnikaBindingSource;
+            this.ulogaDataGridViewTextBoxColumn.DisplayMember = "naziv";
+            this.ulogaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.ulogaDataGridViewTextBoxColumn.HeaderText = "Uloga";
+            this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
+            this.ulogaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ulogaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ulogaDataGridViewTextBoxColumn.ValueMember = "id_uloga";
+            // 
+            // ulogaKorisnikaDataGridViewTextBoxColumn
+            // 
+            this.ulogaKorisnikaDataGridViewTextBoxColumn.DataPropertyName = "UlogaKorisnika";
+            this.ulogaKorisnikaDataGridViewTextBoxColumn.HeaderText = "UlogaKorisnika";
+            this.ulogaKorisnikaDataGridViewTextBoxColumn.Name = "ulogaKorisnikaDataGridViewTextBoxColumn";
+            this.ulogaKorisnikaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ulogaKorisnikaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // treninziDataGridViewTextBoxColumn
+            // 
+            this.treninziDataGridViewTextBoxColumn.DataPropertyName = "Treninzi";
+            this.treninziDataGridViewTextBoxColumn.HeaderText = "Treninzi";
+            this.treninziDataGridViewTextBoxColumn.Name = "treninziDataGridViewTextBoxColumn";
+            this.treninziDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // utakmiceDataGridViewTextBoxColumn
+            // 
+            this.utakmiceDataGridViewTextBoxColumn.DataPropertyName = "Utakmice";
+            this.utakmiceDataGridViewTextBoxColumn.HeaderText = "Utakmice";
+            this.utakmiceDataGridViewTextBoxColumn.Name = "utakmiceDataGridViewTextBoxColumn";
+            this.utakmiceDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmPopisKorisnika
             // 

@@ -49,5 +49,22 @@ namespace Dime.Prijava
 
         }
 
+        private void FrmPrijavaKorisnika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void Pomoc()
+        {
+            FrmPrijavaKorisnikaPomoc forma = new FrmPrijavaKorisnikaPomoc();
+            this.Hide();
+            forma.ShowDialog();
+            this.Show();
+        }
     }
 }

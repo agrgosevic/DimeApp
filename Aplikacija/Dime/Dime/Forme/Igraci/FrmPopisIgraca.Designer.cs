@@ -34,6 +34,9 @@
             this.btnObrisiIgraca = new System.Windows.Forms.Button();
             this.btnDodajIgraca = new System.Windows.Forms.Button();
             this.dgvPopisIgraca = new System.Windows.Forms.DataGridView();
+            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
+            this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
             this.idigracDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +44,6 @@
             this.visinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tezinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
-            this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisIgraca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -98,6 +98,20 @@
             this.dgvPopisIgraca.Size = new System.Drawing.Size(701, 426);
             this.dgvPopisIgraca.TabIndex = 5;
             // 
+            // igracBindingSource
+            // 
+            this.igracBindingSource.DataMember = "Igrac";
+            this.igracBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            // 
+            // _19008_DBDataSetPrimary
+            // 
+            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
+            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // igracTableAdapter
+            // 
+            this.igracTableAdapter.ClearBeforeFill = true;
+            // 
             // idigracDataGridViewTextBoxColumn
             // 
             this.idigracDataGridViewTextBoxColumn.DataPropertyName = "id_igrac";
@@ -127,13 +141,13 @@
             // visinaDataGridViewTextBoxColumn
             // 
             this.visinaDataGridViewTextBoxColumn.DataPropertyName = "visina";
-            this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina";
+            this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina (cm)";
             this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
             // 
             // tezinaDataGridViewTextBoxColumn
             // 
             this.tezinaDataGridViewTextBoxColumn.DataPropertyName = "tezina";
-            this.tezinaDataGridViewTextBoxColumn.HeaderText = "Težina";
+            this.tezinaDataGridViewTextBoxColumn.HeaderText = "Težina (kg)";
             this.tezinaDataGridViewTextBoxColumn.Name = "tezinaDataGridViewTextBoxColumn";
             // 
             // brojDataGridViewTextBoxColumn
@@ -141,20 +155,6 @@
             this.brojDataGridViewTextBoxColumn.DataPropertyName = "broj";
             this.brojDataGridViewTextBoxColumn.HeaderText = "Broj";
             this.brojDataGridViewTextBoxColumn.Name = "brojDataGridViewTextBoxColumn";
-            // 
-            // igracBindingSource
-            // 
-            this.igracBindingSource.DataMember = "Igrac";
-            this.igracBindingSource.DataSource = this._19008_DBDataSetPrimary;
-            // 
-            // _19008_DBDataSetPrimary
-            // 
-            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
-            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // igracTableAdapter
-            // 
-            this.igracTableAdapter.ClearBeforeFill = true;
             // 
             // FrmPopisIgraca
             // 

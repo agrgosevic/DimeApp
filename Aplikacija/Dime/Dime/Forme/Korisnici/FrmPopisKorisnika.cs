@@ -26,7 +26,6 @@ namespace Dime.Forme
                 listaKorisnika = new BindingList<Korisnik>(db.Korisnici.ToList());
             }
             korisnikBindingSource2.DataSource = listaKorisnika;
-
         }
         private void btnUrediKorisnika_Click(object sender, EventArgs e)
         {
@@ -49,8 +48,11 @@ namespace Dime.Forme
                 {
                     using (var db = new DimeEntities())
                     {
+                        List<Trening> listaTreninga = null;
+                        listaTreninga = new List<Trening>(db.Treninzi.ToList());
+
                         db.Korisnici.Attach(odabraniKorisnik);
-                        if (true/*odabraniKorisnik.Utakmice.Count == 0 && odabraniKorisnik.Treninzi.Count == 0*/)
+                        if (odabraniKorisnik.Utakmice.Count == 0 && !(listaTreninga.Exists(k => k.korisnik == odabraniKorisnik.id_korisnik)))
                         {
                             db.Korisnici.Remove(odabraniKorisnik);
                             db.SaveChanges();
@@ -64,7 +66,6 @@ namespace Dime.Forme
                 }
             }
         }
-
         private void FrmPopisKorisnika_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the '_19008_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
@@ -72,7 +73,6 @@ namespace Dime.Forme
             // TODO: This line of code loads data into the '_19008_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
             this.ulogaKorisnikaTableAdapter.Fill(this._19008_DBDataSet.UlogaKorisnika);
         }
-
         private void btnDodajKorisnika_Click(object sender, EventArgs e)
         {
             FrmDodajKorisnika formaDodajKorisnika = new FrmDodajKorisnika();
@@ -81,7 +81,6 @@ namespace Dime.Forme
             this.Show();
             PrikaziKorisnike();
         }
-
         private void dgvPopisKorisnika_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
