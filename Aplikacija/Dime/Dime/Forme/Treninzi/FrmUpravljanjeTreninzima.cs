@@ -45,5 +45,20 @@ namespace Dime.Forme.Treninzi
             forma.ShowDialog();
             PrikaziSveTreninge();
         }
+
+        private void btnObrisiTrening_Click(object sender, EventArgs e)
+        {
+            Trening izabraniTrening = treningBindingSource.Current as Trening;
+            if (izabraniTrening != null)
+            {
+                using (var db = new DimeEntities())
+                {
+                    db.Treninzi.Attach(izabraniTrening);
+                    db.Treninzi.Remove(izabraniTrening);
+                    db.SaveChanges();
+                }
+                PrikaziSveTreninge();
+            }
+        }
     }
 }
