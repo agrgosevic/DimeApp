@@ -26,8 +26,8 @@ namespace Dime.Forme
                 listaKorisnika = new BindingList<Korisnik>(db.Korisnici.ToList());
             }
             korisnikBindingSource2.DataSource = listaKorisnika;
-        }
 
+        }
         private void btnUrediKorisnika_Click(object sender, EventArgs e)
         {
             Korisnik odabraniKorisnik = dgvPopisKorisnika.CurrentRow.DataBoundItem as Korisnik;
@@ -80,11 +80,6 @@ namespace Dime.Forme
             formaDodajKorisnika.ShowDialog();
             this.Show();
             PrikaziKorisnike();
-        }
-
-        private void dgvPopisKorisnika_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
         }
     }
 }

@@ -55,7 +55,6 @@
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(150, 27);
             this.txtKorisnickoIme.TabIndex = 2;
-            this.txtKorisnickoIme.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKorisnickoIme_KeyDown);
             // 
             // label1
             // 
@@ -79,7 +78,7 @@
             // 
             this.btnPomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPomoc.Location = new System.Drawing.Point(355, 279);
-            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPomoc.Name = "btnPomoc";
             this.btnPomoc.Size = new System.Drawing.Size(33, 36);
             this.btnPomoc.TabIndex = 6;
@@ -93,7 +92,6 @@
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(150, 27);
             this.txtLozinka.TabIndex = 3;
-            this.txtLozinka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLozinka_KeyDown);
             // 
             // FrmPrijavaKorisnika
             // 

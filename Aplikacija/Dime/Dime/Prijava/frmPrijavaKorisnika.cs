@@ -49,20 +49,5 @@ namespace Dime.Prijava
 
         }
 
-        private void txtLozinka_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Prijava();
-            }
-        }
-
-        private void txtKorisnickoIme_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Prijava();
-            }
-        }
     }
 }
