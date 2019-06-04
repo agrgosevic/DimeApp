@@ -28,27 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNapomena = new System.Windows.Forms.TextBox();
-            this.txtKorisnik = new System.Windows.Forms.TextBox();
             this.cmbTipTreninga = new System.Windows.Forms.ComboBox();
             this.btnDodajTrening = new System.Windows.Forms.Button();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
+            this.cmbKorisnik = new System.Windows.Forms.ComboBox();
+            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
+            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.korisnikTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.KorisnikTableAdapter();
+            this.tipTreningaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
             // 
             // label2
             // 
@@ -86,13 +84,6 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Korisnik";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(99, 37);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(121, 20);
-            this.txtId.TabIndex = 6;
-            // 
             // txtNapomena
             // 
             this.txtNapomena.Location = new System.Drawing.Point(99, 108);
@@ -100,20 +91,16 @@
             this.txtNapomena.Size = new System.Drawing.Size(121, 20);
             this.txtNapomena.TabIndex = 9;
             // 
-            // txtKorisnik
-            // 
-            this.txtKorisnik.Location = new System.Drawing.Point(99, 179);
-            this.txtKorisnik.Name = "txtKorisnik";
-            this.txtKorisnik.Size = new System.Drawing.Size(121, 20);
-            this.txtKorisnik.TabIndex = 11;
-            // 
             // cmbTipTreninga
             // 
+            this.cmbTipTreninga.DataSource = this.tipTreningaBindingSource;
+            this.cmbTipTreninga.DisplayMember = "naziv_tipa";
             this.cmbTipTreninga.FormattingEnabled = true;
             this.cmbTipTreninga.Location = new System.Drawing.Point(99, 142);
             this.cmbTipTreninga.Name = "cmbTipTreninga";
             this.cmbTipTreninga.Size = new System.Drawing.Size(121, 21);
             this.cmbTipTreninga.TabIndex = 12;
+            this.cmbTipTreninga.ValueMember = "id_tipa_treninga";
             // 
             // btnDodajTrening
             // 
@@ -127,47 +114,87 @@
             // 
             // dtpDatum
             // 
+            this.dtpDatum.CustomFormat = "yyyy-mm-dd HH:mm:ss";
+            this.dtpDatum.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDatum.Location = new System.Drawing.Point(99, 73);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(200, 20);
             this.dtpDatum.TabIndex = 14;
+            this.dtpDatum.Value = new System.DateTime(2019, 6, 14, 0, 0, 0, 0);
+            // 
+            // cmbKorisnik
+            // 
+            this.cmbKorisnik.DataSource = this.korisnikBindingSource;
+            this.cmbKorisnik.DisplayMember = "korisnicko_ime";
+            this.cmbKorisnik.FormattingEnabled = true;
+            this.cmbKorisnik.Location = new System.Drawing.Point(99, 173);
+            this.cmbKorisnik.Name = "cmbKorisnik";
+            this.cmbKorisnik.Size = new System.Drawing.Size(121, 21);
+            this.cmbKorisnik.TabIndex = 15;
+            this.cmbKorisnik.ValueMember = "id_korisnik";
+            // 
+            // _19008_DBDataSetPrimary
+            // 
+            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
+            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // korisnikBindingSource
+            // 
+            this.korisnikBindingSource.DataMember = "Korisnik";
+            this.korisnikBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            // 
+            // korisnikTableAdapter
+            // 
+            this.korisnikTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipTreningaBindingSource
+            // 
+            this.tipTreningaBindingSource.DataMember = "TipTreninga";
+            this.tipTreningaBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            // 
+            // tipTreningaTableAdapter
+            // 
+            this.tipTreningaTableAdapter.ClearBeforeFill = true;
             // 
             // FrmDodajIzmijeniTrening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 368);
+            this.Controls.Add(this.cmbKorisnik);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.btnDodajTrening);
             this.Controls.Add(this.cmbTipTreninga);
-            this.Controls.Add(this.txtKorisnik);
             this.Controls.Add(this.txtNapomena);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "FrmDodajIzmijeniTrening";
             this.Text = "FrmDodajIzmijeniTrening";
             this.Load += new System.EventHandler(this.FrmDodajIzmijeniTrening_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNapomena;
-        private System.Windows.Forms.TextBox txtKorisnik;
         private System.Windows.Forms.ComboBox cmbTipTreninga;
         private System.Windows.Forms.Button btnDodajTrening;
         private System.Windows.Forms.DateTimePicker dtpDatum;
+        private System.Windows.Forms.ComboBox cmbKorisnik;
+        private _19008_DBDataSetPrimary _19008_DBDataSetPrimary;
+        private System.Windows.Forms.BindingSource korisnikBindingSource;
+        private _19008_DBDataSetPrimaryTableAdapters.KorisnikTableAdapter korisnikTableAdapter;
+        private System.Windows.Forms.BindingSource tipTreningaBindingSource;
+        private _19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter tipTreningaTableAdapter;
     }
 }

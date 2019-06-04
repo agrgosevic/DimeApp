@@ -15,43 +15,40 @@ namespace Dime.Forme.Treninzi
         public FrmDodajIzmijeniTrening()
         {
             InitializeComponent();
-            PrikaziTipoveTreninga();
+            
         }
-
-        public void PrikaziTipoveTreninga()
-        {
-            List<TipTreninga> tipoviTreninga;
-            using (var db = new DimeEntities())
-            {
-                tipoviTreninga = db.TipoviTreninga.ToList();
-            }
-            cmbTipTreninga.DataSource = tipoviTreninga;
-        }
-
+        
         private void btnDodajTrening_Click(object sender, EventArgs e)
         {
-            DateTime datum_vrijeme = dtpDatum.Value;
+            
+            string v = $"{dtpDatum.Value.Hour}:{dtpDatum.Value.Minute}:{dtpDatum.Value.Second}";
+            TimeSpan vrijeme = TimeSpan.Parse(v);
+            string d = $"{dtpDatum.Value.Year}-{dtpDatum.Value.Month}-{dtpDatum.Value.Day}";
+            DateTime dat = DateTime.Parse(d);
             using (var db = new DimeEntities())
             {
-                Korisnik k = new Korisnik();
-                Trening noviTrening = new Trening
-                {
-                    datum = datum_vrijeme.Date,
-                    vrijeme = datum_vrijeme.TimeOfDay,
-                    napomena = txtNapomena.Text,
-                    tip_treninga = int.Parse(cmbTipTreninga.SelectedItem.ToString()),
-                    korisnik = k.id_korisnik
-                };
+                Trening noviTrening = new Trening();
+                noviTrening.datum = dat;
+                noviTrening.vrijeme = vrijeme;
+                noviTrening.napomena = txtNapomena.Text;
+                noviTrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
+                noviTrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
+
+
                 db.Treninzi.Add(noviTrening);
                 db.SaveChanges();
             }
             Close();
+
         }
 
         private void FrmDodajIzmijeniTrening_Load(object sender, EventArgs e)
         {
-            dtpDatum.Format = DateTimePickerFormat.Custom;
-            dtpDatum.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.TipTreninga' table. You can move, or remove it, as needed.
+            this.tipTreningaTableAdapter.Fill(this._19008_DBDataSetPrimary.TipTreninga);
+            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.Korisnik' table. You can move, or remove it, as needed.
+            this.korisnikTableAdapter.Fill(this._19008_DBDataSetPrimary.Korisnik);
+
         }
     }
 }

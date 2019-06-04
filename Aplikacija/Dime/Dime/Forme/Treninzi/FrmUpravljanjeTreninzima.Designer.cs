@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpravljanjeTreninzima));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnNoviTrening = new System.Windows.Forms.Button();
             this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,6 +49,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idtreningDataGridViewTextBoxColumn,
@@ -62,7 +64,7 @@
             this.dataGridView1.DataSource = this.treningBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(662, 219);
+            this.dataGridView1.Size = new System.Drawing.Size(656, 219);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnNoviTrening
@@ -84,35 +86,36 @@
             this.idtreningDataGridViewTextBoxColumn.DataPropertyName = "id_trening";
             this.idtreningDataGridViewTextBoxColumn.HeaderText = "id_trening";
             this.idtreningDataGridViewTextBoxColumn.Name = "idtreningDataGridViewTextBoxColumn";
+            this.idtreningDataGridViewTextBoxColumn.Visible = false;
             // 
             // datumDataGridViewTextBoxColumn
             // 
             this.datumDataGridViewTextBoxColumn.DataPropertyName = "datum";
-            this.datumDataGridViewTextBoxColumn.HeaderText = "datum";
+            this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
             this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
             // 
             // vrijemeDataGridViewTextBoxColumn
             // 
             this.vrijemeDataGridViewTextBoxColumn.DataPropertyName = "vrijeme";
-            this.vrijemeDataGridViewTextBoxColumn.HeaderText = "vrijeme";
+            this.vrijemeDataGridViewTextBoxColumn.HeaderText = "Vrijeme";
             this.vrijemeDataGridViewTextBoxColumn.Name = "vrijemeDataGridViewTextBoxColumn";
             // 
             // napomenaDataGridViewTextBoxColumn
             // 
             this.napomenaDataGridViewTextBoxColumn.DataPropertyName = "napomena";
-            this.napomenaDataGridViewTextBoxColumn.HeaderText = "napomena";
+            this.napomenaDataGridViewTextBoxColumn.HeaderText = "Napomena";
             this.napomenaDataGridViewTextBoxColumn.Name = "napomenaDataGridViewTextBoxColumn";
             // 
             // tiptreningaDataGridViewTextBoxColumn
             // 
             this.tiptreningaDataGridViewTextBoxColumn.DataPropertyName = "tip_treninga";
-            this.tiptreningaDataGridViewTextBoxColumn.HeaderText = "tip_treninga";
+            this.tiptreningaDataGridViewTextBoxColumn.HeaderText = "Tip treninga";
             this.tiptreningaDataGridViewTextBoxColumn.Name = "tiptreningaDataGridViewTextBoxColumn";
             // 
             // korisnikDataGridViewTextBoxColumn
             // 
             this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
-            this.korisnikDataGridViewTextBoxColumn.HeaderText = "korisnik";
+            this.korisnikDataGridViewTextBoxColumn.HeaderText = "Trener";
             this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
             // 
             // korisnikDataGridViewTextBoxColumn1
@@ -143,6 +146,7 @@
             this.ClientSize = new System.Drawing.Size(724, 433);
             this.Controls.Add(this.btnNoviTrening);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUpravljanjeTreninzima";
             this.Text = "FrmUpravljanjeTreninzima";
             this.Load += new System.EventHandler(this.FrmUpravljanjeTreninzima_Load);

@@ -36,6 +36,7 @@ namespace Dime.Forme.Treninzi
         {
             FrmDodajIzmijeniTrening forma = new FrmDodajIzmijeniTrening();
             forma.ShowDialog();
+            PrikaziSveTreninge();
         }
     }
 }
