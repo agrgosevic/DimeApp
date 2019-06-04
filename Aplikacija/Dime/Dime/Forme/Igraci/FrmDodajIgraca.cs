@@ -36,8 +36,6 @@ namespace Dime.Forme.Igraci
                     igrac.visina = int.Parse(txtVisina.Text);
                     igrac.tezina = int.Parse(txtTezina.Text);
                     igrac.broj = int.Parse(txtBroj.Text);
-                    db.Igraci.Add(igrac);
-                    db.SaveChanges();
                 }
                 else
                 {
@@ -61,7 +59,7 @@ namespace Dime.Forme.Igraci
             {
                 txtIme.Text = igracZaIzmjenu.ime;
                 txtPrezime.Text = igracZaIzmjenu.prezime;
-                dtpDatumRodenja.Value = igracZaIzmjenu.datum_rodenja;
+                //dtpDatumRodenja.Value = igracZaIzmjenu.datum_rodenja.  ;
                 txtVisina.Text = igracZaIzmjenu.visina.ToString();
                 txtTezina.Text = igracZaIzmjenu.tezina.ToString();
                 txtBroj.Text = igracZaIzmjenu.broj.ToString();

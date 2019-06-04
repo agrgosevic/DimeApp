@@ -25,18 +25,18 @@ namespace Dime
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Clanarina> Clanarinas { get; set; }
-        public virtual DbSet<ClanarinaIgraca> ClanarinaIgracas { get; set; }
-        public virtual DbSet<Igrac> Igracs { get; set; }
-        public virtual DbSet<Klub> Klubs { get; set; }
-        public virtual DbSet<Korisnik> Korisniks { get; set; }
-        public virtual DbSet<StatistikaIgraca> StatistikaIgracas { get; set; }
+        public virtual DbSet<Clanarina> Clanarine { get; set; }
+        public virtual DbSet<ClanarinaIgraca> ClanarineIgraca { get; set; }
+        public virtual DbSet<Igrac> Igraci { get; set; }
+        public virtual DbSet<Klub> Klubovi { get; set; }
+        public virtual DbSet<Korisnik> Korisnici { get; set; }
+        public virtual DbSet<StatistikaIgraca> StatistikeIgraca { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<TipTreninga> TipTreningas { get; set; }
-        public virtual DbSet<TipUtakmice> TipUtakmice1 { get; set; }
-        public virtual DbSet<Trening> Trenings { get; set; }
-        public virtual DbSet<TreningPrisustvo> TreningPrisustvoes { get; set; }
-        public virtual DbSet<UlogaKorisnika> UlogaKorisnikas { get; set; }
-        public virtual DbSet<Utakmica> Utakmicas { get; set; }
+        public virtual DbSet<TipTreninga> TipoviTreninga { get; set; }
+        public virtual DbSet<TipUtakmice> TipoviUtakmica { get; set; }
+        public virtual DbSet<Trening> Treninzi { get; set; }
+        public virtual DbSet<TreningPrisustvo> TreningPrisustva { get; set; }
+        public virtual DbSet<UlogaKorisnika> UlogeKorisnika { get; set; }
+        public virtual DbSet<Utakmica> Utakmice { get; set; }
     }
 }
