@@ -42,6 +42,7 @@
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtIme = new System.Windows.Forms.TextBox();
             this.dtpDatumRodenja = new System.Windows.Forms.DateTimePicker();
+            this.btnPomoc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -160,11 +161,25 @@
             this.dtpDatumRodenja.Size = new System.Drawing.Size(200, 20);
             this.dtpDatumRodenja.TabIndex = 47;
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPomoc.Location = new System.Drawing.Point(346, 232);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(33, 36);
+            this.btnPomoc.TabIndex = 48;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            this.btnPomoc.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.btnPomoc_HelpRequested);
+            // 
             // FrmDodajIgraca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 279);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.dtpDatumRodenja);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
@@ -182,6 +197,7 @@
             this.Name = "FrmDodajIgraca";
             this.Text = "FrmDodajIgraca";
             this.Load += new System.EventHandler(this.FrmDodajIgraca_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajIgraca_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +218,6 @@
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.TextBox txtIme;
         private System.Windows.Forms.DateTimePicker dtpDatumRodenja;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

@@ -72,5 +72,32 @@ namespace Dime.Forme.Igraci
         {
             Close();
         }
+
+        private void FrmDodajIgraca_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void btnPomoc_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void Pomoc()
+        {
+            FrmDodajIgracaPomoc forma = new FrmDodajIgracaPomoc();
+            this.Hide();
+            forma.ShowDialog();
+            this.Show();
+        }
+
     }
 }

@@ -23,19 +23,16 @@ namespace Dime
             prezime = prezimeKorisnika;
             lblImeKorisnika.Text = ime + " " + prezime;
         }
-
         private void btnStatistika_Click(object sender, EventArgs e)
         {
             FrmStatistikeUtakmica forma = new FrmStatistikeUtakmica();
             forma.ShowDialog();
         }
-
         private void btnAktivnosti_Click(object sender, EventArgs e)
         {
             FrmPopisAktivnosti forma = new FrmPopisAktivnosti();
             forma.ShowDialog();
         }
-
         private void btnIgraci_Click(object sender, EventArgs e)
         {
             FrmPopisIgraca forma = new FrmPopisIgraca();
@@ -43,7 +40,6 @@ namespace Dime
             forma.ShowDialog();
             this.Show();
         }
-
         private void btnKorisnici_Click(object sender, EventArgs e)
         {
             FrmPopisKorisnika forma = new FrmPopisKorisnika();
@@ -51,11 +47,38 @@ namespace Dime
             forma.ShowDialog();
             this.Show();
         }
-
         private void btnTreninzi_Click(object sender, EventArgs e)
         {
             FrmUpravljanjeTreninzima forma = new FrmUpravljanjeTreninzima();
             forma.ShowDialog();
+        }
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+        private void FrmGlavniIzbornik_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+        private void Pomoc()
+        {
+            FrmGlavniIzbornikPomoc forma = new FrmGlavniIzbornikPomoc();
+            this.Hide();
+            forma.ShowDialog();
+            this.Show();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmGlavniIzbornik_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
         }
     }
 }

@@ -47,13 +47,14 @@
             this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._19008_DBDataSet = new Dime._19008_DBDataSet();
             this.ulogaKorisnikaTableAdapter = new Dime._19008_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
+            this.btnPomoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(204, 219);
+            this.btnOdustani.Location = new System.Drawing.Point(204, 204);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(75, 23);
             this.btnOdustani.TabIndex = 32;
@@ -63,7 +64,7 @@
             // 
             // btnSpremi
             // 
-            this.btnSpremi.Location = new System.Drawing.Point(126, 219);
+            this.btnSpremi.Location = new System.Drawing.Point(126, 204);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(72, 23);
             this.btnSpremi.TabIndex = 31;
@@ -185,11 +186,24 @@
             // 
             this.ulogaKorisnikaTableAdapter.ClearBeforeFill = true;
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPomoc.Location = new System.Drawing.Point(11, 238);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(33, 36);
+            this.btnPomoc.TabIndex = 33;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmDodajKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 285);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.cmbUloga);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
@@ -208,6 +222,8 @@
             this.Name = "FrmDodajKorisnika";
             this.Text = "Korisnik";
             this.Load += new System.EventHandler(this.FrmDodajKorisnika_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajKorisnika_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajKorisnika_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -233,5 +249,6 @@
         private _19008_DBDataSet _19008_DBDataSet;
         private System.Windows.Forms.BindingSource ulogaKorisnikaBindingSource;
         private _19008_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter ulogaKorisnikaTableAdapter;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

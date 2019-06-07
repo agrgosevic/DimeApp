@@ -56,6 +56,7 @@
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(150, 27);
             this.txtKorisnickoIme.TabIndex = 2;
+            this.txtKorisnickoIme.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKorisnickoIme_KeyDown);
             // 
             // label1
             // 
@@ -94,6 +95,7 @@
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(150, 27);
             this.txtLozinka.TabIndex = 3;
+            this.txtLozinka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLozinka_KeyDown);
             // 
             // label3
             // 

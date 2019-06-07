@@ -67,3 +67,8 @@ C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Form
 C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Prijava.FrmPrijavaKorisnikaPomoc.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Igraci.FrmDodajIgraca.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Prijava.FrmPrijavaKorisnikaPomoc.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Igraci.FrmDodajIgracaPomoc.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Igraci.FrmPopisIgracaPomoc.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Korisnici.FrmDodajKorisnikaPomoc.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Korisnici.FrmPopisKorisnikaPomoc.resources
+C:\Users\Cvitko\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.FrmGlavniIzbornikPomoc.resources

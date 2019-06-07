@@ -74,5 +74,27 @@ namespace Dime.Forme
         {
             Close();
         }
+        public void Pomoc()
+        {
+            Korisnici.FrmDodajKorisnikaPomoc forma = new Korisnici.FrmDodajKorisnikaPomoc();
+            this.Hide();
+            forma.ShowDialog();
+            this.Show();
+        }
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+        private void FrmDodajKorisnika_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+        private void FrmDodajKorisnika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
     }
 }

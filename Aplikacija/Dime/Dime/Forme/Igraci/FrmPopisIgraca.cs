@@ -76,5 +76,30 @@ namespace Dime.Forme
                 }
             }
         }
+
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmPopisIgraca_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void FrmPopisIgraca_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+        private void Pomoc()
+        {
+            Igraci.FrmPopisIgracaPomoc forma = new Igraci.FrmPopisIgracaPomoc();
+            this.Hide();
+            forma.ShowDialog();
+            this.Show();
+        }
     }
 }

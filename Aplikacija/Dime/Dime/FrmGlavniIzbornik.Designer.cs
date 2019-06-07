@@ -39,6 +39,7 @@
             this.btnStatistika = new System.Windows.Forms.Button();
             this.btnTreninzi = new System.Windows.Forms.Button();
             this.btnIgraci = new System.Windows.Forms.Button();
+            this.btnOdjava = new System.Windows.Forms.Button();
             this.grpKorisnik.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +85,7 @@
             this.btnPomoc.TabIndex = 2;
             this.btnPomoc.Text = "? (F1)";
             this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
             // 
             // btnAktivnosti
             // 
@@ -180,11 +182,22 @@
             this.btnIgraci.UseVisualStyleBackColor = true;
             this.btnIgraci.Click += new System.EventHandler(this.btnIgraci_Click);
             // 
+            // btnOdjava
+            // 
+            this.btnOdjava.Location = new System.Drawing.Point(525, 348);
+            this.btnOdjava.Name = "btnOdjava";
+            this.btnOdjava.Size = new System.Drawing.Size(75, 23);
+            this.btnOdjava.TabIndex = 9;
+            this.btnOdjava.Text = "Odjava";
+            this.btnOdjava.UseVisualStyleBackColor = true;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
+            // 
             // FrmGlavniIzbornik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 352);
+            this.ClientSize = new System.Drawing.Size(612, 383);
+            this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnAktivnosti);
             this.Controls.Add(this.btnUtakmice);
             this.Controls.Add(this.btnKorisnici);
@@ -200,6 +213,8 @@
             this.Name = "FrmGlavniIzbornik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dime";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmGlavniIzbornik_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGlavniIzbornik_KeyDown);
             this.grpKorisnik.ResumeLayout(false);
             this.grpKorisnik.PerformLayout();
             this.ResumeLayout(false);
@@ -219,6 +234,7 @@
         private System.Windows.Forms.Button btnUtakmice;
         private System.Windows.Forms.Button btnAktivnosti;
         private System.Windows.Forms.Label lblImeKorisnika;
+        private System.Windows.Forms.Button btnOdjava;
     }
 }
 

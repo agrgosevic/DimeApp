@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dime.Forme.Korisnici
+namespace Dime
 {
-    public partial class FrmDodajKorisnikaPomoc : Form
+    public partial class FrmGlavniIzbornikPomoc : Form
     {
-        public FrmDodajKorisnikaPomoc()
+        public FrmGlavniIzbornikPomoc()
         {
             InitializeComponent();
         }
 
-        private void FrmDodajKorisnikaPomoc_KeyDown(object sender, KeyEventArgs e)
+        private void FrmGlavniIzbornikPomoc_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {

@@ -34,9 +34,6 @@
             this.btnObrisiIgraca = new System.Windows.Forms.Button();
             this.btnDodajIgraca = new System.Windows.Forms.Button();
             this.dgvPopisIgraca = new System.Windows.Forms.DataGridView();
-            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
-            this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
             this.idigracDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +41,10 @@
             this.visinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tezinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
+            this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
+            this.btnPomoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisIgraca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -95,22 +96,9 @@
             this.dgvPopisIgraca.DataSource = this.igracBindingSource;
             this.dgvPopisIgraca.Location = new System.Drawing.Point(9, 12);
             this.dgvPopisIgraca.Name = "dgvPopisIgraca";
+            this.dgvPopisIgraca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPopisIgraca.Size = new System.Drawing.Size(701, 426);
             this.dgvPopisIgraca.TabIndex = 5;
-            // 
-            // igracBindingSource
-            // 
-            this.igracBindingSource.DataMember = "Igrac";
-            this.igracBindingSource.DataSource = this._19008_DBDataSetPrimary;
-            // 
-            // _19008_DBDataSetPrimary
-            // 
-            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
-            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // igracTableAdapter
-            // 
-            this.igracTableAdapter.ClearBeforeFill = true;
             // 
             // idigracDataGridViewTextBoxColumn
             // 
@@ -156,11 +144,38 @@
             this.brojDataGridViewTextBoxColumn.HeaderText = "Broj";
             this.brojDataGridViewTextBoxColumn.Name = "brojDataGridViewTextBoxColumn";
             // 
+            // igracBindingSource
+            // 
+            this.igracBindingSource.DataMember = "Igrac";
+            this.igracBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            // 
+            // _19008_DBDataSetPrimary
+            // 
+            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
+            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // igracTableAdapter
+            // 
+            this.igracTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPomoc.Location = new System.Drawing.Point(756, 403);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(33, 36);
+            this.btnPomoc.TabIndex = 9;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmPopisIgraca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.btnUrediIgraca);
             this.Controls.Add(this.btnObrisiIgraca);
             this.Controls.Add(this.btnDodajIgraca);
@@ -169,6 +184,8 @@
             this.Name = "FrmPopisIgraca";
             this.Text = "Igrači";
             this.Load += new System.EventHandler(this.FrmPopisIgraca_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmPopisIgraca_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmPopisIgraca_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisIgraca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
@@ -192,5 +209,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn visinaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tezinaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn brojDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

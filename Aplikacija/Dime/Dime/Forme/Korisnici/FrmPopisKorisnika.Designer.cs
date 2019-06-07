@@ -33,11 +33,11 @@
             this.dgvPopisKorisnika = new System.Windows.Forms.DataGridView();
             this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._19008_DBDataSet = new Dime._19008_DBDataSet();
-            this.korisnikBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.btnDodajKorisnika = new System.Windows.Forms.Button();
             this.btnObrisiKorisnika = new System.Windows.Forms.Button();
             this.btnUrediKorisnika = new System.Windows.Forms.Button();
             this.ulogaKorisnikaTableAdapter = new Dime._19008_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
+            this.btnPomoc = new System.Windows.Forms.Button();
             this.idkorisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +48,7 @@
             this.ulogaKorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treninziDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisKorisnika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSet)).BeginInit();
@@ -73,6 +74,7 @@
             this.dgvPopisKorisnika.DataSource = this.korisnikBindingSource2;
             this.dgvPopisKorisnika.Location = new System.Drawing.Point(12, 12);
             this.dgvPopisKorisnika.Name = "dgvPopisKorisnika";
+            this.dgvPopisKorisnika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPopisKorisnika.Size = new System.Drawing.Size(701, 426);
             this.dgvPopisKorisnika.TabIndex = 0;
             this.dgvPopisKorisnika.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPopisKorisnika_DataError);
@@ -86,10 +88,6 @@
             // 
             this._19008_DBDataSet.DataSetName = "_19008_DBDataSet";
             this._19008_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // korisnikBindingSource2
-            // 
-            this.korisnikBindingSource2.DataSource = typeof(Dime.Korisnik);
             // 
             // btnDodajKorisnika
             // 
@@ -124,6 +122,18 @@
             // ulogaKorisnikaTableAdapter
             // 
             this.ulogaKorisnikaTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPomoc.Location = new System.Drawing.Point(756, 403);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(33, 36);
+            this.btnPomoc.TabIndex = 7;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
             // 
             // idkorisnikDataGridViewTextBoxColumn
             // 
@@ -196,11 +206,16 @@
             this.utakmiceDataGridViewTextBoxColumn.Name = "utakmiceDataGridViewTextBoxColumn";
             this.utakmiceDataGridViewTextBoxColumn.Visible = false;
             // 
+            // korisnikBindingSource2
+            // 
+            this.korisnikBindingSource2.DataSource = typeof(Dime.Korisnik);
+            // 
             // FrmPopisKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.btnUrediKorisnika);
             this.Controls.Add(this.btnObrisiKorisnika);
             this.Controls.Add(this.btnDodajKorisnika);
@@ -209,6 +224,8 @@
             this.Name = "FrmPopisKorisnika";
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.FrmPopisKorisnika_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmPopisKorisnika_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmPopisKorisnika_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisKorisnika)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSet)).EndInit();
@@ -237,5 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ulogaKorisnikaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn treninziDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn utakmiceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

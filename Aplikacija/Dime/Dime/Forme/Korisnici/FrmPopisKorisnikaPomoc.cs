@@ -16,5 +16,13 @@ namespace Dime.Forme.Korisnici
         {
             InitializeComponent();
         }
+
+        private void FrmPopisKorisnikaPomoc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

@@ -153,6 +153,12 @@
     <Compile Include="FrmGlavniIzbornik.Designer.cs">
       <DependentUpon>FrmGlavniIzbornik.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGlavniIzbornikPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGlavniIzbornikPomoc.Designer.cs">
+      <DependentUpon>FrmGlavniIzbornikPomoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Igrac.cs">
       <DependentUpon>DimeModel.tt</DependentUpon>
     </Compile>
@@ -213,6 +219,12 @@
     <EmbeddedResource Include="Forme\Igraci\FrmDodajIgraca.resx">
       <DependentUpon>FrmDodajIgraca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Igraci\FrmDodajIgracaPomoc.resx">
+      <DependentUpon>FrmDodajIgracaPomoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Igraci\FrmPopisIgracaPomoc.resx">
+      <DependentUpon>FrmPopisIgracaPomoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Korisnici\FrmDodajKorisnika.resx">
       <DependentUpon>FrmDodajKorisnika.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,8 +234,14 @@
     <EmbeddedResource Include="Forme\Igraci\FrmPopisIgraca.resx">
       <DependentUpon>FrmPopisIgraca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Korisnici\FrmDodajKorisnikaPomoc.resx">
+      <DependentUpon>FrmDodajKorisnikaPomoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Korisnici\FrmPopisKorisnika.resx">
       <DependentUpon>FrmPopisKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Korisnici\FrmPopisKorisnikaPomoc.resx">
+      <DependentUpon>FrmPopisKorisnikaPomoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Statistika\FrmStatistikeUtakmica.resx">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
@@ -236,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGlavniIzbornik.resx">
       <DependentUpon>FrmGlavniIzbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGlavniIzbornikPomoc.resx">
+      <DependentUpon>FrmGlavniIzbornikPomoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava\FrmPrijavaKorisnika.resx">
       <DependentUpon>FrmPrijavaKorisnika.cs</DependentUpon>
