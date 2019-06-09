@@ -37,5 +37,27 @@ namespace Dime.Forme.Utakmice
         {
             PrikaziSveUtakmice();
         }
+
+        private void btnIzmijeniUtakmicu_Click(object sender, EventArgs e)
+        {
+            FrmDodajIzmijeniUtakmicu forma = new FrmDodajIzmijeniUtakmicu(utakmicaBindingSource.Current as Utakmica);
+            forma.ShowDialog();
+            PrikaziSveUtakmice();
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            Utakmica selektiranaUtakmica = utakmicaBindingSource.Current as Utakmica;
+            if (selektiranaUtakmica != null)
+            {
+                using (var db = new DimeEntities())
+                {
+                    db.Utakmice.Attach(selektiranaUtakmica);
+                    db.Utakmice.Remove(selektiranaUtakmica);
+                    db.SaveChanges();
+                }
+                PrikaziSveUtakmice();
+            }
+        }
     }
 }

@@ -12,9 +12,31 @@ namespace Dime.Forme.Utakmice
 {
     public partial class FrmDodajIzmijeniUtakmicu : Form
     {
+        private Utakmica odabranaUtakmica;
         public FrmDodajIzmijeniUtakmicu()
         {
             InitializeComponent();
+        }
+
+        public FrmDodajIzmijeniUtakmicu(Utakmica utakmica)
+        {
+            InitializeComponent();
+            odabranaUtakmica = utakmica;
+            PopuniPodatkeOdabranomUtakmicom();
+        }
+
+        private void PopuniPodatkeOdabranomUtakmicom()
+        {
+            if (odabranaUtakmica != null)
+            {
+                dtpDatumVrijeme.Value = odabranaUtakmica.datum;
+                txtOpis.Text = odabranaUtakmica.opis;
+                txtZabijeniPoeni.Text = odabranaUtakmica.zabijeni_poeni.ToString();
+                txtPrimljeniPoeni.Text = odabranaUtakmica.primljeni_poeni.ToString();
+                cmbTipUtakmice.Text = odabranaUtakmica.tip_utakmice.ToString();
+                cmbProtivnik.Text = odabranaUtakmica.protivnik.ToString();
+                cmbKorisnik.Text = odabranaUtakmica.korisnik.ToString();
+            }
         }
 
         private void FrmDodajIzmijeniUtakmicu_Load(object sender, EventArgs e)
@@ -36,18 +58,36 @@ namespace Dime.Forme.Utakmice
             DateTime datum = DateTime.Parse(d);
             using (var db = new DimeEntities())
             {
-                Utakmica novaTekma = new Utakmica();
-                novaTekma.datum = datum;
-                novaTekma.vrijeme = vrijeme;
-                novaTekma.opis = txtOpis.Text;
-                novaTekma.zabijeni_poeni = int.Parse(txtZabijeniPoeni.Text);
-                novaTekma.primljeni_poeni = int.Parse(txtPrimljeniPoeni.Text);
-                novaTekma.tip_utakmice = int.Parse(cmbTipUtakmice.SelectedValue.ToString());
-                novaTekma.protivnik = int.Parse(cmbProtivnik.SelectedValue.ToString());
-                novaTekma.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
-                db.Utakmice.Add(novaTekma);
-                db.SaveChanges();
+                if (odabranaUtakmica == null)
+                {
+                    Utakmica novaTekma = new Utakmica();
+                    novaTekma.datum = datum;
+                    novaTekma.vrijeme = vrijeme;
+                    novaTekma.opis = txtOpis.Text;
+                    novaTekma.zabijeni_poeni = int.Parse(txtZabijeniPoeni.Text);
+                    novaTekma.primljeni_poeni = int.Parse(txtPrimljeniPoeni.Text);
+                    novaTekma.tip_utakmice = int.Parse(cmbTipUtakmice.SelectedValue.ToString());
+                    novaTekma.protivnik = int.Parse(cmbProtivnik.SelectedValue.ToString());
+                    novaTekma.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
+                    db.Utakmice.Add(novaTekma);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    db.Utakmice.Attach(odabranaUtakmica);
+                    odabranaUtakmica.datum = datum;
+                    odabranaUtakmica.vrijeme = vrijeme;
+                    odabranaUtakmica.opis = txtOpis.Text;
+                    odabranaUtakmica.zabijeni_poeni= int.Parse(txtZabijeniPoeni.Text);
+                    odabranaUtakmica.primljeni_poeni = int.Parse(txtPrimljeniPoeni.Text);
+                    odabranaUtakmica.tip_utakmice = int.Parse(cmbTipUtakmice.SelectedValue.ToString());
+                    odabranaUtakmica.protivnik = int.Parse(cmbProtivnik.SelectedValue.ToString());
+                    odabranaUtakmica.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
+                    db.SaveChanges();
+                }
+                
             }
+            Close();
         }
     }
 }

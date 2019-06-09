@@ -43,6 +43,7 @@
             this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.korisnikTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.KorisnikTableAdapter();
             this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
+            this.btnOdustani = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
@@ -156,11 +157,22 @@
             // 
             this.tipTreningaTableAdapter.ClearBeforeFill = true;
             // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Location = new System.Drawing.Point(101, 239);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(121, 36);
+            this.btnOdustani.TabIndex = 16;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
             // FrmDodajIzmijeniTrening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 297);
+            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.cmbKorisnik);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.btnSpremi);
@@ -196,5 +208,6 @@
         private _19008_DBDataSetPrimaryTableAdapters.KorisnikTableAdapter korisnikTableAdapter;
         private System.Windows.Forms.BindingSource tipTreningaBindingSource;
         private _19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter tipTreningaTableAdapter;
+        private System.Windows.Forms.Button btnOdustani;
     }
 }

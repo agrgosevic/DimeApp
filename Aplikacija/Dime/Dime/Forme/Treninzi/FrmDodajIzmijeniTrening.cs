@@ -78,5 +78,10 @@ namespace Dime.Forme.Treninzi
             this.korisnikTableAdapter.Fill(this._19008_DBDataSetPrimary.Korisnik);
 
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

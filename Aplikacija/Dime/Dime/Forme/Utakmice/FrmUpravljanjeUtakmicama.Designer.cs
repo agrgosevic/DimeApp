@@ -31,7 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnDodajUtakmicu = new System.Windows.Forms.Button();
-            this.utakmicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnIzmijeniUtakmicu = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.idutakmicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +46,7 @@
             this.korisniciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statistikeIgracaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipUtakmiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.utakmicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utakmicaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -84,9 +86,25 @@
             this.btnDodajUtakmicu.UseVisualStyleBackColor = true;
             this.btnDodajUtakmicu.Click += new System.EventHandler(this.btnDodajUtakmicu_Click);
             // 
-            // utakmicaBindingSource
+            // btnIzmijeniUtakmicu
             // 
-            this.utakmicaBindingSource.DataSource = typeof(Dime.Utakmica);
+            this.btnIzmijeniUtakmicu.Location = new System.Drawing.Point(405, 279);
+            this.btnIzmijeniUtakmicu.Name = "btnIzmijeniUtakmicu";
+            this.btnIzmijeniUtakmicu.Size = new System.Drawing.Size(131, 42);
+            this.btnIzmijeniUtakmicu.TabIndex = 2;
+            this.btnIzmijeniUtakmicu.Text = "Izmijeni";
+            this.btnIzmijeniUtakmicu.UseVisualStyleBackColor = true;
+            this.btnIzmijeniUtakmicu.Click += new System.EventHandler(this.btnIzmijeniUtakmicu_Click);
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(845, 279);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(124, 42);
+            this.btnObrisi.TabIndex = 3;
+            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // idutakmicaDataGridViewTextBoxColumn
             // 
@@ -171,11 +189,17 @@
             this.tipUtakmiceDataGridViewTextBoxColumn1.Name = "tipUtakmiceDataGridViewTextBoxColumn1";
             this.tipUtakmiceDataGridViewTextBoxColumn1.Visible = false;
             // 
+            // utakmicaBindingSource
+            // 
+            this.utakmicaBindingSource.DataSource = typeof(Dime.Utakmica);
+            // 
             // FrmUpravljanjeUtakmicama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 345);
+            this.Controls.Add(this.btnObrisi);
+            this.Controls.Add(this.btnIzmijeniUtakmicu);
             this.Controls.Add(this.btnDodajUtakmicu);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmUpravljanjeUtakmicama";
@@ -205,5 +229,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn korisniciDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statistikeIgracaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipUtakmiceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button btnIzmijeniUtakmicu;
+        private System.Windows.Forms.Button btnObrisi;
     }
 }
