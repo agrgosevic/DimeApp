@@ -147,6 +147,18 @@
     <Compile Include="Forme\Treninzi\FrmUpravljanjeTreninzima.Designer.cs">
       <DependentUpon>FrmUpravljanjeTreninzima.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicu.Designer.cs">
+      <DependentUpon>FrmDodajIzmijeniUtakmicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Utakmice\FrmUpravljanjeUtakmicama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Utakmice\FrmUpravljanjeUtakmicama.Designer.cs">
+      <DependentUpon>FrmUpravljanjeUtakmicama.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGlavniIzbornik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +264,12 @@
     <EmbeddedResource Include="Forme\Treninzi\FrmUpravljanjeTreninzima.resx">
       <DependentUpon>FrmUpravljanjeTreninzima.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicu.resx">
+      <DependentUpon>FrmDodajIzmijeniUtakmicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Utakmice\FrmUpravljanjeUtakmicama.resx">
+      <DependentUpon>FrmUpravljanjeUtakmicama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGlavniIzbornik.resx">
       <DependentUpon>FrmGlavniIzbornik.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,8 +301,10 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Korisnik.datasource" />
+    <None Include="Properties\DataSources\TipUtakmice.datasource" />
     <None Include="Properties\DataSources\Trening.datasource" />
     <None Include="Properties\DataSources\UlogaKorisnika.datasource" />
+    <None Include="Properties\DataSources\Utakmica.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -341,8 +361,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forme\Utakmice\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

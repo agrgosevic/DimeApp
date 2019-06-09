@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDodajUtakmicu = new System.Windows.Forms.Button();
             this.utakmicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idutakmicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,6 @@
             this.korisniciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statistikeIgracaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipUtakmiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDodajUtakmicu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utakmicaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,16 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(960, 241);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btnDodajUtakmicu
+            // 
+            this.btnDodajUtakmicu.Location = new System.Drawing.Point(12, 279);
+            this.btnDodajUtakmicu.Name = "btnDodajUtakmicu";
+            this.btnDodajUtakmicu.Size = new System.Drawing.Size(142, 42);
+            this.btnDodajUtakmicu.TabIndex = 1;
+            this.btnDodajUtakmicu.Text = "Dodaj utakmicu";
+            this.btnDodajUtakmicu.UseVisualStyleBackColor = true;
+            this.btnDodajUtakmicu.Click += new System.EventHandler(this.btnDodajUtakmicu_Click);
             // 
             // utakmicaBindingSource
             // 
@@ -159,15 +169,7 @@
             this.tipUtakmiceDataGridViewTextBoxColumn1.DataPropertyName = "TipUtakmice";
             this.tipUtakmiceDataGridViewTextBoxColumn1.HeaderText = "TipUtakmice";
             this.tipUtakmiceDataGridViewTextBoxColumn1.Name = "tipUtakmiceDataGridViewTextBoxColumn1";
-            // 
-            // btnDodajUtakmicu
-            // 
-            this.btnDodajUtakmicu.Location = new System.Drawing.Point(12, 279);
-            this.btnDodajUtakmicu.Name = "btnDodajUtakmicu";
-            this.btnDodajUtakmicu.Size = new System.Drawing.Size(142, 42);
-            this.btnDodajUtakmicu.TabIndex = 1;
-            this.btnDodajUtakmicu.Text = "Dodaj utakmicu";
-            this.btnDodajUtakmicu.UseVisualStyleBackColor = true;
+            this.tipUtakmiceDataGridViewTextBoxColumn1.Visible = false;
             // 
             // FrmUpravljanjeUtakmicama
             // 
@@ -178,6 +180,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmUpravljanjeUtakmicama";
             this.Text = "FrmDodajIzmijeniUtakmicu";
+            this.Load += new System.EventHandler(this.FrmUpravljanjeUtakmicama_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utakmicaBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -187,6 +190,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource utakmicaBindingSource;
+        private System.Windows.Forms.Button btnDodajUtakmicu;
         private System.Windows.Forms.DataGridViewTextBoxColumn idutakmicaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemeDataGridViewTextBoxColumn;
@@ -200,7 +205,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn korisniciDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statistikeIgracaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipUtakmiceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource utakmicaBindingSource;
-        private System.Windows.Forms.Button btnDodajUtakmicu;
     }
 }

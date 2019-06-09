@@ -117,6 +117,7 @@
             this.btnUtakmice.Text = "Utakmice";
             this.btnUtakmice.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnUtakmice.UseVisualStyleBackColor = true;
+            this.btnUtakmice.Click += new System.EventHandler(this.btnUtakmice_Click);
             // 
             // btnKorisnici
             // 

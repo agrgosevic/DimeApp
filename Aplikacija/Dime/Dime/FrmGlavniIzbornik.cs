@@ -1,5 +1,6 @@
 ﻿using Dime.Forme;
 using Dime.Forme.Treninzi;
+using Dime.Forme.Utakmice;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,6 +80,12 @@ namespace Dime
             {
                 Close();
             }
+        }
+
+        private void btnUtakmice_Click(object sender, EventArgs e)
+        {
+            FrmUpravljanjeUtakmicama forma = new FrmUpravljanjeUtakmicama();
+            forma.ShowDialog();
         }
     }
 }

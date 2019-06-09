@@ -16,5 +16,26 @@ namespace Dime.Forme.Utakmice
         {
             InitializeComponent();
         }
+
+        private void PrikaziSveUtakmice()
+        {
+            using (var db = new DimeEntities())
+            {
+                var upit = from u in db.Utakmice select u;
+                utakmicaBindingSource.DataSource = upit.ToList();
+            }
+        }
+
+        private void btnDodajUtakmicu_Click(object sender, EventArgs e)
+        {
+            FrmDodajIzmijeniUtakmicu forma = new FrmDodajIzmijeniUtakmicu();
+            forma.ShowDialog();
+            PrikaziSveUtakmice();
+        }
+
+        private void FrmUpravljanjeUtakmicama_Load(object sender, EventArgs e)
+        {
+            PrikaziSveUtakmice();
+        }
     }
 }
