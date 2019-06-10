@@ -44,6 +44,7 @@
             this.korisnikTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.KorisnikTableAdapter();
             this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
             this.btnOdustani = new System.Windows.Forms.Button();
+            this.btnPomoć = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
@@ -167,11 +168,22 @@
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
+            // btnPomoć
+            // 
+            this.btnPomoć.Location = new System.Drawing.Point(290, 249);
+            this.btnPomoć.Name = "btnPomoć";
+            this.btnPomoć.Size = new System.Drawing.Size(48, 36);
+            this.btnPomoć.TabIndex = 17;
+            this.btnPomoć.Text = "Pomoć (F1)";
+            this.btnPomoć.UseVisualStyleBackColor = true;
+            this.btnPomoć.Click += new System.EventHandler(this.btnPomoć_Click);
+            // 
             // FrmDodajIzmijeniTrening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 297);
+            this.Controls.Add(this.btnPomoć);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.cmbKorisnik);
             this.Controls.Add(this.dtpDatum);
@@ -185,6 +197,8 @@
             this.Name = "FrmDodajIzmijeniTrening";
             this.Text = "FrmDodajIzmijeniTrening";
             this.Load += new System.EventHandler(this.FrmDodajIzmijeniTrening_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajIzmijeniTrening_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajIzmijeniTrening_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
@@ -209,5 +223,6 @@
         private System.Windows.Forms.BindingSource tipTreningaBindingSource;
         private _19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter tipTreningaTableAdapter;
         private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Button btnPomoć;
     }
 }

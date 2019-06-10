@@ -83,5 +83,29 @@ namespace Dime.Forme.Treninzi
         {
             Close();
         }
+
+        private void btnPomoć_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmDodajIzmijeniTrening_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void Pomoc()
+        {
+            FrmDodajIzmijeniTreningPomoć formaPomoc = new FrmDodajIzmijeniTreningPomoć();
+            formaPomoc.ShowDialog();
+        }
+
+        private void FrmDodajIzmijeniTrening_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
     }
 }

@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace Dime.Forme.Treninzi
 {
-    public partial class FrmUpravljanjeTreninzimaPomoc : Form
+    public partial class FrmDodajIzmijeniTreningPomoć : Form
     {
-        public FrmUpravljanjeTreninzimaPomoc()
+        public FrmDodajIzmijeniTreningPomoć()
         {
             InitializeComponent();
         }
 
-        private void FrmUpravljanjeTreninzimaPomoc_KeyDown(object sender, KeyEventArgs e)
+        private void FrmDodajIzmijeniTreningPomoć_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
                 Close();
             }
         }
-
-        
     }
 }
