@@ -165,6 +165,12 @@
     <Compile Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicu.Designer.cs">
       <DependentUpon>FrmDodajIzmijeniUtakmicu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicuPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicuPomoc.Designer.cs">
+      <DependentUpon>FrmDodajIzmijeniUtakmicuPomoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Utakmice\FrmUpravljanjeUtakmicama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicu.resx">
       <DependentUpon>FrmDodajIzmijeniUtakmicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicuPomoc.resx">
+      <DependentUpon>FrmDodajIzmijeniUtakmicuPomoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Utakmice\FrmUpravljanjeUtakmicama.resx">
       <DependentUpon>FrmUpravljanjeUtakmicama.cs</DependentUpon>

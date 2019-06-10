@@ -89,5 +89,34 @@ namespace Dime.Forme.Utakmice
             }
             Close();
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnPomoć_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmDodajIzmijeniUtakmicu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void Pomoc()
+        {
+            FrmDodajIzmijeniUtakmicuPomoc formaPomoc = new FrmDodajIzmijeniUtakmicuPomoc();
+            formaPomoc.ShowDialog();
+        }
+
+        private void FrmDodajIzmijeniUtakmicu_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
     }
 }

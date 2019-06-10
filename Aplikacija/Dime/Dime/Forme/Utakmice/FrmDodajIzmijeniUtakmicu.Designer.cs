@@ -51,6 +51,8 @@
             this.cmbProtivnik = new System.Windows.Forms.ComboBox();
             this.klubBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klubTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.KlubTableAdapter();
+            this.btnPomoć = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tipUtakmiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
@@ -225,11 +227,33 @@
             // 
             this.klubTableAdapter.ClearBeforeFill = true;
             // 
+            // btnPomoć
+            // 
+            this.btnPomoć.Location = new System.Drawing.Point(295, 349);
+            this.btnPomoć.Name = "btnPomoć";
+            this.btnPomoć.Size = new System.Drawing.Size(48, 36);
+            this.btnPomoć.TabIndex = 18;
+            this.btnPomoć.Text = "Pomoć (F1)";
+            this.btnPomoć.UseVisualStyleBackColor = true;
+            this.btnPomoć.Click += new System.EventHandler(this.btnPomoć_Click);
+            // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Location = new System.Drawing.Point(120, 353);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(121, 32);
+            this.btnOdustani.TabIndex = 19;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
             // FrmDodajIzmijeniUtakmicu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 397);
+            this.Controls.Add(this.btnOdustani);
+            this.Controls.Add(this.btnPomoć);
             this.Controls.Add(this.cmbProtivnik);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.cmbKorisnik);
@@ -248,6 +272,8 @@
             this.Name = "FrmDodajIzmijeniUtakmicu";
             this.Text = "FrmDodajIzmijeniUtakmicu";
             this.Load += new System.EventHandler(this.FrmDodajIzmijeniUtakmicu_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajIzmijeniUtakmicu_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajIzmijeniUtakmicu_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.tipUtakmiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
@@ -281,5 +307,7 @@
         private System.Windows.Forms.ComboBox cmbProtivnik;
         private System.Windows.Forms.BindingSource klubBindingSource;
         private _19008_DBDataSetPrimaryTableAdapters.KlubTableAdapter klubTableAdapter;
+        private System.Windows.Forms.Button btnPomoć;
+        private System.Windows.Forms.Button btnOdustani;
     }
 }
