@@ -34,6 +34,7 @@
             this.btnNoviTrening = new System.Windows.Forms.Button();
             this.btnIzmijeniTrening = new System.Windows.Forms.Button();
             this.btnObrisiTrening = new System.Windows.Forms.Button();
+            this.btnPomoć = new System.Windows.Forms.Button();
             this.idtreningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,7 +72,7 @@
             // 
             // btnNoviTrening
             // 
-            this.btnNoviTrening.Location = new System.Drawing.Point(12, 263);
+            this.btnNoviTrening.Location = new System.Drawing.Point(12, 253);
             this.btnNoviTrening.Name = "btnNoviTrening";
             this.btnNoviTrening.Size = new System.Drawing.Size(113, 40);
             this.btnNoviTrening.TabIndex = 1;
@@ -81,7 +82,7 @@
             // 
             // btnIzmijeniTrening
             // 
-            this.btnIzmijeniTrening.Location = new System.Drawing.Point(293, 263);
+            this.btnIzmijeniTrening.Location = new System.Drawing.Point(294, 253);
             this.btnIzmijeniTrening.Name = "btnIzmijeniTrening";
             this.btnIzmijeniTrening.Size = new System.Drawing.Size(107, 40);
             this.btnIzmijeniTrening.TabIndex = 2;
@@ -91,13 +92,23 @@
             // 
             // btnObrisiTrening
             // 
-            this.btnObrisiTrening.Location = new System.Drawing.Point(567, 263);
+            this.btnObrisiTrening.Location = new System.Drawing.Point(567, 253);
             this.btnObrisiTrening.Name = "btnObrisiTrening";
             this.btnObrisiTrening.Size = new System.Drawing.Size(101, 40);
             this.btnObrisiTrening.TabIndex = 3;
             this.btnObrisiTrening.Text = "Obriši";
             this.btnObrisiTrening.UseVisualStyleBackColor = true;
             this.btnObrisiTrening.Click += new System.EventHandler(this.btnObrisiTrening_Click);
+            // 
+            // btnPomoć
+            // 
+            this.btnPomoć.Location = new System.Drawing.Point(620, 306);
+            this.btnPomoć.Name = "btnPomoć";
+            this.btnPomoć.Size = new System.Drawing.Size(48, 36);
+            this.btnPomoć.TabIndex = 4;
+            this.btnPomoć.Text = "Pomoć (F1)";
+            this.btnPomoć.UseVisualStyleBackColor = true;
+            this.btnPomoć.Click += new System.EventHandler(this.btnPomoć_Click);
             // 
             // idtreningDataGridViewTextBoxColumn
             // 
@@ -165,7 +176,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 330);
+            this.ClientSize = new System.Drawing.Size(678, 354);
+            this.Controls.Add(this.btnPomoć);
             this.Controls.Add(this.btnObrisiTrening);
             this.Controls.Add(this.btnIzmijeniTrening);
             this.Controls.Add(this.btnNoviTrening);
@@ -174,6 +186,8 @@
             this.Name = "FrmUpravljanjeTreninzima";
             this.Text = "FrmUpravljanjeTreninzima";
             this.Load += new System.EventHandler(this.FrmUpravljanjeTreninzima_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmUpravljanjeTreninzima_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUpravljanjeTreninzima_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -196,5 +210,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn treningPrisustvaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnIzmijeniTrening;
         private System.Windows.Forms.Button btnObrisiTrening;
+        private System.Windows.Forms.Button btnPomoć;
     }
 }

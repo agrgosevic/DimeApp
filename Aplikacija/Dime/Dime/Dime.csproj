@@ -147,6 +147,12 @@
     <Compile Include="Forme\Treninzi\FrmUpravljanjeTreninzima.Designer.cs">
       <DependentUpon>FrmUpravljanjeTreninzima.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Treninzi\FrmUpravljanjeTreninzimaPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Treninzi\FrmUpravljanjeTreninzimaPomoc.Designer.cs">
+      <DependentUpon>FrmUpravljanjeTreninzimaPomoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Treninzi\FrmUpravljanjeTreninzima.resx">
       <DependentUpon>FrmUpravljanjeTreninzima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Treninzi\FrmUpravljanjeTreninzimaPomoc.resx">
+      <DependentUpon>FrmUpravljanjeTreninzimaPomoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Utakmice\FrmDodajIzmijeniUtakmicu.resx">
       <DependentUpon>FrmDodajIzmijeniUtakmicu.cs</DependentUpon>
