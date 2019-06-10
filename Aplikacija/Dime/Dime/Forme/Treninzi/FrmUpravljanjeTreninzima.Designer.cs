@@ -82,7 +82,7 @@
             // 
             // btnIzmijeniTrening
             // 
-            this.btnIzmijeniTrening.Location = new System.Drawing.Point(294, 253);
+            this.btnIzmijeniTrening.Location = new System.Drawing.Point(168, 253);
             this.btnIzmijeniTrening.Name = "btnIzmijeniTrening";
             this.btnIzmijeniTrening.Size = new System.Drawing.Size(107, 40);
             this.btnIzmijeniTrening.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             // btnObrisiTrening
             // 
-            this.btnObrisiTrening.Location = new System.Drawing.Point(567, 253);
+            this.btnObrisiTrening.Location = new System.Drawing.Point(324, 253);
             this.btnObrisiTrening.Name = "btnObrisiTrening";
             this.btnObrisiTrening.Size = new System.Drawing.Size(101, 40);
             this.btnObrisiTrening.TabIndex = 3;
@@ -102,7 +102,7 @@
             // 
             // btnPomoć
             // 
-            this.btnPomoć.Location = new System.Drawing.Point(620, 306);
+            this.btnPomoć.Location = new System.Drawing.Point(618, 255);
             this.btnPomoć.Name = "btnPomoć";
             this.btnPomoć.Size = new System.Drawing.Size(48, 36);
             this.btnPomoć.TabIndex = 4;
@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 354);
+            this.ClientSize = new System.Drawing.Size(678, 309);
             this.Controls.Add(this.btnPomoć);
             this.Controls.Add(this.btnObrisiTrening);
             this.Controls.Add(this.btnIzmijeniTrening);

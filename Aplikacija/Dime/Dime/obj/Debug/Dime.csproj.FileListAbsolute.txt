@@ -83,3 +83,4 @@ C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.csp
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Utakmice.FrmDodajIzmijeniUtakmicu.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Treninzi.FrmUpravljanjeTreninzimaPomoc.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Treninzi.FrmDodajIzmijeniTreningPomoć.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Utakmice.FrmUpravljanjeUtakmicamaPomoc.resources

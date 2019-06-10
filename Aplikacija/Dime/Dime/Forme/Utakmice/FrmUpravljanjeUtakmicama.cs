@@ -59,5 +59,29 @@ namespace Dime.Forme.Utakmice
                 PrikaziSveUtakmice();
             }
         }
+
+        private void btnPomoć_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmUpravljanjeUtakmicama_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void Pomoc()
+        {
+            FrmUpravljanjeUtakmicamaPomoc formaPomoc = new FrmUpravljanjeUtakmicamaPomoc();
+            formaPomoc.ShowDialog();
+        }
+
+        private void FrmUpravljanjeUtakmicama_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
     }
 }

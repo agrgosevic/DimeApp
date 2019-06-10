@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDodajUtakmicu = new System.Windows.Forms.Button();
-            this.btnIzmijeniUtakmicu = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
             this.idutakmicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,10 @@
             this.statistikeIgracaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipUtakmiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utakmicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDodajUtakmicu = new System.Windows.Forms.Button();
+            this.btnIzmijeniUtakmicu = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.btnPomoć = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utakmicaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -75,36 +76,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(960, 241);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnDodajUtakmicu
-            // 
-            this.btnDodajUtakmicu.Location = new System.Drawing.Point(12, 279);
-            this.btnDodajUtakmicu.Name = "btnDodajUtakmicu";
-            this.btnDodajUtakmicu.Size = new System.Drawing.Size(142, 42);
-            this.btnDodajUtakmicu.TabIndex = 1;
-            this.btnDodajUtakmicu.Text = "Dodaj utakmicu";
-            this.btnDodajUtakmicu.UseVisualStyleBackColor = true;
-            this.btnDodajUtakmicu.Click += new System.EventHandler(this.btnDodajUtakmicu_Click);
-            // 
-            // btnIzmijeniUtakmicu
-            // 
-            this.btnIzmijeniUtakmicu.Location = new System.Drawing.Point(405, 279);
-            this.btnIzmijeniUtakmicu.Name = "btnIzmijeniUtakmicu";
-            this.btnIzmijeniUtakmicu.Size = new System.Drawing.Size(131, 42);
-            this.btnIzmijeniUtakmicu.TabIndex = 2;
-            this.btnIzmijeniUtakmicu.Text = "Izmijeni";
-            this.btnIzmijeniUtakmicu.UseVisualStyleBackColor = true;
-            this.btnIzmijeniUtakmicu.Click += new System.EventHandler(this.btnIzmijeniUtakmicu_Click);
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(845, 279);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(124, 42);
-            this.btnObrisi.TabIndex = 3;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // idutakmicaDataGridViewTextBoxColumn
             // 
@@ -193,11 +164,52 @@
             // 
             this.utakmicaBindingSource.DataSource = typeof(Dime.Utakmica);
             // 
+            // btnDodajUtakmicu
+            // 
+            this.btnDodajUtakmicu.Location = new System.Drawing.Point(12, 279);
+            this.btnDodajUtakmicu.Name = "btnDodajUtakmicu";
+            this.btnDodajUtakmicu.Size = new System.Drawing.Size(142, 42);
+            this.btnDodajUtakmicu.TabIndex = 1;
+            this.btnDodajUtakmicu.Text = "Dodaj utakmicu";
+            this.btnDodajUtakmicu.UseVisualStyleBackColor = true;
+            this.btnDodajUtakmicu.Click += new System.EventHandler(this.btnDodajUtakmicu_Click);
+            // 
+            // btnIzmijeniUtakmicu
+            // 
+            this.btnIzmijeniUtakmicu.Location = new System.Drawing.Point(211, 279);
+            this.btnIzmijeniUtakmicu.Name = "btnIzmijeniUtakmicu";
+            this.btnIzmijeniUtakmicu.Size = new System.Drawing.Size(131, 42);
+            this.btnIzmijeniUtakmicu.TabIndex = 2;
+            this.btnIzmijeniUtakmicu.Text = "Izmijeni";
+            this.btnIzmijeniUtakmicu.UseVisualStyleBackColor = true;
+            this.btnIzmijeniUtakmicu.Click += new System.EventHandler(this.btnIzmijeniUtakmicu_Click);
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(405, 279);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(124, 42);
+            this.btnObrisi.TabIndex = 3;
+            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
+            // btnPomoć
+            // 
+            this.btnPomoć.Location = new System.Drawing.Point(924, 279);
+            this.btnPomoć.Name = "btnPomoć";
+            this.btnPomoć.Size = new System.Drawing.Size(48, 36);
+            this.btnPomoć.TabIndex = 5;
+            this.btnPomoć.Text = "Pomoć (F1)";
+            this.btnPomoć.UseVisualStyleBackColor = true;
+            this.btnPomoć.Click += new System.EventHandler(this.btnPomoć_Click);
+            // 
             // FrmUpravljanjeUtakmicama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 345);
+            this.ClientSize = new System.Drawing.Size(981, 340);
+            this.Controls.Add(this.btnPomoć);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnIzmijeniUtakmicu);
             this.Controls.Add(this.btnDodajUtakmicu);
@@ -205,6 +217,8 @@
             this.Name = "FrmUpravljanjeUtakmicama";
             this.Text = "FrmDodajIzmijeniUtakmicu";
             this.Load += new System.EventHandler(this.FrmUpravljanjeUtakmicama_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmUpravljanjeUtakmicama_HelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUpravljanjeUtakmicama_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utakmicaBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -231,5 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipUtakmiceDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button btnIzmijeniUtakmicu;
         private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.Button btnPomoć;
     }
 }

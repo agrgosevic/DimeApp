@@ -171,6 +171,12 @@
     <Compile Include="Forme\Utakmice\FrmUpravljanjeUtakmicama.Designer.cs">
       <DependentUpon>FrmUpravljanjeUtakmicama.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Utakmice\FrmUpravljanjeUtakmicamaPomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Utakmice\FrmUpravljanjeUtakmicamaPomoc.Designer.cs">
+      <DependentUpon>FrmUpravljanjeUtakmicamaPomoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGlavniIzbornik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Utakmice\FrmUpravljanjeUtakmicama.resx">
       <DependentUpon>FrmUpravljanjeUtakmicama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Utakmice\FrmUpravljanjeUtakmicamaPomoc.resx">
+      <DependentUpon>FrmUpravljanjeUtakmicamaPomoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGlavniIzbornik.resx">
       <DependentUpon>FrmGlavniIzbornik.cs</DependentUpon>
