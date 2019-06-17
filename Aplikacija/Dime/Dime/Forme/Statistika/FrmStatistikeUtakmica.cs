@@ -16,7 +16,7 @@ namespace Dime.Forme
         public FrmStatistikeUtakmica()
         {
             InitializeComponent();
-            //PrikaziUtakmice();
+            PrikaziUtakmice();
         }
 
         private void PrikaziUtakmice()
@@ -36,7 +36,7 @@ namespace Dime.Forme
             // Punjenje stupca Protivnik s podacima
             this.klubTableAdapter.Fill(this._19008_DBDataSetPrimary.Klub);
             // Punjenje ostalih stupaca iz tablice Utakmica u dgv
-            this.utakmicaTableAdapter.Fill(this._19008_DBDataSetPrimary.Utakmica);
+            //this.utakmicaTableAdapter.Fill(this._19008_DBDataSetPrimary.Utakmica);
         }
 
         private void btnOdaberi_Click(object sender, EventArgs e)
@@ -46,7 +46,9 @@ namespace Dime.Forme
             {
                 FrmStatistikaOdabraneUtakmice formaStatistika = new FrmStatistikaOdabraneUtakmice(odabranaUtakmica);
                 formaStatistika.ShowDialog();
+                PrikaziUtakmice();
             }
+            
         }
     }
 }

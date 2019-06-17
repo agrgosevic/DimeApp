@@ -21,7 +21,15 @@ namespace Dime.Forme.Statistika
 
         private void FrmStatistikaOdabraneUtakmice_Load(object sender, EventArgs e)
         {
-            lblProtivnik.Text = utakmica.Protivnik.naziv;
+            using (var db = new DimeEntities())
+            {
+                lblProtivnik.Text = db.Klubovi.FirstOrDefault(p => p.id_klub == utakmica.protivnik).naziv;
+                lblDatum.Text = utakmica.datum.ToShortDateString();
+                lblVrijeme.Text = utakmica.vrijeme.ToString();
+                lblTipUtakmice.Text = db.TipoviUtakmica.FirstOrDefault(t => t.id_tipa_utakmice == utakmica.tip_utakmice).naziv_tipa;
+                lblPrimljeniPoeni.Text = utakmica.primljeni_poeni.ToString();
+                lblZabijeniPoeni.Text = utakmica.zabijeni_poeni.ToString();
+            }
         }
     }
 }
