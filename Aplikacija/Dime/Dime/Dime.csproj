@@ -129,6 +129,12 @@
     <Compile Include="Forme\Korisnici\FrmPopisKorisnikaPomoc.Designer.cs">
       <DependentUpon>FrmPopisKorisnikaPomoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Statistika\FrmStatistikaOdabraneUtakmice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Statistika\FrmStatistikaOdabraneUtakmice.Designer.cs">
+      <DependentUpon>FrmStatistikaOdabraneUtakmice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Statistika\FrmStatistikeUtakmica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Korisnici\FrmPopisKorisnikaPomoc.resx">
       <DependentUpon>FrmPopisKorisnikaPomoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Statistika\FrmStatistikaOdabraneUtakmice.resx">
+      <DependentUpon>FrmStatistikaOdabraneUtakmice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Statistika\FrmStatistikeUtakmica.resx">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>

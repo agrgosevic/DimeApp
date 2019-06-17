@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dime.Forme.Statistika;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,36 +16,37 @@ namespace Dime.Forme
         public FrmStatistikeUtakmica()
         {
             InitializeComponent();
+            //PrikaziUtakmice();
         }
 
-        private void PrikaziOdigraneUtakmice()
+        private void PrikaziUtakmice()
         {
+            BindingList<Utakmica> listaUtakmica;
             using (var db = new DimeEntities())
             {
-                var sqlUpit = from u in db.Utakmice
-                              select new
-                              {
-                                  Datum = u.datum,
-                                  Vrijeme = u.vrijeme,
-                                  Zabijeni_poeni = u.zabijeni_poeni,
-                                  Primljeni_poeni = u.primljeni_poeni,
-                                  Tip_utakmice = u.TipUtakmice.naziv_tipa,
-                                  Protivnik = u.Protivnik.naziv
-                              };
-
-                dgvOdigraneUtakmice.DataSource = sqlUpit.ToList();
+                listaUtakmica = new BindingList<Utakmica>(db.Utakmice.ToList());
             }
-
-            // Preimenovanje stupaca dgv-a
-            dgvOdigraneUtakmice.Columns[2].HeaderText = "Zabijeni poeni";
-            dgvOdigraneUtakmice.Columns[3].HeaderText = "Primljeni poeni";
-            dgvOdigraneUtakmice.Columns[4].HeaderText = "Tip utakmice";
-
+            utakmicaBindingSource1.DataSource = listaUtakmica;
         }
 
         private void FrmStatistikeUtakmica_Load(object sender, EventArgs e)
         {
-            PrikaziOdigraneUtakmice();
+            // Punjenje stupca Tip Utakmice s podacima.
+            this.tipUtakmiceTableAdapter.Fill(this._19008_DBDataSetPrimary.TipUtakmice);
+            // Punjenje stupca Protivnik s podacima
+            this.klubTableAdapter.Fill(this._19008_DBDataSetPrimary.Klub);
+            // Punjenje ostalih stupaca iz tablice Utakmica u dgv
+            this.utakmicaTableAdapter.Fill(this._19008_DBDataSetPrimary.Utakmica);
+        }
+
+        private void btnOdaberi_Click(object sender, EventArgs e)
+        {
+            Utakmica odabranaUtakmica = dgvOdigraneUtakmice.CurrentRow.DataBoundItem as Utakmica;
+            if(odabranaUtakmica != null)
+            {
+                FrmStatistikaOdabraneUtakmice formaStatistika = new FrmStatistikaOdabraneUtakmice(odabranaUtakmica);
+                formaStatistika.ShowDialog();
+            }
         }
     }
 }
