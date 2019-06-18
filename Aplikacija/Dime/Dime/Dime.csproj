@@ -291,6 +291,9 @@
     <EmbeddedResource Include="Forme\Korisnici\FrmPopisKorisnikaPomoc.resx">
       <DependentUpon>FrmPopisKorisnikaPomoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Statistika\FrmDodajStatistikuIgraca.resx">
+      <DependentUpon>FrmDodajStatistikuIgraca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Statistika\FrmStatistikaOdabraneUtakmice.resx">
       <DependentUpon>FrmStatistikaOdabraneUtakmice.cs</DependentUpon>
     </EmbeddedResource>

@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStatistikaOdabraneUtakmice));
-            this.lblNasKlub = new System.Windows.Forms.Label();
             this.lblProtivnik = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblVrijeme = new System.Windows.Forms.Label();
             this.lblTipUtakmice = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblRezultat = new System.Windows.Forms.Label();
             this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
             this.statistikaIgracaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,7 +61,6 @@
             this.lblImePrezime = new System.Windows.Forms.Label();
             this.statistikaIgracaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.StatistikaIgracaTableAdapter();
             this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
-            this.lblRezultat = new System.Windows.Forms.Label();
             this.prekrsajiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skokoviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asistencijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +74,7 @@
             this.minutazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idutakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvIgraciNaUtakmici = new System.Windows.Forms.DataGridView();
+            this.lblIshod = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -83,33 +83,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvIgraciNaUtakmici)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblNasKlub
-            // 
-            this.lblNasKlub.AutoSize = true;
-            this.lblNasKlub.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNasKlub.Location = new System.Drawing.Point(6, 11);
-            this.lblNasKlub.Name = "lblNasKlub";
-            this.lblNasKlub.Size = new System.Drawing.Size(166, 34);
-            this.lblNasKlub.TabIndex = 0;
-            this.lblNasKlub.Text = "[ Naš klub ]";
-            this.lblNasKlub.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // lblProtivnik
             // 
-            this.lblProtivnik.AutoSize = true;
-            this.lblProtivnik.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProtivnik.Location = new System.Drawing.Point(6, 113);
+            this.lblProtivnik.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProtivnik.Location = new System.Drawing.Point(6, 18);
             this.lblProtivnik.Name = "lblProtivnik";
-            this.lblProtivnik.Size = new System.Drawing.Size(163, 34);
+            this.lblProtivnik.Size = new System.Drawing.Size(304, 34);
             this.lblProtivnik.TabIndex = 1;
             this.lblProtivnik.Text = "[ Protivnik ]";
-            this.lblProtivnik.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblDatum
             // 
-            this.lblDatum.AutoSize = true;
+            this.lblDatum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatum.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatum.Location = new System.Drawing.Point(322, 18);
+            this.lblDatum.Location = new System.Drawing.Point(316, 18);
             this.lblDatum.Name = "lblDatum";
             this.lblDatum.Size = new System.Drawing.Size(151, 23);
             this.lblDatum.TabIndex = 5;
@@ -118,9 +105,9 @@
             // 
             // lblVrijeme
             // 
-            this.lblVrijeme.AutoSize = true;
+            this.lblVrijeme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVrijeme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijeme.Location = new System.Drawing.Point(322, 67);
+            this.lblVrijeme.Location = new System.Drawing.Point(316, 46);
             this.lblVrijeme.Name = "lblVrijeme";
             this.lblVrijeme.Size = new System.Drawing.Size(151, 23);
             this.lblVrijeme.TabIndex = 6;
@@ -129,9 +116,9 @@
             // 
             // lblTipUtakmice
             // 
-            this.lblTipUtakmice.AutoSize = true;
+            this.lblTipUtakmice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipUtakmice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipUtakmice.Location = new System.Drawing.Point(322, 113);
+            this.lblTipUtakmice.Location = new System.Drawing.Point(316, 72);
             this.lblTipUtakmice.Name = "lblTipUtakmice";
             this.lblTipUtakmice.Size = new System.Drawing.Size(151, 23);
             this.lblTipUtakmice.TabIndex = 7;
@@ -140,17 +127,27 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblIshod);
             this.groupBox1.Controls.Add(this.lblVrijeme);
             this.groupBox1.Controls.Add(this.lblTipUtakmice);
             this.groupBox1.Controls.Add(this.lblDatum);
             this.groupBox1.Controls.Add(this.lblRezultat);
-            this.groupBox1.Controls.Add(this.lblNasKlub);
             this.groupBox1.Controls.Add(this.lblProtivnik);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 159);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // lblRezultat
+            // 
+            this.lblRezultat.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRezultat.Location = new System.Drawing.Point(5, 65);
+            this.lblRezultat.Name = "lblRezultat";
+            this.lblRezultat.Size = new System.Drawing.Size(305, 37);
+            this.lblRezultat.TabIndex = 3;
+            this.lblRezultat.Text = "0 : 0";
+            this.lblRezultat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // igracBindingSource
             // 
@@ -185,6 +182,7 @@
             this.btnDodaj.TabIndex = 11;
             this.btnDodaj.Text = "Dodaj igrača";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // button1
             // 
@@ -378,11 +376,10 @@
             // 
             // lblImePrezime
             // 
-            this.lblImePrezime.AutoSize = true;
             this.lblImePrezime.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImePrezime.Location = new System.Drawing.Point(105, 53);
+            this.lblImePrezime.Location = new System.Drawing.Point(6, 53);
             this.lblImePrezime.Name = "lblImePrezime";
-            this.lblImePrezime.Size = new System.Drawing.Size(245, 37);
+            this.lblImePrezime.Size = new System.Drawing.Size(426, 37);
             this.lblImePrezime.TabIndex = 0;
             this.lblImePrezime.Text = "[ Ime i Prezime ]";
             this.lblImePrezime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -394,17 +391,6 @@
             // igracTableAdapter
             // 
             this.igracTableAdapter.ClearBeforeFill = true;
-            // 
-            // lblRezultat
-            // 
-            this.lblRezultat.AutoSize = true;
-            this.lblRezultat.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRezultat.Location = new System.Drawing.Point(45, 60);
-            this.lblRezultat.Name = "lblRezultat";
-            this.lblRezultat.Size = new System.Drawing.Size(75, 37);
-            this.lblRezultat.TabIndex = 3;
-            this.lblRezultat.Text = "0 : 0";
-            this.lblRezultat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // prekrsajiDataGridViewTextBoxColumn
             // 
@@ -527,6 +513,17 @@
             this.dgvIgraciNaUtakmici.TabIndex = 9;
             this.dgvIgraciNaUtakmici.SelectionChanged += new System.EventHandler(this.dgvIgraciNaUtakmici_SelectionChanged);
             // 
+            // lblIshod
+            // 
+            this.lblIshod.AutoSize = true;
+            this.lblIshod.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIshod.Location = new System.Drawing.Point(6, 113);
+            this.lblIshod.Name = "lblIshod";
+            this.lblIshod.Size = new System.Drawing.Size(122, 34);
+            this.lblIshod.TabIndex = 8;
+            this.lblIshod.Text = "[ Ishod ]";
+            this.lblIshod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmStatistikaOdabraneUtakmice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -560,8 +557,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNasKlub;
         private System.Windows.Forms.Label lblProtivnik;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label lblVrijeme;
@@ -606,5 +601,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn minutazaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idutakmiceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgvIgraciNaUtakmici;
+        private System.Windows.Forms.Label lblIshod;
     }
 }

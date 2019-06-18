@@ -12,7 +12,7 @@ namespace Dime.Forme.Statistika
 {
     public partial class FrmStatistikaOdabraneUtakmice : Form
     {
-        private Utakmica utakmica;
+        private Utakmica Utakmica;
         private string Protivnik;
 
         public FrmStatistikaOdabraneUtakmice()
@@ -20,10 +20,38 @@ namespace Dime.Forme.Statistika
             InitializeComponent();
         }
 
-        public FrmStatistikaOdabraneUtakmice(Utakmica odabranaUtkamica)
+        public FrmStatistikaOdabraneUtakmice(Utakmica utakmica)
         {
-            utakmica = odabranaUtkamica;
+            Utakmica = utakmica;
             InitializeComponent();
+        }
+
+        private void PrikaziPodatke()
+        {
+            BindingList<StatistikaIgraca> popisIgraca;
+            using (var db = new DimeEntities())
+            {
+                Protivnik = db.Klubovi.FirstOrDefault(p => p.id_klub == Utakmica.protivnik).naziv;
+                lblProtivnik.Text = $"Protivnik: {Protivnik}";
+                lblDatum.Text = Utakmica.datum.ToShortDateString();
+                lblVrijeme.Text = Utakmica.vrijeme.ToString();
+                lblTipUtakmice.Text = db.TipoviUtakmica.FirstOrDefault(t => t.id_tipa_utakmice == Utakmica.tip_utakmice).naziv_tipa;
+                lblRezultat.Text = $"{Utakmica.zabijeni_poeni.ToString()} : {Utakmica.primljeni_poeni.ToString()}";
+                popisIgraca = new BindingList<StatistikaIgraca>(db.StatistikeIgraca.Where(i => i.id_utakmice == Utakmica.id_utakmica).ToList());
+
+                if (Utakmica.zabijeni_poeni > Utakmica.primljeni_poeni)
+                {
+                    lblIshod.Text = "Pobjeda";
+                    lblIshod.ForeColor = Color.Green;
+                }
+                else
+                {
+                    lblIshod.Text = "Poraz";
+                    lblIshod.ForeColor = Color.Red;
+                }
+            }
+            statistikaIgracaBindingSource.DataSource = popisIgraca;
+            this.Text = $"Utakmica protiv {Protivnik} {Utakmica.datum.ToShortDateString()} u {Utakmica.vrijeme.ToString()}";
         }
 
         private void FrmStatistikaOdabraneUtakmice_Load(object sender, EventArgs e)
@@ -32,19 +60,7 @@ namespace Dime.Forme.Statistika
             this.igracTableAdapter.Fill(this._19008_DBDataSetPrimary.Igrac);
             // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.StatistikaIgraca' table. You can move, or remove it, as needed.
             this.statistikaIgracaTableAdapter.Fill(this._19008_DBDataSetPrimary.StatistikaIgraca);
-            BindingList<StatistikaIgraca> popisIgraca;
-            using (var db = new DimeEntities())
-            {
-                Protivnik = db.Klubovi.FirstOrDefault(p => p.id_klub == utakmica.protivnik).naziv;
-                lblProtivnik.Text = Protivnik;
-                lblDatum.Text = utakmica.datum.ToShortDateString();
-                lblVrijeme.Text = utakmica.vrijeme.ToString();
-                lblTipUtakmice.Text = db.TipoviUtakmica.FirstOrDefault(t => t.id_tipa_utakmice == utakmica.tip_utakmice).naziv_tipa;
-                lblRezultat.Text = $"{utakmica.zabijeni_poeni.ToString()} : {utakmica.primljeni_poeni.ToString()}";
-                popisIgraca = new BindingList<StatistikaIgraca>(db.StatistikeIgraca.Where(i => i.id_utakmice == utakmica.id_utakmica).ToList());
-            }
-            statistikaIgracaBindingSource.DataSource = popisIgraca;
-            this.Text = $"Utakmica protiv {Protivnik} {utakmica.datum.ToShortDateString()} u {utakmica.vrijeme.ToString()}";
+            PrikaziPodatke();
         }
 
         private void dgvIgraciNaUtakmici_SelectionChanged(object sender, EventArgs e)
@@ -101,6 +117,13 @@ namespace Dime.Forme.Statistika
                     }
                 }
             }
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            FrmDodajStatistikuIgraca formaDodaj = new FrmDodajStatistikuIgraca(Utakmica);
+            formaDodaj.ShowDialog();
+            PrikaziPodatke();
         }
     }
 }
