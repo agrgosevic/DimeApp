@@ -14,6 +14,12 @@ namespace Dime.Forme.Statistika
     {
         private Utakmica utakmica;
         private string Protivnik;
+
+        public FrmStatistikaOdabraneUtakmice()
+        {
+            InitializeComponent();
+        }
+
         public FrmStatistikaOdabraneUtakmice(Utakmica odabranaUtkamica)
         {
             utakmica = odabranaUtkamica;
@@ -43,53 +49,56 @@ namespace Dime.Forme.Statistika
 
         private void dgvIgraciNaUtakmici_SelectionChanged(object sender, EventArgs e)
         {
-            StatistikaIgraca odabranaStatistikaIgraca = dgvIgraciNaUtakmici.CurrentRow.DataBoundItem as StatistikaIgraca;
-            if(odabranaStatistikaIgraca != null)
+            if (dgvIgraciNaUtakmici.Rows.Count > 0)
             {
-                using (var db = new DimeEntities())
+                StatistikaIgraca odabranaStatistikaIgraca = dgvIgraciNaUtakmici.CurrentRow.DataBoundItem as StatistikaIgraca;
+                if (odabranaStatistikaIgraca != null)
                 {
-                    string ime = db.Igraci.FirstOrDefault(i => i.id_igrac == odabranaStatistikaIgraca.id_igraca).ime;
-                    string prezime = db.Igraci.FirstOrDefault(i => i.id_igrac == odabranaStatistikaIgraca.id_igraca).prezime;
-                    string poeni = (odabranaStatistikaIgraca.sb_zabijeni + (odabranaStatistikaIgraca.p2_zabijeni * 2) + (odabranaStatistikaIgraca.p3_zabijeni * 3)).ToString();
-                    decimal postotak_sb;
-                    decimal postotak_2p;
-                    decimal postotak_3p;
+                    using (var db = new DimeEntities())
+                    {
+                        string ime = db.Igraci.FirstOrDefault(i => i.id_igrac == odabranaStatistikaIgraca.id_igraca).ime;
+                        string prezime = db.Igraci.FirstOrDefault(i => i.id_igrac == odabranaStatistikaIgraca.id_igraca).prezime;
+                        string poeni = (odabranaStatistikaIgraca.sb_zabijeni + (odabranaStatistikaIgraca.p2_zabijeni * 2) + (odabranaStatistikaIgraca.p3_zabijeni * 3)).ToString();
+                        decimal postotak_sb;
+                        decimal postotak_2p;
+                        decimal postotak_3p;
 
-                    try
-                    {
-                        postotak_sb = 100M * odabranaStatistikaIgraca.sb_zabijeni / odabranaStatistikaIgraca.sb_pokusaji;
-                    }
-                    catch (DivideByZeroException)
-                    {
-                        postotak_sb = 0;
-                    }
+                        try
+                        {
+                            postotak_sb = 100M * odabranaStatistikaIgraca.sb_zabijeni / odabranaStatistikaIgraca.sb_pokusaji;
+                        }
+                        catch (DivideByZeroException)
+                        {
+                            postotak_sb = 0;
+                        }
 
-                    try
-                    {
-                        postotak_2p = 100M * odabranaStatistikaIgraca.p2_zabijeni / odabranaStatistikaIgraca.p2_pokusaji;
-                    }
-                    catch (DivideByZeroException)
-                    {
-                        postotak_2p = 0;
-                    }
+                        try
+                        {
+                            postotak_2p = 100M * odabranaStatistikaIgraca.p2_zabijeni / odabranaStatistikaIgraca.p2_pokusaji;
+                        }
+                        catch (DivideByZeroException)
+                        {
+                            postotak_2p = 0;
+                        }
 
-                    try
-                    {
-                        postotak_3p = 100M * odabranaStatistikaIgraca.p3_zabijeni / odabranaStatistikaIgraca.p3_pokusaji;
-                    }
-                    catch (DivideByZeroException)
-                    {
-                        postotak_3p = 0;
-                    }
+                        try
+                        {
+                            postotak_3p = 100M * odabranaStatistikaIgraca.p3_zabijeni / odabranaStatistikaIgraca.p3_pokusaji;
+                        }
+                        catch (DivideByZeroException)
+                        {
+                            postotak_3p = 0;
+                        }
 
-                    lblImePrezime.Text = $"{ime} {prezime}";
-                    txtMinute.Text = odabranaStatistikaIgraca.minutaza.ToString();
-                    txtPoeni.Text = poeni;
-                    txtAsistencije.Text = odabranaStatistikaIgraca.asistencije.ToString();
-                    txtSkokovi.Text = odabranaStatistikaIgraca.skokovi.ToString();
-                    txtSBPostotak.Text = Math.Round(postotak_sb, 1).ToString();
-                    txt2pPostotak.Text = Math.Round(postotak_2p, 1).ToString();
-                    txt3pPostotak.Text = Math.Round(postotak_3p, 1).ToString();
+                        lblImePrezime.Text = $"{ime} {prezime}";
+                        txtMinute.Text = odabranaStatistikaIgraca.minutaza.ToString();
+                        txtPoeni.Text = poeni;
+                        txtAsistencije.Text = odabranaStatistikaIgraca.asistencije.ToString();
+                        txtSkokovi.Text = odabranaStatistikaIgraca.skokovi.ToString();
+                        txtSBPostotak.Text = Math.Round(postotak_sb, 1).ToString();
+                        txt2pPostotak.Text = Math.Round(postotak_2p, 1).ToString();
+                        txt3pPostotak.Text = Math.Round(postotak_3p, 1).ToString();
+                    }
                 }
             }
         }
