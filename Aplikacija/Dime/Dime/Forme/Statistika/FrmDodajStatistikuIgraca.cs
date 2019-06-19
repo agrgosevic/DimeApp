@@ -20,10 +20,34 @@ namespace Dime.Forme.Statistika
             Utakmica = utakmica;
         }
 
+        public FrmDodajStatistikuIgraca(Utakmica utakmica, StatistikaIgraca statistikaIgraca)
+        {
+            InitializeComponent();
+            Utakmica = utakmica;
+            StatIgrac = statistikaIgraca;
+        }
+
         private void FrmDodajStatistikuIgraca_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.Igrac' table. You can move, or remove it, as needed.
             this.igracTableAdapter.Fill(this._19008_DBDataSetPrimary.Igrac);
+            if (StatIgrac != null)
+            {
+                using (var db = new DimeEntities())
+                {
+                    cmbIgraci.SelectedValue = db.Igraci.First(i => i.id_igrac == StatIgrac.id_igraca).id_igrac;
+                    txtMinute.Text = StatIgrac.minutaza.ToString();
+                    txtSBZ.Text = StatIgrac.sb_zabijeni.ToString();
+                    txtSBP.Text = StatIgrac.sb_pokusaji.ToString();
+                    txt2pZ.Text = StatIgrac.p2_zabijeni.ToString();
+                    txt2pP.Text = StatIgrac.p2_pokusaji.ToString();
+                    txt3pZ.Text = StatIgrac.p3_zabijeni.ToString();
+                    txt3pP.Text = StatIgrac.p3_pokusaji.ToString();
+                    txtAsistencije.Text = StatIgrac.asistencije.ToString();
+                    txtSkokovi.Text = StatIgrac.skokovi.ToString();
+                    txtPrekrsaji.Text = StatIgrac.prekrsaji.ToString();
+                }
+            }
 
         }
 
@@ -48,6 +72,22 @@ namespace Dime.Forme.Statistika
                     statistikaIgraca.prekrsaji = int.Parse(txtPrekrsaji.Text);
 
                     db.StatistikeIgraca.Add(statistikaIgraca);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    db.StatistikeIgraca.Attach(StatIgrac);
+                    StatIgrac.minutaza = int.Parse(txtMinute.Text);
+                    StatIgrac.sb_zabijeni = int.Parse(txtSBZ.Text);
+                    StatIgrac.sb_pokusaji = int.Parse(txtSBP.Text);
+                    StatIgrac.p2_zabijeni = int.Parse(txt2pZ.Text);
+                    StatIgrac.p2_pokusaji = int.Parse(txt2pP.Text);
+                    StatIgrac.p3_zabijeni = int.Parse(txt3pZ.Text);
+                    StatIgrac.p3_pokusaji = int.Parse(txt3pP.Text);
+                    StatIgrac.asistencije = int.Parse(txtAsistencije.Text);
+                    StatIgrac.skokovi = int.Parse(txtSkokovi.Text);
+                    StatIgrac.prekrsaji = int.Parse(txtPrekrsaji.Text);
+
                     db.SaveChanges();
                 }
             }

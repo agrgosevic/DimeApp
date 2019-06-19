@@ -125,5 +125,16 @@ namespace Dime.Forme.Statistika
             formaDodaj.ShowDialog();
             PrikaziPodatke();
         }
+
+        private void btnIzmjeni_Click(object sender, EventArgs e)
+        {
+            StatistikaIgraca odabranaStatIgraca = dgvIgraciNaUtakmici.CurrentRow.DataBoundItem as StatistikaIgraca;
+            if(odabranaStatIgraca != null)
+            {
+                FrmDodajStatistikuIgraca formaDodaj = new FrmDodajStatistikuIgraca(Utakmica, odabranaStatIgraca);
+                formaDodaj.ShowDialog();
+                PrikaziPodatke();
+            }
+        }
     }
 }

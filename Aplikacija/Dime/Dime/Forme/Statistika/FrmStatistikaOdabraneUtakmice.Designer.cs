@@ -35,6 +35,7 @@
             this.lblVrijeme = new System.Windows.Forms.Label();
             this.lblTipUtakmice = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblIshod = new System.Windows.Forms.Label();
             this.lblRezultat = new System.Windows.Forms.Label();
             this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
@@ -74,7 +75,6 @@
             this.minutazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idutakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvIgraciNaUtakmici = new System.Windows.Forms.DataGridView();
-            this.lblIshod = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -139,6 +139,17 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
+            // lblIshod
+            // 
+            this.lblIshod.AutoSize = true;
+            this.lblIshod.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIshod.Location = new System.Drawing.Point(6, 113);
+            this.lblIshod.Name = "lblIshod";
+            this.lblIshod.Size = new System.Drawing.Size(122, 34);
+            this.lblIshod.TabIndex = 8;
+            this.lblIshod.Text = "[ Ishod ]";
+            this.lblIshod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblRezultat
             // 
             this.lblRezultat.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,6 +212,7 @@
             this.btnIzmjeni.TabIndex = 13;
             this.btnIzmjeni.Text = "Uredi statistiku";
             this.btnIzmjeni.UseVisualStyleBackColor = true;
+            this.btnIzmjeni.Click += new System.EventHandler(this.btnIzmjeni_Click);
             // 
             // groupBox2
             // 
@@ -512,17 +524,6 @@
             this.dgvIgraciNaUtakmici.Size = new System.Drawing.Size(472, 259);
             this.dgvIgraciNaUtakmici.TabIndex = 9;
             this.dgvIgraciNaUtakmici.SelectionChanged += new System.EventHandler(this.dgvIgraciNaUtakmici_SelectionChanged);
-            // 
-            // lblIshod
-            // 
-            this.lblIshod.AutoSize = true;
-            this.lblIshod.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIshod.Location = new System.Drawing.Point(6, 113);
-            this.lblIshod.Name = "lblIshod";
-            this.lblIshod.Size = new System.Drawing.Size(122, 34);
-            this.lblIshod.TabIndex = 8;
-            this.lblIshod.Text = "[ Ishod ]";
-            this.lblIshod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmStatistikaOdabraneUtakmice
             // 
