@@ -40,26 +40,30 @@
             this.btnIzmjeni = new System.Windows.Forms.Button();
             this.btnObrisi = new System.Windows.Forms.Button();
             this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
-            this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.treningTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TreningTableAdapter();
-            this.tipTreningaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
             this.idtreningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiptreningaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tipTreningaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clanarinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.treningTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TreningTableAdapter();
+            this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
             this.clanarinaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.ClanarinaTableAdapter();
+            this._19008_DBDataSetUpdated = new Dime._19008_DBDataSetUpdated();
+            this.clanarinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clanarinaTableAdapter1 = new Dime._19008_DBDataSetUpdatedTableAdapters.ClanarinaTableAdapter();
             this.idclanarinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mjesecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.godinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rokuplateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdrzaniTreninzi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanarina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanarinaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,7 +116,6 @@
             // 
             this.dgvPopisClanarina.AllowUserToAddRows = false;
             this.dgvPopisClanarina.AllowUserToDeleteRows = false;
-            this.dgvPopisClanarina.AllowUserToOrderColumns = true;
             this.dgvPopisClanarina.AllowUserToResizeColumns = false;
             this.dgvPopisClanarina.AllowUserToResizeRows = false;
             this.dgvPopisClanarina.AutoGenerateColumns = false;
@@ -121,10 +124,12 @@
             this.dgvPopisClanarina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idclanarinaDataGridViewTextBoxColumn,
             this.mjesecDataGridViewTextBoxColumn,
+            this.godinaDataGridViewTextBoxColumn,
             this.rokuplateDataGridViewTextBoxColumn});
             this.dgvPopisClanarina.DataSource = this.clanarinaBindingSource;
             this.dgvPopisClanarina.Location = new System.Drawing.Point(538, 41);
             this.dgvPopisClanarina.Name = "dgvPopisClanarina";
+            this.dgvPopisClanarina.ReadOnly = true;
             this.dgvPopisClanarina.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPopisClanarina.RowTemplate.Height = 24;
             this.dgvPopisClanarina.Size = new System.Drawing.Size(496, 463);
@@ -180,24 +185,6 @@
             this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
             this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // treningBindingSource
-            // 
-            this.treningBindingSource.DataMember = "Trening";
-            this.treningBindingSource.DataSource = this._19008_DBDataSetPrimary;
-            // 
-            // treningTableAdapter
-            // 
-            this.treningTableAdapter.ClearBeforeFill = true;
-            // 
-            // tipTreningaBindingSource
-            // 
-            this.tipTreningaBindingSource.DataMember = "TipTreninga";
-            this.tipTreningaBindingSource.DataSource = this._19008_DBDataSetPrimary;
-            // 
-            // tipTreningaTableAdapter
-            // 
-            this.tipTreningaTableAdapter.ClearBeforeFill = true;
-            // 
             // idtreningDataGridViewTextBoxColumn
             // 
             this.idtreningDataGridViewTextBoxColumn.DataPropertyName = "id_trening";
@@ -241,6 +228,11 @@
             this.tiptreningaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.tiptreningaDataGridViewTextBoxColumn.ValueMember = "id_tipa_treninga";
             // 
+            // tipTreningaBindingSource
+            // 
+            this.tipTreningaBindingSource.DataMember = "TipTreninga";
+            this.tipTreningaBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            // 
             // korisnikDataGridViewTextBoxColumn
             // 
             this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
@@ -249,14 +241,36 @@
             this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
             this.korisnikDataGridViewTextBoxColumn.Visible = false;
             // 
-            // clanarinaBindingSource
+            // treningBindingSource
             // 
-            this.clanarinaBindingSource.DataMember = "Clanarina";
-            this.clanarinaBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            this.treningBindingSource.DataMember = "Trening";
+            this.treningBindingSource.DataSource = this._19008_DBDataSetPrimary;
+            // 
+            // treningTableAdapter
+            // 
+            this.treningTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipTreningaTableAdapter
+            // 
+            this.tipTreningaTableAdapter.ClearBeforeFill = true;
             // 
             // clanarinaTableAdapter
             // 
             this.clanarinaTableAdapter.ClearBeforeFill = true;
+            // 
+            // _19008_DBDataSetUpdated
+            // 
+            this._19008_DBDataSetUpdated.DataSetName = "_19008_DBDataSetUpdated";
+            this._19008_DBDataSetUpdated.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clanarinaBindingSource
+            // 
+            this.clanarinaBindingSource.DataMember = "Clanarina";
+            this.clanarinaBindingSource.DataSource = this._19008_DBDataSetUpdated;
+            // 
+            // clanarinaTableAdapter1
+            // 
+            this.clanarinaTableAdapter1.ClearBeforeFill = true;
             // 
             // idclanarinaDataGridViewTextBoxColumn
             // 
@@ -272,13 +286,20 @@
             this.mjesecDataGridViewTextBoxColumn.HeaderText = "Mjesec";
             this.mjesecDataGridViewTextBoxColumn.Name = "mjesecDataGridViewTextBoxColumn";
             this.mjesecDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mjesecDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // godinaDataGridViewTextBoxColumn
+            // 
+            this.godinaDataGridViewTextBoxColumn.DataPropertyName = "godina";
+            this.godinaDataGridViewTextBoxColumn.HeaderText = "Godina";
+            this.godinaDataGridViewTextBoxColumn.Name = "godinaDataGridViewTextBoxColumn";
+            this.godinaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rokuplateDataGridViewTextBoxColumn
             // 
             this.rokuplateDataGridViewTextBoxColumn.DataPropertyName = "rok_uplate";
             this.rokuplateDataGridViewTextBoxColumn.HeaderText = "Rok uplate";
             this.rokuplateDataGridViewTextBoxColumn.Name = "rokuplateDataGridViewTextBoxColumn";
+            this.rokuplateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmPopisAktivnosti
             // 
@@ -304,8 +325,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdrzaniTreninzi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanarinaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -334,10 +356,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn tiptreningaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource clanarinaBindingSource;
         private _19008_DBDataSetPrimaryTableAdapters.ClanarinaTableAdapter clanarinaTableAdapter;
+        private _19008_DBDataSetUpdated _19008_DBDataSetUpdated;
+        private System.Windows.Forms.BindingSource clanarinaBindingSource;
+        private _19008_DBDataSetUpdatedTableAdapters.ClanarinaTableAdapter clanarinaTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idclanarinaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mjesecDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn godinaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rokuplateDataGridViewTextBoxColumn;
     }
 }

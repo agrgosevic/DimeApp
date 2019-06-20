@@ -30,13 +30,12 @@ namespace Dime.Forme
 
         private void FrmPopisAktivnosti_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.Clanarina' table. You can move, or remove it, as needed.
-            this.clanarinaTableAdapter.Fill(this._19008_DBDataSetPrimary.Clanarina);
+            // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.Clanarina' table. You can move, or remove it, as needed.
+            this.clanarinaTableAdapter1.Fill(this._19008_DBDataSetUpdated.Clanarina);
             // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.TipTreninga' table. You can move, or remove it, as needed.
             this.tipTreningaTableAdapter.Fill(this._19008_DBDataSetPrimary.TipTreninga);
             // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.Trening' table. You can move, or remove it, as needed.
             //this.treningTableAdapter.Fill(this._19008_DBDataSetPrimary.Trening);
-
         }
     }
 }

@@ -5,8 +5,9 @@
       <PropertyRef Name="id_clanarina" />
     </Key>
     <Property Name="id_clanarina" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="mjesec" Type="int" Nullable="false" />
+    <Property Name="mjesec" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="rok_uplate" Type="date" Nullable="false" />
+    <Property Name="godina" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ClanarinaIgraca">
     <Key>
@@ -15,7 +16,7 @@
     </Key>
     <Property Name="id_clanarine" Type="int" Nullable="false" />
     <Property Name="id_igraca" Type="int" Nullable="false" />
-    <Property Name="uplaceno" Type="tinyint" Nullable="false" />
+    <Property Name="uplaceno" Type="varchar" MaxLength="30" Nullable="false" />
   </EntityType>
   <EntityType Name="Igrac">
     <Key>
@@ -108,7 +109,7 @@
     </Key>
     <Property Name="id_treninga" Type="int" Nullable="false" />
     <Property Name="id_igraca" Type="int" Nullable="false" />
-    <Property Name="prisustvo" Type="tinyint" Nullable="false" />
+    <Property Name="prisustvo" Type="varchar" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="UlogaKorisnika">
     <Key>

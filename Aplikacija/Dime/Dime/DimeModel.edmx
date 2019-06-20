@@ -4,14 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DimeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DimeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Clanarina">
           <Key>
             <PropertyRef Name="id_clanarina" />
           </Key>
           <Property Name="id_clanarina" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="mjesec" Type="int" Nullable="false" />
+          <Property Name="mjesec" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="rok_uplate" Type="date" Nullable="false" />
+          <Property Name="godina" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ClanarinaIgraca">
           <Key>
@@ -20,7 +21,7 @@
           </Key>
           <Property Name="id_clanarine" Type="int" Nullable="false" />
           <Property Name="id_igraca" Type="int" Nullable="false" />
-          <Property Name="uplaceno" Type="tinyint" Nullable="false" />
+          <Property Name="uplaceno" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <EntityType Name="Igrac">
           <Key>
@@ -113,7 +114,7 @@
           </Key>
           <Property Name="id_treninga" Type="int" Nullable="false" />
           <Property Name="id_igraca" Type="int" Nullable="false" />
-          <Property Name="prisustvo" Type="tinyint" Nullable="false" />
+          <Property Name="prisustvo" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="UlogaKorisnika">
           <Key>
@@ -343,31 +344,10 @@
             <End Role="Utakmica" EntitySet="Utakmica" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DimeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Clanarina">
-          <Key>
-            <PropertyRef Name="id_clanarina" />
-          </Key>
-          <Property Name="id_clanarina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="mjesec" Type="Int32" Nullable="false" />
-          <Property Name="rok_uplate" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="ClanarineIgraca" Relationship="Self.FK_ClanarinaIgraca_Clanarina" FromRole="Clanarina" ToRole="ClanarinaIgraca" />
-        </EntityType>
-        <EntityType Name="ClanarinaIgraca">
-          <Key>
-            <PropertyRef Name="id_clanarine" />
-            <PropertyRef Name="id_igraca" />
-          </Key>
-          <Property Name="id_clanarine" Type="Int32" Nullable="false" />
-          <Property Name="id_igraca" Type="Int32" Nullable="false" />
-          <Property Name="uplaceno" Type="Byte" Nullable="false" />
-          <NavigationProperty Name="Clanarina" Relationship="Self.FK_ClanarinaIgraca_Clanarina" FromRole="ClanarinaIgraca" ToRole="Clanarina" />
-          <NavigationProperty Name="Igrac" Relationship="Self.FK_ClanarinaIgraca_Igrac" FromRole="ClanarinaIgraca" ToRole="Igrac" />
-        </EntityType>
         <EntityType Name="Igrac">
           <Key>
             <PropertyRef Name="id_igrac" />
@@ -379,9 +359,9 @@
           <Property Name="visina" Type="Int32" Nullable="false" />
           <Property Name="tezina" Type="Int32" Nullable="false" />
           <Property Name="broj" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ClanarineIgraca" Relationship="Self.FK_ClanarinaIgraca_Igrac" FromRole="Igrac" ToRole="ClanarinaIgraca" />
           <NavigationProperty Name="StatistikeIgraca" Relationship="Self.FK_StatistikaIgraca_Igrac" FromRole="Igrac" ToRole="StatistikaIgraca" />
-          <NavigationProperty Name="TreningPrisustva" Relationship="Self.FK_TreningPrisustvo_Igrac" FromRole="Igrac" ToRole="TreningPrisustvo" />
+          <NavigationProperty Name="ClanarinaIgraca" Relationship="DimeDBModel.FK_ClanarinaIgraca_Igrac" FromRole="Igrac" ToRole="ClanarinaIgraca" />
+          <NavigationProperty Name="TreningPrisustvo" Relationship="DimeDBModel.FK_TreningPrisustvo_Igrac" FromRole="Igrac" ToRole="TreningPrisustvo" />
         </EntityType>
         <EntityType Name="Klub">
           <Key>
@@ -464,18 +444,7 @@
           <Property Name="korisnik" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Korisnik" Relationship="Self.FK_Trening_Korisnik" FromRole="Trening" ToRole="Korisnik" />
           <NavigationProperty Name="TipTreninga" Relationship="Self.FK_Trening_TipTreninga" FromRole="Trening" ToRole="TipTreninga" />
-          <NavigationProperty Name="TreningPrisustva" Relationship="Self.FK_TreningPrisustvo_Trening" FromRole="Trening" ToRole="TreningPrisustvo" />
-        </EntityType>
-        <EntityType Name="TreningPrisustvo">
-          <Key>
-            <PropertyRef Name="id_treninga" />
-            <PropertyRef Name="id_igraca" />
-          </Key>
-          <Property Name="id_treninga" Type="Int32" Nullable="false" />
-          <Property Name="id_igraca" Type="Int32" Nullable="false" />
-          <Property Name="prisustvo" Type="Byte" Nullable="false" />
-          <NavigationProperty Name="Igrac" Relationship="Self.FK_TreningPrisustvo_Igrac" FromRole="TreningPrisustvo" ToRole="Igrac" />
-          <NavigationProperty Name="Trening" Relationship="Self.FK_TreningPrisustvo_Trening" FromRole="TreningPrisustvo" ToRole="Trening" />
+          <NavigationProperty Name="TreningPrisustvo" Relationship="DimeDBModel.FK_TreningPrisustvo_Trening" FromRole="Trening" ToRole="TreningPrisustvo" />
         </EntityType>
         <EntityType Name="UlogaKorisnika">
           <Key>
@@ -503,30 +472,6 @@
           <NavigationProperty Name="StatistikeIgraca" Relationship="Self.FK_StatistikaIgraca_Utakmica" FromRole="Utakmica" ToRole="StatistikaIgraca" />
           <NavigationProperty Name="TipUtakmice" Relationship="Self.FK_Utakmica_TipUtakmice" FromRole="Utakmica" ToRole="TipUtakmice" />
         </EntityType>
-        <Association Name="FK_ClanarinaIgraca_Clanarina">
-          <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="1" />
-          <End Role="ClanarinaIgraca" Type="Self.ClanarinaIgraca" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Clanarina">
-              <PropertyRef Name="id_clanarina" />
-            </Principal>
-            <Dependent Role="ClanarinaIgraca">
-              <PropertyRef Name="id_clanarine" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ClanarinaIgraca_Igrac">
-          <End Role="Igrac" Type="Self.Igrac" Multiplicity="1" />
-          <End Role="ClanarinaIgraca" Type="Self.ClanarinaIgraca" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Igrac">
-              <PropertyRef Name="id_igrac" />
-            </Principal>
-            <Dependent Role="ClanarinaIgraca">
-              <PropertyRef Name="id_igraca" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_StatistikaIgraca_Igrac">
           <End Role="Igrac" Type="Self.Igrac" Multiplicity="1" />
           <End Role="StatistikaIgraca" Type="Self.StatistikaIgraca" Multiplicity="*" />
@@ -535,18 +480,6 @@
               <PropertyRef Name="id_igrac" />
             </Principal>
             <Dependent Role="StatistikaIgraca">
-              <PropertyRef Name="id_igraca" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TreningPrisustvo_Igrac">
-          <End Role="Igrac" Type="Self.Igrac" Multiplicity="1" />
-          <End Role="TreningPrisustvo" Type="Self.TreningPrisustvo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Igrac">
-              <PropertyRef Name="id_igrac" />
-            </Principal>
-            <Dependent Role="TreningPrisustvo">
               <PropertyRef Name="id_igraca" />
             </Dependent>
           </ReferentialConstraint>
@@ -635,21 +568,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TreningPrisustvo_Trening">
-          <End Role="Trening" Type="Self.Trening" Multiplicity="1" />
-          <End Role="TreningPrisustvo" Type="Self.TreningPrisustvo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Trening">
-              <PropertyRef Name="id_trening" />
-            </Principal>
-            <Dependent Role="TreningPrisustvo">
-              <PropertyRef Name="id_treninga" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="DimeEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Clanarinas" EntityType="Self.Clanarina" />
-          <EntitySet Name="ClanarinaIgracas" EntityType="Self.ClanarinaIgraca" />
           <EntitySet Name="Igracs" EntityType="Self.Igrac" />
           <EntitySet Name="Klubs" EntityType="Self.Klub" />
           <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
@@ -658,24 +577,11 @@
           <EntitySet Name="TipTreningas" EntityType="Self.TipTreninga" />
           <EntitySet Name="TipUtakmice1" EntityType="DimeDBModel.TipUtakmice" />
           <EntitySet Name="Trenings" EntityType="Self.Trening" />
-          <EntitySet Name="TreningPrisustvoes" EntityType="Self.TreningPrisustvo" />
           <EntitySet Name="UlogaKorisnikas" EntityType="Self.UlogaKorisnika" />
           <EntitySet Name="Utakmicas" EntityType="Self.Utakmica" />
-          <AssociationSet Name="FK_ClanarinaIgraca_Clanarina" Association="Self.FK_ClanarinaIgraca_Clanarina">
-            <End Role="Clanarina" EntitySet="Clanarinas" />
-            <End Role="ClanarinaIgraca" EntitySet="ClanarinaIgracas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ClanarinaIgraca_Igrac" Association="Self.FK_ClanarinaIgraca_Igrac">
-            <End Role="Igrac" EntitySet="Igracs" />
-            <End Role="ClanarinaIgraca" EntitySet="ClanarinaIgracas" />
-          </AssociationSet>
           <AssociationSet Name="FK_StatistikaIgraca_Igrac" Association="Self.FK_StatistikaIgraca_Igrac">
             <End Role="Igrac" EntitySet="Igracs" />
             <End Role="StatistikaIgraca" EntitySet="StatistikaIgracas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TreningPrisustvo_Igrac" Association="Self.FK_TreningPrisustvo_Igrac">
-            <End Role="Igrac" EntitySet="Igracs" />
-            <End Role="TreningPrisustvo" EntitySet="TreningPrisustvoes" />
           </AssociationSet>
           <AssociationSet Name="FK_Utakmica_Klub" Association="Self.FK_Utakmica_Klub">
             <End Role="Klub" EntitySet="Klubs" />
@@ -705,35 +611,112 @@
             <End Role="TipUtakmice" EntitySet="TipUtakmice1" />
             <End Role="Utakmica" EntitySet="Utakmicas" />
           </AssociationSet>
-          <AssociationSet Name="FK_TreningPrisustvo_Trening" Association="Self.FK_TreningPrisustvo_Trening">
+          <EntitySet Name="Clanarina" EntityType="DimeDBModel.Clanarina" />
+          <EntitySet Name="ClanarinaIgraca" EntityType="DimeDBModel.ClanarinaIgraca" />
+          <EntitySet Name="TreningPrisustvo" EntityType="DimeDBModel.TreningPrisustvo" />
+          <AssociationSet Name="FK_ClanarinaIgraca_Clanarina" Association="DimeDBModel.FK_ClanarinaIgraca_Clanarina">
+            <End Role="Clanarina" EntitySet="Clanarina" />
+            <End Role="ClanarinaIgraca" EntitySet="ClanarinaIgraca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClanarinaIgraca_Igrac" Association="DimeDBModel.FK_ClanarinaIgraca_Igrac">
+            <End Role="Igrac" EntitySet="Igracs" />
+            <End Role="ClanarinaIgraca" EntitySet="ClanarinaIgraca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreningPrisustvo_Igrac" Association="DimeDBModel.FK_TreningPrisustvo_Igrac">
+            <End Role="Igrac" EntitySet="Igracs" />
+            <End Role="TreningPrisustvo" EntitySet="TreningPrisustvo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreningPrisustvo_Trening" Association="DimeDBModel.FK_TreningPrisustvo_Trening">
             <End Role="Trening" EntitySet="Trenings" />
-            <End Role="TreningPrisustvo" EntitySet="TreningPrisustvoes" />
+            <End Role="TreningPrisustvo" EntitySet="TreningPrisustvo" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Clanarina">
+          <Key>
+            <PropertyRef Name="id_clanarina" />
+          </Key>
+          <Property Name="id_clanarina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mjesec" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="rok_uplate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="godina" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ClanarinaIgraca" Relationship="DimeDBModel.FK_ClanarinaIgraca_Clanarina" FromRole="Clanarina" ToRole="ClanarinaIgraca" />
+        </EntityType>
+        <EntityType Name="ClanarinaIgraca">
+          <Key>
+            <PropertyRef Name="id_clanarine" />
+            <PropertyRef Name="id_igraca" />
+          </Key>
+          <Property Name="id_clanarine" Type="Int32" Nullable="false" />
+          <Property Name="id_igraca" Type="Int32" Nullable="false" />
+          <Property Name="uplaceno" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Clanarina" Relationship="DimeDBModel.FK_ClanarinaIgraca_Clanarina" FromRole="ClanarinaIgraca" ToRole="Clanarina" />
+          <NavigationProperty Name="Igrac" Relationship="DimeDBModel.FK_ClanarinaIgraca_Igrac" FromRole="ClanarinaIgraca" ToRole="Igrac" />
+        </EntityType>
+        <EntityType Name="TreningPrisustvo">
+          <Key>
+            <PropertyRef Name="id_treninga" />
+            <PropertyRef Name="id_igraca" />
+          </Key>
+          <Property Name="id_treninga" Type="Int32" Nullable="false" />
+          <Property Name="id_igraca" Type="Int32" Nullable="false" />
+          <Property Name="prisustvo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Igrac" Relationship="DimeDBModel.FK_TreningPrisustvo_Igrac" FromRole="TreningPrisustvo" ToRole="Igrac" />
+          <NavigationProperty Name="Trening" Relationship="DimeDBModel.FK_TreningPrisustvo_Trening" FromRole="TreningPrisustvo" ToRole="Trening" />
+        </EntityType>
+        <Association Name="FK_ClanarinaIgraca_Clanarina">
+          <End Type="DimeDBModel.Clanarina" Role="Clanarina" Multiplicity="1" />
+          <End Type="DimeDBModel.ClanarinaIgraca" Role="ClanarinaIgraca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clanarina">
+              <PropertyRef Name="id_clanarina" />
+            </Principal>
+            <Dependent Role="ClanarinaIgraca">
+              <PropertyRef Name="id_clanarine" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClanarinaIgraca_Igrac">
+          <End Type="DimeDBModel.Igrac" Role="Igrac" Multiplicity="1" />
+          <End Type="DimeDBModel.ClanarinaIgraca" Role="ClanarinaIgraca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Igrac">
+              <PropertyRef Name="id_igrac" />
+            </Principal>
+            <Dependent Role="ClanarinaIgraca">
+              <PropertyRef Name="id_igraca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreningPrisustvo_Igrac">
+          <End Type="DimeDBModel.Igrac" Role="Igrac" Multiplicity="1" />
+          <End Type="DimeDBModel.TreningPrisustvo" Role="TreningPrisustvo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Igrac">
+              <PropertyRef Name="id_igrac" />
+            </Principal>
+            <Dependent Role="TreningPrisustvo">
+              <PropertyRef Name="id_igraca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreningPrisustvo_Trening">
+          <End Type="DimeDBModel.Trening" Role="Trening" Multiplicity="1" />
+          <End Type="DimeDBModel.TreningPrisustvo" Role="TreningPrisustvo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trening">
+              <PropertyRef Name="id_trening" />
+            </Principal>
+            <Dependent Role="TreningPrisustvo">
+              <PropertyRef Name="id_treninga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DimeDBModelStoreContainer" CdmEntityContainer="DimeEntities">
-          <EntitySetMapping Name="Clanarinas">
-            <EntityTypeMapping TypeName="DimeDBModel.Clanarina">
-              <MappingFragment StoreEntitySet="Clanarina">
-                <ScalarProperty Name="id_clanarina" ColumnName="id_clanarina" />
-                <ScalarProperty Name="mjesec" ColumnName="mjesec" />
-                <ScalarProperty Name="rok_uplate" ColumnName="rok_uplate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ClanarinaIgracas">
-            <EntityTypeMapping TypeName="DimeDBModel.ClanarinaIgraca">
-              <MappingFragment StoreEntitySet="ClanarinaIgraca">
-                <ScalarProperty Name="id_clanarine" ColumnName="id_clanarine" />
-                <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
-                <ScalarProperty Name="uplaceno" ColumnName="uplaceno" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Igracs">
             <EntityTypeMapping TypeName="DimeDBModel.Igrac">
               <MappingFragment StoreEntitySet="Igrac">
@@ -825,15 +808,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TreningPrisustvoes">
-            <EntityTypeMapping TypeName="DimeDBModel.TreningPrisustvo">
-              <MappingFragment StoreEntitySet="TreningPrisustvo">
-                <ScalarProperty Name="id_treninga" ColumnName="id_treninga" />
-                <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
-                <ScalarProperty Name="prisustvo" ColumnName="prisustvo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="UlogaKorisnikas">
             <EntityTypeMapping TypeName="DimeDBModel.UlogaKorisnika">
               <MappingFragment StoreEntitySet="UlogaKorisnika">
@@ -857,6 +831,34 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Clanarina">
+            <EntityTypeMapping TypeName="DimeDBModel.Clanarina">
+              <MappingFragment StoreEntitySet="Clanarina">
+                <ScalarProperty Name="godina" ColumnName="godina" />
+                <ScalarProperty Name="rok_uplate" ColumnName="rok_uplate" />
+                <ScalarProperty Name="mjesec" ColumnName="mjesec" />
+                <ScalarProperty Name="id_clanarina" ColumnName="id_clanarina" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClanarinaIgraca">
+            <EntityTypeMapping TypeName="DimeDBModel.ClanarinaIgraca">
+              <MappingFragment StoreEntitySet="ClanarinaIgraca">
+                <ScalarProperty Name="uplaceno" ColumnName="uplaceno" />
+                <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
+                <ScalarProperty Name="id_clanarine" ColumnName="id_clanarine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreningPrisustvo">
+            <EntityTypeMapping TypeName="DimeDBModel.TreningPrisustvo">
+              <MappingFragment StoreEntitySet="TreningPrisustvo">
+                <ScalarProperty Name="prisustvo" ColumnName="prisustvo" />
+                <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
+                <ScalarProperty Name="id_treninga" ColumnName="id_treninga" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -871,7 +873,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

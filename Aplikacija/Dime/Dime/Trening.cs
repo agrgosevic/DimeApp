@@ -17,7 +17,7 @@ namespace Dime
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Trening()
         {
-            this.TreningPrisustva = new HashSet<TreningPrisustvo>();
+            this.TreningPrisustvo = new HashSet<TreningPrisustvo>();
         }
     
         public int id_trening { get; set; }
@@ -30,6 +30,6 @@ namespace Dime
         public virtual Korisnik Korisnik { get; set; }
         public virtual TipTreninga TipTreninga { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TreningPrisustvo> TreningPrisustva { get; set; }
+        public virtual ICollection<TreningPrisustvo> TreningPrisustvo { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Dime
     {
         public int id_clanarine { get; set; }
         public int id_igraca { get; set; }
-        public byte uplaceno { get; set; }
+        public string uplaceno { get; set; }
     
         public virtual Clanarina Clanarina { get; set; }
         public virtual Igrac Igrac { get; set; }

@@ -25,8 +25,6 @@ namespace Dime
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Clanarina> Clanarine { get; set; }
-        public virtual DbSet<ClanarinaIgraca> ClanarineIgraca { get; set; }
         public virtual DbSet<Igrac> Igraci { get; set; }
         public virtual DbSet<Klub> Klubovi { get; set; }
         public virtual DbSet<Korisnik> Korisnici { get; set; }
@@ -35,8 +33,10 @@ namespace Dime
         public virtual DbSet<TipTreninga> TipoviTreninga { get; set; }
         public virtual DbSet<TipUtakmice> TipoviUtakmica { get; set; }
         public virtual DbSet<Trening> Treninzi { get; set; }
-        public virtual DbSet<TreningPrisustvo> TreningPrisustva { get; set; }
         public virtual DbSet<UlogaKorisnika> UlogeKorisnika { get; set; }
         public virtual DbSet<Utakmica> Utakmice { get; set; }
+        public virtual DbSet<Clanarina> Clanarine { get; set; }
+        public virtual DbSet<ClanarinaIgraca> ClanarineIgraca { get; set; }
+        public virtual DbSet<TreningPrisustvo> TreningPrisustva { get; set; }
     }
 }
