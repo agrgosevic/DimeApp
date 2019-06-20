@@ -45,6 +45,8 @@
             this.btnObrisi = new System.Windows.Forms.Button();
             this.btnIzmjeni = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblPrekrsaji = new System.Windows.Forms.Label();
+            this.txtPrekrsaji = new System.Windows.Forms.TextBox();
             this.txt3pPostotak = new System.Windows.Forms.TextBox();
             this.txt2pPostotak = new System.Windows.Forms.TextBox();
             this.txtSBPostotak = new System.Windows.Forms.TextBox();
@@ -75,8 +77,6 @@
             this.minutazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idutakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvIgraciNaUtakmici = new System.Windows.Forms.DataGridView();
-            this.txtPrekrsaji = new System.Windows.Forms.TextBox();
-            this.lblPrekrsaji = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -183,9 +183,9 @@
             this.lblPopisIgraca.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPopisIgraca.Location = new System.Drawing.Point(8, 187);
             this.lblPopisIgraca.Name = "lblPopisIgraca";
-            this.lblPopisIgraca.Size = new System.Drawing.Size(117, 21);
+            this.lblPopisIgraca.Size = new System.Drawing.Size(112, 21);
             this.lblPopisIgraca.TabIndex = 10;
-            this.lblPopisIgraca.Text = "Popis igrača:";
+            this.lblPopisIgraca.Text = "Popis igrača";
             // 
             // btnDodaj
             // 
@@ -243,6 +243,27 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Statistika igrača";
+            // 
+            // lblPrekrsaji
+            // 
+            this.lblPrekrsaji.AutoSize = true;
+            this.lblPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrekrsaji.Location = new System.Drawing.Point(180, 450);
+            this.lblPrekrsaji.Name = "lblPrekrsaji";
+            this.lblPrekrsaji.Size = new System.Drawing.Size(87, 23);
+            this.lblPrekrsaji.TabIndex = 31;
+            this.lblPrekrsaji.Text = "prekršaji";
+            // 
+            // txtPrekrsaji
+            // 
+            this.txtPrekrsaji.Enabled = false;
+            this.txtPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrekrsaji.Location = new System.Drawing.Point(189, 407);
+            this.txtPrekrsaji.Multiline = true;
+            this.txtPrekrsaji.Name = "txtPrekrsaji";
+            this.txtPrekrsaji.Size = new System.Drawing.Size(70, 40);
+            this.txtPrekrsaji.TabIndex = 30;
+            this.txtPrekrsaji.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt3pPostotak
             // 
@@ -503,7 +524,6 @@
             // 
             this.dgvIgraciNaUtakmici.AllowUserToAddRows = false;
             this.dgvIgraciNaUtakmici.AllowUserToDeleteRows = false;
-            this.dgvIgraciNaUtakmici.AllowUserToOrderColumns = true;
             this.dgvIgraciNaUtakmici.AllowUserToResizeColumns = false;
             this.dgvIgraciNaUtakmici.AllowUserToResizeRows = false;
             this.dgvIgraciNaUtakmici.AutoGenerateColumns = false;
@@ -529,27 +549,6 @@
             this.dgvIgraciNaUtakmici.Size = new System.Drawing.Size(472, 259);
             this.dgvIgraciNaUtakmici.TabIndex = 9;
             this.dgvIgraciNaUtakmici.SelectionChanged += new System.EventHandler(this.dgvIgraciNaUtakmici_SelectionChanged);
-            // 
-            // txtPrekrsaji
-            // 
-            this.txtPrekrsaji.Enabled = false;
-            this.txtPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrekrsaji.Location = new System.Drawing.Point(189, 407);
-            this.txtPrekrsaji.Multiline = true;
-            this.txtPrekrsaji.Name = "txtPrekrsaji";
-            this.txtPrekrsaji.Size = new System.Drawing.Size(70, 40);
-            this.txtPrekrsaji.TabIndex = 30;
-            this.txtPrekrsaji.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblPrekrsaji
-            // 
-            this.lblPrekrsaji.AutoSize = true;
-            this.lblPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrekrsaji.Location = new System.Drawing.Point(180, 450);
-            this.lblPrekrsaji.Name = "lblPrekrsaji";
-            this.lblPrekrsaji.Size = new System.Drawing.Size(87, 23);
-            this.lblPrekrsaji.TabIndex = 31;
-            this.lblPrekrsaji.Text = "prekršaji";
             // 
             // FrmStatistikaOdabraneUtakmice
             // 
