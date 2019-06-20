@@ -75,6 +75,8 @@
             this.minutazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idutakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvIgraciNaUtakmici = new System.Windows.Forms.DataGridView();
+            this.txtPrekrsaji = new System.Windows.Forms.TextBox();
+            this.lblPrekrsaji = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -217,6 +219,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblPrekrsaji);
+            this.groupBox2.Controls.Add(this.txtPrekrsaji);
             this.groupBox2.Controls.Add(this.txt3pPostotak);
             this.groupBox2.Controls.Add(this.txt2pPostotak);
             this.groupBox2.Controls.Add(this.txtSBPostotak);
@@ -526,6 +530,27 @@
             this.dgvIgraciNaUtakmici.TabIndex = 9;
             this.dgvIgraciNaUtakmici.SelectionChanged += new System.EventHandler(this.dgvIgraciNaUtakmici_SelectionChanged);
             // 
+            // txtPrekrsaji
+            // 
+            this.txtPrekrsaji.Enabled = false;
+            this.txtPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrekrsaji.Location = new System.Drawing.Point(189, 407);
+            this.txtPrekrsaji.Multiline = true;
+            this.txtPrekrsaji.Name = "txtPrekrsaji";
+            this.txtPrekrsaji.Size = new System.Drawing.Size(70, 40);
+            this.txtPrekrsaji.TabIndex = 30;
+            this.txtPrekrsaji.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblPrekrsaji
+            // 
+            this.lblPrekrsaji.AutoSize = true;
+            this.lblPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrekrsaji.Location = new System.Drawing.Point(180, 450);
+            this.lblPrekrsaji.Name = "lblPrekrsaji";
+            this.lblPrekrsaji.Size = new System.Drawing.Size(87, 23);
+            this.lblPrekrsaji.TabIndex = 31;
+            this.lblPrekrsaji.Text = "prekršaji";
+            // 
             // FrmStatistikaOdabraneUtakmice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -604,5 +629,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idutakmiceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgvIgraciNaUtakmici;
         private System.Windows.Forms.Label lblIshod;
+        private System.Windows.Forms.Label lblPrekrsaji;
+        private System.Windows.Forms.TextBox txtPrekrsaji;
     }
 }

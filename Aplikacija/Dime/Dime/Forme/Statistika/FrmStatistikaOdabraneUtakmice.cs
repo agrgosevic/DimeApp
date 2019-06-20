@@ -114,6 +114,7 @@ namespace Dime.Forme.Statistika
                         txtSBPostotak.Text = Math.Round(postotak_sb, 1).ToString();
                         txt2pPostotak.Text = Math.Round(postotak_2p, 1).ToString();
                         txt3pPostotak.Text = Math.Round(postotak_3p, 1).ToString();
+                        txtPrekrsaji.Text = odabranaStatistikaIgraca.prekrsaji.ToString();
                     }
                 }
             }
