@@ -136,5 +136,26 @@ namespace Dime.Forme.Statistika
                 PrikaziPodatke();
             }
         }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (dgvIgraciNaUtakmici.CurrentRow != null)
+            {
+                StatistikaIgraca odabranaStatIgraca = dgvIgraciNaUtakmici.CurrentRow.DataBoundItem as StatistikaIgraca;
+                if (odabranaStatIgraca != null)
+                {
+                    if (MessageBox.Show("Jeste li sigurni da želite obrisati igrača s popisa statistike?", "Upozorenje!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        using (var db = new DimeEntities())
+                        {
+                            db.StatistikeIgraca.Attach(odabranaStatIgraca);
+                            db.StatistikeIgraca.Remove(odabranaStatIgraca);
+                            db.SaveChanges();
+                        }
+                    }
+                    PrikaziPodatke();
+                }
+            }
+        }
     }
 }
