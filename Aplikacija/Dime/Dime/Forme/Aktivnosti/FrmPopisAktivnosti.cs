@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dime.Forme.Aktivnosti;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,15 +40,8 @@ namespace Dime.Forme
             clanarinaBindingSource.DataSource = listaClanarina;
         }
 
-        private void FrmPopisAktivnosti_Load(object sender, EventArgs e)
+        private void ObojiClanarine()
         {
-            // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.Clanarina' table. You can move, or remove it, as needed.
-            this.clanarinaTableAdapter1.Fill(this._19008_DBDataSetUpdated.Clanarina);
-            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.TipTreninga' table. You can move, or remove it, as needed.
-            this.tipTreningaTableAdapter.Fill(this._19008_DBDataSetPrimary.TipTreninga);
-            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.Trening' table. You can move, or remove it, as needed.
-            //this.treningTableAdapter.Fill(this._19008_DBDataSetPrimary.Trening);
-
             foreach (DataGridViewRow row in dgvPopisClanarina.Rows)
             {
                 if (row != null)
@@ -65,6 +59,30 @@ namespace Dime.Forme
                     }
 
                 }
+            }
+        }
+
+        private void FrmPopisAktivnosti_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.Clanarina' table. You can move, or remove it, as needed.
+            this.clanarinaTableAdapter1.Fill(this._19008_DBDataSetUpdated.Clanarina);
+            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.TipTreninga' table. You can move, or remove it, as needed.
+            this.tipTreningaTableAdapter.Fill(this._19008_DBDataSetPrimary.TipTreninga);
+            // TODO: This line of code loads data into the '_19008_DBDataSetPrimary.Trening' table. You can move, or remove it, as needed.
+            //this.treningTableAdapter.Fill(this._19008_DBDataSetPrimary.Trening);
+            ObojiClanarine();
+        }
+
+        private void btnOdaberiClanarinu_Click(object sender, EventArgs e)
+        {
+            Clanarina odabranaClanarina = dgvPopisClanarina.CurrentRow.DataBoundItem as Clanarina;
+            if (odabranaClanarina != null)
+            {
+                FrmStanjeClanarina forma = new FrmStanjeClanarina(odabranaClanarina);
+                forma.ShowDialog();
+                PrikaziTreninge();
+                PrikaziClanarine();
+                ObojiClanarine();
             }
         }
     }

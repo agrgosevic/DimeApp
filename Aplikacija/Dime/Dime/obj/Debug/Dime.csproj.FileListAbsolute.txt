@@ -104,3 +104,4 @@ C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.FrmDodajStatistikuIgraca.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.FrmDodajStatistikuIgraca.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.FrmStatistikaOdabraneUtakmice.resources
+C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.FrmStanjeClanarina.resources

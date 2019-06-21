@@ -261,6 +261,7 @@
             this.btnOdaberiClanarinu.TabIndex = 5;
             this.btnOdaberiClanarinu.Text = "Odaberi";
             this.btnOdaberiClanarinu.UseVisualStyleBackColor = true;
+            this.btnOdaberiClanarinu.Click += new System.EventHandler(this.btnOdaberiClanarinu_Click);
             // 
             // btnKreiraj
             // 
