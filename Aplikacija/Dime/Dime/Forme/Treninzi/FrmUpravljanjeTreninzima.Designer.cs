@@ -35,17 +35,25 @@
             this.btnIzmijeniTrening = new System.Windows.Forms.Button();
             this.btnObrisiTrening = new System.Windows.Forms.Button();
             this.btnPomoć = new System.Windows.Forms.Button();
+            this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSetUpdated = new Dime._19008_DBDataSetUpdated();
+            this.tipTreningaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipTreningaTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.TipTreningaTableAdapter();
+            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.korisnikTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.KorisnikTableAdapter();
             this.idtreningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tiptreningaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiptreningaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.korisnikDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipTreningaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -108,6 +116,33 @@
             this.btnPomoć.UseVisualStyleBackColor = true;
             this.btnPomoć.Click += new System.EventHandler(this.btnPomoć_Click);
             // 
+            // treningBindingSource
+            // 
+            this.treningBindingSource.DataSource = typeof(Dime.Trening);
+            // 
+            // _19008_DBDataSetUpdated
+            // 
+            this._19008_DBDataSetUpdated.DataSetName = "_19008_DBDataSetUpdated";
+            this._19008_DBDataSetUpdated.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipTreningaBindingSource
+            // 
+            this.tipTreningaBindingSource.DataMember = "TipTreninga";
+            this.tipTreningaBindingSource.DataSource = this._19008_DBDataSetUpdated;
+            // 
+            // tipTreningaTableAdapter
+            // 
+            this.tipTreningaTableAdapter.ClearBeforeFill = true;
+            // 
+            // korisnikBindingSource
+            // 
+            this.korisnikBindingSource.DataMember = "Korisnik";
+            this.korisnikBindingSource.DataSource = this._19008_DBDataSetUpdated;
+            // 
+            // korisnikTableAdapter
+            // 
+            this.korisnikTableAdapter.ClearBeforeFill = true;
+            // 
             // idtreningDataGridViewTextBoxColumn
             // 
             this.idtreningDataGridViewTextBoxColumn.DataPropertyName = "id_trening";
@@ -136,14 +171,26 @@
             // tiptreningaDataGridViewTextBoxColumn
             // 
             this.tiptreningaDataGridViewTextBoxColumn.DataPropertyName = "tip_treninga";
+            this.tiptreningaDataGridViewTextBoxColumn.DataSource = this.tipTreningaBindingSource;
+            this.tiptreningaDataGridViewTextBoxColumn.DisplayMember = "naziv_tipa";
+            this.tiptreningaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.tiptreningaDataGridViewTextBoxColumn.HeaderText = "Tip treninga";
             this.tiptreningaDataGridViewTextBoxColumn.Name = "tiptreningaDataGridViewTextBoxColumn";
+            this.tiptreningaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tiptreningaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tiptreningaDataGridViewTextBoxColumn.ValueMember = "id_tipa_treninga";
             // 
             // korisnikDataGridViewTextBoxColumn
             // 
             this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
+            this.korisnikDataGridViewTextBoxColumn.DataSource = this.korisnikBindingSource;
+            this.korisnikDataGridViewTextBoxColumn.DisplayMember = "korisnicko_ime";
+            this.korisnikDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.korisnikDataGridViewTextBoxColumn.HeaderText = "Trener";
             this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
+            this.korisnikDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.korisnikDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.korisnikDataGridViewTextBoxColumn.ValueMember = "id_korisnik";
             // 
             // korisnikDataGridViewTextBoxColumn1
             // 
@@ -158,10 +205,6 @@
             this.tipTreningaDataGridViewTextBoxColumn1.HeaderText = "TipTreninga";
             this.tipTreningaDataGridViewTextBoxColumn1.Name = "tipTreningaDataGridViewTextBoxColumn1";
             this.tipTreningaDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // treningBindingSource
-            // 
-            this.treningBindingSource.DataSource = typeof(Dime.Trening);
             // 
             // FrmUpravljanjeTreninzima
             // 
@@ -181,6 +224,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUpravljanjeTreninzima_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,16 +236,21 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource treningBindingSource;
         private System.Windows.Forms.Button btnNoviTrening;
+        private System.Windows.Forms.Button btnIzmijeniTrening;
+        private System.Windows.Forms.Button btnObrisiTrening;
+        private System.Windows.Forms.Button btnPomoć;
+        private _19008_DBDataSetUpdated _19008_DBDataSetUpdated;
+        private System.Windows.Forms.BindingSource tipTreningaBindingSource;
+        private _19008_DBDataSetUpdatedTableAdapters.TipTreningaTableAdapter tipTreningaTableAdapter;
+        private System.Windows.Forms.BindingSource korisnikBindingSource;
+        private _19008_DBDataSetUpdatedTableAdapters.KorisnikTableAdapter korisnikTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idtreningDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tiptreningaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn tiptreningaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn korisnikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipTreningaDataGridViewTextBoxColumn1; 
-        private System.Windows.Forms.Button btnIzmijeniTrening;
-        private System.Windows.Forms.Button btnObrisiTrening;
-        private System.Windows.Forms.Button btnPomoć;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipTreningaDataGridViewTextBoxColumn1;
     }
 }

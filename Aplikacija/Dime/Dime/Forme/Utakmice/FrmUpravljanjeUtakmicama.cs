@@ -35,6 +35,12 @@ namespace Dime.Forme.Utakmice
 
         private void FrmUpravljanjeUtakmicama_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.Korisnik' table. You can move, or remove it, as needed.
+            this.korisnikTableAdapter.Fill(this._19008_DBDataSetUpdated.Korisnik);
+            // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.Klub' table. You can move, or remove it, as needed.
+            this.klubTableAdapter.Fill(this._19008_DBDataSetUpdated.Klub);
+            // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.TipUtakmice' table. You can move, or remove it, as needed.
+            this.tipUtakmiceTableAdapter.Fill(this._19008_DBDataSetUpdated.TipUtakmice);
             PrikaziSveUtakmice();
         }
 
