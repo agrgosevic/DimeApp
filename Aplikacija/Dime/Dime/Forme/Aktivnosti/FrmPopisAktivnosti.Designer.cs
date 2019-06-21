@@ -29,42 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPopisAktivnosti));
             this.dgvOdrzaniTreninzi = new System.Windows.Forms.DataGridView();
-            this.lblPopisTreninga = new System.Windows.Forms.Label();
-            this.lblPopisClanarina = new System.Windows.Forms.Label();
-            this.dgvPopisClanarina = new System.Windows.Forms.DataGridView();
-            this.btnOdaberiTrening = new System.Windows.Forms.Button();
-            this.btnOdaberiClanarinu = new System.Windows.Forms.Button();
-            this.btnKreiraj = new System.Windows.Forms.Button();
-            this.btnIzmjeni = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
             this.idtreningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiptreningaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tipTreningaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSetPrimary = new Dime._19008_DBDataSetPrimary();
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.treningTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TreningTableAdapter();
-            this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
-            this.clanarinaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.ClanarinaTableAdapter();
-            this._19008_DBDataSetUpdated = new Dime._19008_DBDataSetUpdated();
-            this.clanarinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clanarinaTableAdapter1 = new Dime._19008_DBDataSetUpdatedTableAdapters.ClanarinaTableAdapter();
+            this.lblPopisTreninga = new System.Windows.Forms.Label();
+            this.lblPopisClanarina = new System.Windows.Forms.Label();
+            this.dgvPopisClanarina = new System.Windows.Forms.DataGridView();
             this.idclanarinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mjesecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.godinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rokuplateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clanarinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSetUpdated = new Dime._19008_DBDataSetUpdated();
+            this.btnOdaberiTrening = new System.Windows.Forms.Button();
+            this.btnOdaberiClanarinu = new System.Windows.Forms.Button();
+            this.btnKreiraj = new System.Windows.Forms.Button();
+            this.btnIzmjeni = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.treningTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TreningTableAdapter();
+            this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
+            this.clanarinaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.ClanarinaTableAdapter();
+            this.clanarinaTableAdapter1 = new Dime._19008_DBDataSetUpdatedTableAdapters.ClanarinaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdrzaniTreninzi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanarina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanarina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanarinaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOdrzaniTreninzi
@@ -91,99 +92,6 @@
             this.dgvOdrzaniTreninzi.RowTemplate.Height = 24;
             this.dgvOdrzaniTreninzi.Size = new System.Drawing.Size(496, 463);
             this.dgvOdrzaniTreninzi.TabIndex = 0;
-            // 
-            // lblPopisTreninga
-            // 
-            this.lblPopisTreninga.AutoSize = true;
-            this.lblPopisTreninga.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPopisTreninga.Location = new System.Drawing.Point(8, 9);
-            this.lblPopisTreninga.Name = "lblPopisTreninga";
-            this.lblPopisTreninga.Size = new System.Drawing.Size(235, 23);
-            this.lblPopisTreninga.TabIndex = 1;
-            this.lblPopisTreninga.Text = "Popis održanih treninga";
-            // 
-            // lblPopisClanarina
-            // 
-            this.lblPopisClanarina.AutoSize = true;
-            this.lblPopisClanarina.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPopisClanarina.Location = new System.Drawing.Point(878, 9);
-            this.lblPopisClanarina.Name = "lblPopisClanarina";
-            this.lblPopisClanarina.Size = new System.Drawing.Size(159, 23);
-            this.lblPopisClanarina.TabIndex = 2;
-            this.lblPopisClanarina.Text = "Popis članarina";
-            // 
-            // dgvPopisClanarina
-            // 
-            this.dgvPopisClanarina.AllowUserToAddRows = false;
-            this.dgvPopisClanarina.AllowUserToDeleteRows = false;
-            this.dgvPopisClanarina.AllowUserToResizeColumns = false;
-            this.dgvPopisClanarina.AllowUserToResizeRows = false;
-            this.dgvPopisClanarina.AutoGenerateColumns = false;
-            this.dgvPopisClanarina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPopisClanarina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPopisClanarina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idclanarinaDataGridViewTextBoxColumn,
-            this.mjesecDataGridViewTextBoxColumn,
-            this.godinaDataGridViewTextBoxColumn,
-            this.rokuplateDataGridViewTextBoxColumn});
-            this.dgvPopisClanarina.DataSource = this.clanarinaBindingSource;
-            this.dgvPopisClanarina.Location = new System.Drawing.Point(538, 41);
-            this.dgvPopisClanarina.Name = "dgvPopisClanarina";
-            this.dgvPopisClanarina.ReadOnly = true;
-            this.dgvPopisClanarina.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvPopisClanarina.RowTemplate.Height = 24;
-            this.dgvPopisClanarina.Size = new System.Drawing.Size(496, 463);
-            this.dgvPopisClanarina.TabIndex = 3;
-            // 
-            // btnOdaberiTrening
-            // 
-            this.btnOdaberiTrening.Location = new System.Drawing.Point(12, 518);
-            this.btnOdaberiTrening.Name = "btnOdaberiTrening";
-            this.btnOdaberiTrening.Size = new System.Drawing.Size(82, 38);
-            this.btnOdaberiTrening.TabIndex = 4;
-            this.btnOdaberiTrening.Text = "Odaberi";
-            this.btnOdaberiTrening.UseVisualStyleBackColor = true;
-            // 
-            // btnOdaberiClanarinu
-            // 
-            this.btnOdaberiClanarinu.Location = new System.Drawing.Point(952, 518);
-            this.btnOdaberiClanarinu.Name = "btnOdaberiClanarinu";
-            this.btnOdaberiClanarinu.Size = new System.Drawing.Size(82, 38);
-            this.btnOdaberiClanarinu.TabIndex = 5;
-            this.btnOdaberiClanarinu.Text = "Odaberi";
-            this.btnOdaberiClanarinu.UseVisualStyleBackColor = true;
-            // 
-            // btnKreiraj
-            // 
-            this.btnKreiraj.Location = new System.Drawing.Point(538, 518);
-            this.btnKreiraj.Name = "btnKreiraj";
-            this.btnKreiraj.Size = new System.Drawing.Size(124, 38);
-            this.btnKreiraj.TabIndex = 6;
-            this.btnKreiraj.Text = "Kreiraj članarinu";
-            this.btnKreiraj.UseVisualStyleBackColor = true;
-            // 
-            // btnIzmjeni
-            // 
-            this.btnIzmjeni.Location = new System.Drawing.Point(668, 518);
-            this.btnIzmjeni.Name = "btnIzmjeni";
-            this.btnIzmjeni.Size = new System.Drawing.Size(124, 38);
-            this.btnIzmjeni.TabIndex = 7;
-            this.btnIzmjeni.Text = "Izmjeni članarinu";
-            this.btnIzmjeni.UseVisualStyleBackColor = true;
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(798, 518);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(124, 38);
-            this.btnObrisi.TabIndex = 8;
-            this.btnObrisi.Text = "Obriši članarinu";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            // 
-            // _19008_DBDataSetPrimary
-            // 
-            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
-            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // idtreningDataGridViewTextBoxColumn
             // 
@@ -233,6 +141,11 @@
             this.tipTreningaBindingSource.DataMember = "TipTreninga";
             this.tipTreningaBindingSource.DataSource = this._19008_DBDataSetPrimary;
             // 
+            // _19008_DBDataSetPrimary
+            // 
+            this._19008_DBDataSetPrimary.DataSetName = "_19008_DBDataSetPrimary";
+            this._19008_DBDataSetPrimary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // korisnikDataGridViewTextBoxColumn
             // 
             this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
@@ -246,31 +159,51 @@
             this.treningBindingSource.DataMember = "Trening";
             this.treningBindingSource.DataSource = this._19008_DBDataSetPrimary;
             // 
-            // treningTableAdapter
+            // lblPopisTreninga
             // 
-            this.treningTableAdapter.ClearBeforeFill = true;
+            this.lblPopisTreninga.AutoSize = true;
+            this.lblPopisTreninga.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPopisTreninga.Location = new System.Drawing.Point(8, 9);
+            this.lblPopisTreninga.Name = "lblPopisTreninga";
+            this.lblPopisTreninga.Size = new System.Drawing.Size(235, 23);
+            this.lblPopisTreninga.TabIndex = 1;
+            this.lblPopisTreninga.Text = "Popis održanih treninga";
             // 
-            // tipTreningaTableAdapter
+            // lblPopisClanarina
             // 
-            this.tipTreningaTableAdapter.ClearBeforeFill = true;
+            this.lblPopisClanarina.AutoSize = true;
+            this.lblPopisClanarina.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPopisClanarina.Location = new System.Drawing.Point(878, 9);
+            this.lblPopisClanarina.Name = "lblPopisClanarina";
+            this.lblPopisClanarina.Size = new System.Drawing.Size(159, 23);
+            this.lblPopisClanarina.TabIndex = 2;
+            this.lblPopisClanarina.Text = "Popis članarina";
             // 
-            // clanarinaTableAdapter
+            // dgvPopisClanarina
             // 
-            this.clanarinaTableAdapter.ClearBeforeFill = true;
-            // 
-            // _19008_DBDataSetUpdated
-            // 
-            this._19008_DBDataSetUpdated.DataSetName = "_19008_DBDataSetUpdated";
-            this._19008_DBDataSetUpdated.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clanarinaBindingSource
-            // 
-            this.clanarinaBindingSource.DataMember = "Clanarina";
-            this.clanarinaBindingSource.DataSource = this._19008_DBDataSetUpdated;
-            // 
-            // clanarinaTableAdapter1
-            // 
-            this.clanarinaTableAdapter1.ClearBeforeFill = true;
+            this.dgvPopisClanarina.AllowUserToAddRows = false;
+            this.dgvPopisClanarina.AllowUserToDeleteRows = false;
+            this.dgvPopisClanarina.AllowUserToResizeColumns = false;
+            this.dgvPopisClanarina.AllowUserToResizeRows = false;
+            this.dgvPopisClanarina.AutoGenerateColumns = false;
+            this.dgvPopisClanarina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPopisClanarina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPopisClanarina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idclanarinaDataGridViewTextBoxColumn,
+            this.mjesecDataGridViewTextBoxColumn,
+            this.godinaDataGridViewTextBoxColumn,
+            this.rokuplateDataGridViewTextBoxColumn});
+            this.dgvPopisClanarina.DataSource = this.clanarinaBindingSource;
+            this.dgvPopisClanarina.Location = new System.Drawing.Point(538, 41);
+            this.dgvPopisClanarina.Name = "dgvPopisClanarina";
+            this.dgvPopisClanarina.ReadOnly = true;
+            this.dgvPopisClanarina.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.dgvPopisClanarina.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPopisClanarina.RowTemplate.Height = 24;
+            this.dgvPopisClanarina.Size = new System.Drawing.Size(496, 463);
+            this.dgvPopisClanarina.TabIndex = 3;
             // 
             // idclanarinaDataGridViewTextBoxColumn
             // 
@@ -301,6 +234,77 @@
             this.rokuplateDataGridViewTextBoxColumn.Name = "rokuplateDataGridViewTextBoxColumn";
             this.rokuplateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // clanarinaBindingSource
+            // 
+            this.clanarinaBindingSource.DataMember = "Clanarina";
+            this.clanarinaBindingSource.DataSource = this._19008_DBDataSetUpdated;
+            // 
+            // _19008_DBDataSetUpdated
+            // 
+            this._19008_DBDataSetUpdated.DataSetName = "_19008_DBDataSetUpdated";
+            this._19008_DBDataSetUpdated.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnOdaberiTrening
+            // 
+            this.btnOdaberiTrening.Location = new System.Drawing.Point(12, 518);
+            this.btnOdaberiTrening.Name = "btnOdaberiTrening";
+            this.btnOdaberiTrening.Size = new System.Drawing.Size(82, 38);
+            this.btnOdaberiTrening.TabIndex = 4;
+            this.btnOdaberiTrening.Text = "Odaberi";
+            this.btnOdaberiTrening.UseVisualStyleBackColor = true;
+            // 
+            // btnOdaberiClanarinu
+            // 
+            this.btnOdaberiClanarinu.Location = new System.Drawing.Point(952, 518);
+            this.btnOdaberiClanarinu.Name = "btnOdaberiClanarinu";
+            this.btnOdaberiClanarinu.Size = new System.Drawing.Size(82, 38);
+            this.btnOdaberiClanarinu.TabIndex = 5;
+            this.btnOdaberiClanarinu.Text = "Odaberi";
+            this.btnOdaberiClanarinu.UseVisualStyleBackColor = true;
+            // 
+            // btnKreiraj
+            // 
+            this.btnKreiraj.Location = new System.Drawing.Point(538, 518);
+            this.btnKreiraj.Name = "btnKreiraj";
+            this.btnKreiraj.Size = new System.Drawing.Size(124, 38);
+            this.btnKreiraj.TabIndex = 6;
+            this.btnKreiraj.Text = "Kreiraj članarinu";
+            this.btnKreiraj.UseVisualStyleBackColor = true;
+            // 
+            // btnIzmjeni
+            // 
+            this.btnIzmjeni.Location = new System.Drawing.Point(668, 518);
+            this.btnIzmjeni.Name = "btnIzmjeni";
+            this.btnIzmjeni.Size = new System.Drawing.Size(124, 38);
+            this.btnIzmjeni.TabIndex = 7;
+            this.btnIzmjeni.Text = "Izmjeni članarinu";
+            this.btnIzmjeni.UseVisualStyleBackColor = true;
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(798, 518);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(124, 38);
+            this.btnObrisi.TabIndex = 8;
+            this.btnObrisi.Text = "Obriši članarinu";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            // 
+            // treningTableAdapter
+            // 
+            this.treningTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipTreningaTableAdapter
+            // 
+            this.tipTreningaTableAdapter.ClearBeforeFill = true;
+            // 
+            // clanarinaTableAdapter
+            // 
+            this.clanarinaTableAdapter.ClearBeforeFill = true;
+            // 
+            // clanarinaTableAdapter1
+            // 
+            this.clanarinaTableAdapter1.ClearBeforeFill = true;
+            // 
             // FrmPopisAktivnosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,12 +327,12 @@
             this.Text = "Popis aktivnosti";
             this.Load += new System.EventHandler(this.FrmPopisAktivnosti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdrzaniTreninzi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanarina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanarinaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
