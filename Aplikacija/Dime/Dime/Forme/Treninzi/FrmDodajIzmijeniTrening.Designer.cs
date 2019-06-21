@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDodajIzmijeniTrening));
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -194,8 +195,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDodajIzmijeniTrening";
-            this.Text = "FrmDodajIzmijeniTrening";
+            this.Text = "Dodaj/izmijeni trening";
             this.Load += new System.EventHandler(this.FrmDodajIzmijeniTrening_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajIzmijeniTrening_HelpRequested);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajIzmijeniTrening_KeyDown);

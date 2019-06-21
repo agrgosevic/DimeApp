@@ -16,7 +16,7 @@ namespace Dime
     {
         public int id_treninga { get; set; }
         public int id_igraca { get; set; }
-        public byte prisustvo { get; set; }
+        public string prisustvo { get; set; }
     
         public virtual Igrac Igrac { get; set; }
         public virtual Trening Trening { get; set; }

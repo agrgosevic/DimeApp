@@ -43,7 +43,6 @@
             this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnikDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipTreningaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treningPrisustvaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treningBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningBindingSource)).BeginInit();
@@ -62,8 +61,7 @@
             this.tiptreningaDataGridViewTextBoxColumn,
             this.korisnikDataGridViewTextBoxColumn,
             this.korisnikDataGridViewTextBoxColumn1,
-            this.tipTreningaDataGridViewTextBoxColumn1,
-            this.treningPrisustvaDataGridViewTextBoxColumn});
+            this.tipTreningaDataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.treningBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -161,13 +159,6 @@
             this.tipTreningaDataGridViewTextBoxColumn1.Name = "tipTreningaDataGridViewTextBoxColumn1";
             this.tipTreningaDataGridViewTextBoxColumn1.Visible = false;
             // 
-            // treningPrisustvaDataGridViewTextBoxColumn
-            // 
-            this.treningPrisustvaDataGridViewTextBoxColumn.DataPropertyName = "TreningPrisustva";
-            this.treningPrisustvaDataGridViewTextBoxColumn.HeaderText = "TreningPrisustva";
-            this.treningPrisustvaDataGridViewTextBoxColumn.Name = "treningPrisustvaDataGridViewTextBoxColumn";
-            this.treningPrisustvaDataGridViewTextBoxColumn.Visible = false;
-            // 
             // treningBindingSource
             // 
             this.treningBindingSource.DataSource = typeof(Dime.Trening);
@@ -184,7 +175,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUpravljanjeTreninzima";
-            this.Text = "FrmUpravljanjeTreninzima";
+            this.Text = "Treninzi";
             this.Load += new System.EventHandler(this.FrmUpravljanjeTreninzima_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmUpravljanjeTreninzima_HelpRequested);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUpravljanjeTreninzima_KeyDown);
@@ -206,8 +197,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tiptreningaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipTreningaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn treningPrisustvaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipTreningaDataGridViewTextBoxColumn1; 
         private System.Windows.Forms.Button btnIzmijeniTrening;
         private System.Windows.Forms.Button btnObrisiTrening;
         private System.Windows.Forms.Button btnPomoć;

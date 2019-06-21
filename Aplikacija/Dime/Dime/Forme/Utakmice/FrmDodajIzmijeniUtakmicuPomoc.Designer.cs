@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDodajIzmijeniUtakmicuPomoc));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,9 +48,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(66, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 13);
+            this.label2.Size = new System.Drawing.Size(258, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Unesite sve podatke za dodavanje nove utakmice";
+            this.label2.Text = "Unesite sve podatke za dodavanje/izmjene utakmice";
             // 
             // label1
             // 
@@ -70,8 +71,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDodajIzmijeniUtakmicuPomoc";
-            this.Text = "FrmDodajIzmijeniUtakmicuPomoc";
+            this.Text = "Pomoć za dodavanje/izmijenu utakmice";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajIzmijeniUtakmicuPomoc_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();

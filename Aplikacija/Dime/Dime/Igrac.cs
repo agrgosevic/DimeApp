@@ -17,9 +17,9 @@ namespace Dime
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Igrac()
         {
-            this.ClanarineIgraca = new HashSet<ClanarinaIgraca>();
             this.StatistikeIgraca = new HashSet<StatistikaIgraca>();
-            this.TreningPrisustva = new HashSet<TreningPrisustvo>();
+            this.ClanarinaIgraca = new HashSet<ClanarinaIgraca>();
+            this.TreningPrisustvo = new HashSet<TreningPrisustvo>();
         }
     
         public int id_igrac { get; set; }
@@ -31,10 +31,10 @@ namespace Dime
         public int broj { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClanarinaIgraca> ClanarineIgraca { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StatistikaIgraca> StatistikeIgraca { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TreningPrisustvo> TreningPrisustva { get; set; }
+        public virtual ICollection<ClanarinaIgraca> ClanarinaIgraca { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TreningPrisustvo> TreningPrisustvo { get; set; }
     }
 }

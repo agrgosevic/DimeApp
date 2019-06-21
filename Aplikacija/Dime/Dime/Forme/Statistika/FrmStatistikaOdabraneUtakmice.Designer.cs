@@ -42,9 +42,11 @@
             this.statistikaIgracaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPopisIgraca = new System.Windows.Forms.Label();
             this.btnDodaj = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.btnIzmjeni = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblPrekrsaji = new System.Windows.Forms.Label();
+            this.txtPrekrsaji = new System.Windows.Forms.TextBox();
             this.txt3pPostotak = new System.Windows.Forms.TextBox();
             this.txt2pPostotak = new System.Windows.Forms.TextBox();
             this.txtSBPostotak = new System.Windows.Forms.TextBox();
@@ -181,9 +183,9 @@
             this.lblPopisIgraca.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPopisIgraca.Location = new System.Drawing.Point(8, 187);
             this.lblPopisIgraca.Name = "lblPopisIgraca";
-            this.lblPopisIgraca.Size = new System.Drawing.Size(117, 21);
+            this.lblPopisIgraca.Size = new System.Drawing.Size(112, 21);
             this.lblPopisIgraca.TabIndex = 10;
-            this.lblPopisIgraca.Text = "Popis igrača:";
+            this.lblPopisIgraca.Text = "Popis igrača";
             // 
             // btnDodaj
             // 
@@ -195,14 +197,15 @@
             this.btnDodaj.UseVisualStyleBackColor = true;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
-            // button1
+            // btnObrisi
             // 
-            this.button1.Location = new System.Drawing.Point(248, 476);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Obriši igrača";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnObrisi.Location = new System.Drawing.Point(248, 476);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(112, 35);
+            this.btnObrisi.TabIndex = 12;
+            this.btnObrisi.Text = "Obriši igrača";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // btnIzmjeni
             // 
@@ -216,6 +219,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblPrekrsaji);
+            this.groupBox2.Controls.Add(this.txtPrekrsaji);
             this.groupBox2.Controls.Add(this.txt3pPostotak);
             this.groupBox2.Controls.Add(this.txt2pPostotak);
             this.groupBox2.Controls.Add(this.txtSBPostotak);
@@ -238,6 +243,27 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Statistika igrača";
+            // 
+            // lblPrekrsaji
+            // 
+            this.lblPrekrsaji.AutoSize = true;
+            this.lblPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrekrsaji.Location = new System.Drawing.Point(180, 450);
+            this.lblPrekrsaji.Name = "lblPrekrsaji";
+            this.lblPrekrsaji.Size = new System.Drawing.Size(87, 23);
+            this.lblPrekrsaji.TabIndex = 31;
+            this.lblPrekrsaji.Text = "prekršaji";
+            // 
+            // txtPrekrsaji
+            // 
+            this.txtPrekrsaji.Enabled = false;
+            this.txtPrekrsaji.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrekrsaji.Location = new System.Drawing.Point(189, 407);
+            this.txtPrekrsaji.Multiline = true;
+            this.txtPrekrsaji.Name = "txtPrekrsaji";
+            this.txtPrekrsaji.Size = new System.Drawing.Size(70, 40);
+            this.txtPrekrsaji.TabIndex = 30;
+            this.txtPrekrsaji.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt3pPostotak
             // 
@@ -498,7 +524,6 @@
             // 
             this.dgvIgraciNaUtakmici.AllowUserToAddRows = false;
             this.dgvIgraciNaUtakmici.AllowUserToDeleteRows = false;
-            this.dgvIgraciNaUtakmici.AllowUserToOrderColumns = true;
             this.dgvIgraciNaUtakmici.AllowUserToResizeColumns = false;
             this.dgvIgraciNaUtakmici.AllowUserToResizeRows = false;
             this.dgvIgraciNaUtakmici.AutoGenerateColumns = false;
@@ -532,7 +557,7 @@
             this.ClientSize = new System.Drawing.Size(960, 523);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnIzmjeni);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.lblPopisIgraca);
             this.Controls.Add(this.dgvIgraciNaUtakmici);
@@ -565,7 +590,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblPopisIgraca;
         private System.Windows.Forms.Button btnDodaj;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.Button btnIzmjeni;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt3pPostotak;
@@ -603,5 +628,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idutakmiceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgvIgraciNaUtakmici;
         private System.Windows.Forms.Label lblIshod;
+        private System.Windows.Forms.Label lblPrekrsaji;
+        private System.Windows.Forms.TextBox txtPrekrsaji;
     }
 }

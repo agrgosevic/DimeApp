@@ -17,14 +17,15 @@ namespace Dime
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Clanarina()
         {
-            this.ClanarineIgraca = new HashSet<ClanarinaIgraca>();
+            this.ClanarinaIgraca = new HashSet<ClanarinaIgraca>();
         }
     
         public int id_clanarina { get; set; }
-        public int mjesec { get; set; }
+        public string mjesec { get; set; }
         public System.DateTime rok_uplate { get; set; }
+        public int godina { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClanarinaIgraca> ClanarineIgraca { get; set; }
+        public virtual ICollection<ClanarinaIgraca> ClanarinaIgraca { get; set; }
     }
 }

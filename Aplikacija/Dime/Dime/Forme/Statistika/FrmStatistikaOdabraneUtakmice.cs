@@ -114,6 +114,7 @@ namespace Dime.Forme.Statistika
                         txtSBPostotak.Text = Math.Round(postotak_sb, 1).ToString();
                         txt2pPostotak.Text = Math.Round(postotak_2p, 1).ToString();
                         txt3pPostotak.Text = Math.Round(postotak_3p, 1).ToString();
+                        txtPrekrsaji.Text = odabranaStatistikaIgraca.prekrsaji.ToString();
                     }
                 }
             }
@@ -134,6 +135,27 @@ namespace Dime.Forme.Statistika
                 FrmDodajStatistikuIgraca formaDodaj = new FrmDodajStatistikuIgraca(Utakmica, odabranaStatIgraca);
                 formaDodaj.ShowDialog();
                 PrikaziPodatke();
+            }
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (dgvIgraciNaUtakmici.CurrentRow != null)
+            {
+                StatistikaIgraca odabranaStatIgraca = dgvIgraciNaUtakmici.CurrentRow.DataBoundItem as StatistikaIgraca;
+                if (odabranaStatIgraca != null)
+                {
+                    if (MessageBox.Show("Jeste li sigurni da želite obrisati igrača s popisa statistike?", "Upozorenje!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        using (var db = new DimeEntities())
+                        {
+                            db.StatistikeIgraca.Attach(odabranaStatIgraca);
+                            db.StatistikeIgraca.Remove(odabranaStatIgraca);
+                            db.SaveChanges();
+                        }
+                    }
+                    PrikaziPodatke();
+                }
             }
         }
     }

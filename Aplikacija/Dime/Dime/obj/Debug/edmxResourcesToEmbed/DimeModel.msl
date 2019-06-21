@@ -1,24 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DimeDBModelStoreContainer" CdmEntityContainer="DimeEntities">
-    <EntitySetMapping Name="Clanarinas">
-      <EntityTypeMapping TypeName="DimeDBModel.Clanarina">
-        <MappingFragment StoreEntitySet="Clanarina">
-          <ScalarProperty Name="id_clanarina" ColumnName="id_clanarina" />
-          <ScalarProperty Name="mjesec" ColumnName="mjesec" />
-          <ScalarProperty Name="rok_uplate" ColumnName="rok_uplate" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ClanarinaIgracas">
-      <EntityTypeMapping TypeName="DimeDBModel.ClanarinaIgraca">
-        <MappingFragment StoreEntitySet="ClanarinaIgraca">
-          <ScalarProperty Name="id_clanarine" ColumnName="id_clanarine" />
-          <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
-          <ScalarProperty Name="uplaceno" ColumnName="uplaceno" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Igracs">
       <EntityTypeMapping TypeName="DimeDBModel.Igrac">
         <MappingFragment StoreEntitySet="Igrac">
@@ -110,15 +92,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TreningPrisustvoes">
-      <EntityTypeMapping TypeName="DimeDBModel.TreningPrisustvo">
-        <MappingFragment StoreEntitySet="TreningPrisustvo">
-          <ScalarProperty Name="id_treninga" ColumnName="id_treninga" />
-          <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
-          <ScalarProperty Name="prisustvo" ColumnName="prisustvo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="UlogaKorisnikas">
       <EntityTypeMapping TypeName="DimeDBModel.UlogaKorisnika">
         <MappingFragment StoreEntitySet="UlogaKorisnika">
@@ -139,6 +112,34 @@
           <ScalarProperty Name="tip_utakmice" ColumnName="tip_utakmice" />
           <ScalarProperty Name="protivnik" ColumnName="protivnik" />
           <ScalarProperty Name="korisnik" ColumnName="korisnik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clanarina">
+      <EntityTypeMapping TypeName="DimeDBModel.Clanarina">
+        <MappingFragment StoreEntitySet="Clanarina">
+          <ScalarProperty Name="godina" ColumnName="godina" />
+          <ScalarProperty Name="rok_uplate" ColumnName="rok_uplate" />
+          <ScalarProperty Name="mjesec" ColumnName="mjesec" />
+          <ScalarProperty Name="id_clanarina" ColumnName="id_clanarina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClanarinaIgraca">
+      <EntityTypeMapping TypeName="DimeDBModel.ClanarinaIgraca">
+        <MappingFragment StoreEntitySet="ClanarinaIgraca">
+          <ScalarProperty Name="uplaceno" ColumnName="uplaceno" />
+          <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
+          <ScalarProperty Name="id_clanarine" ColumnName="id_clanarine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreningPrisustvo">
+      <EntityTypeMapping TypeName="DimeDBModel.TreningPrisustvo">
+        <MappingFragment StoreEntitySet="TreningPrisustvo">
+          <ScalarProperty Name="prisustvo" ColumnName="prisustvo" />
+          <ScalarProperty Name="id_igraca" ColumnName="id_igraca" />
+          <ScalarProperty Name="id_treninga" ColumnName="id_treninga" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

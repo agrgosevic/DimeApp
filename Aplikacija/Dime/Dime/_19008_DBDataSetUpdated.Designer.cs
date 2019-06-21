@@ -20,9 +20,9 @@ namespace Dime {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("_19008_DBDataSetPrimary")]
+    [global::System.Xml.Serialization.XmlRootAttribute("_19008_DBDataSetUpdated")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _19008_DBDataSetPrimary : global::System.Data.DataSet {
+    public partial class _19008_DBDataSetUpdated : global::System.Data.DataSet {
         
         private ClanarinaDataTable tableClanarina;
         
@@ -76,7 +76,7 @@ namespace Dime {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public _19008_DBDataSetPrimary() {
+        public _19008_DBDataSetUpdated() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -87,7 +87,7 @@ namespace Dime {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected _19008_DBDataSetPrimary(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected _19008_DBDataSetUpdated(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -316,7 +316,7 @@ namespace Dime {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _19008_DBDataSetPrimary cln = ((_19008_DBDataSetPrimary)(base.Clone()));
+            _19008_DBDataSetUpdated cln = ((_19008_DBDataSetUpdated)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -499,9 +499,9 @@ namespace Dime {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "_19008_DBDataSetPrimary";
+            this.DataSetName = "_19008_DBDataSetUpdated";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/_19008_DBDataSetPrimary.xsd";
+            this.Namespace = "http://tempuri.org/_19008_DBDataSetUpdated.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableClanarina = new ClanarinaDataTable();
@@ -661,7 +661,7 @@ namespace Dime {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+            _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -990,7 +990,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1156,7 +1156,7 @@ namespace Dime {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClanarinaIgracaRow AddClanarinaIgracaRow(ClanarinaRow parentClanarinaRowByFK_ClanarinaIgraca_Clanarina, IgracRow parentIgracRowByFK_ClanarinaIgraca_Igrac, byte uplaceno) {
+            public ClanarinaIgracaRow AddClanarinaIgracaRow(ClanarinaRow parentClanarinaRowByFK_ClanarinaIgraca_Clanarina, IgracRow parentIgracRowByFK_ClanarinaIgraca_Igrac, string uplaceno) {
                 ClanarinaIgracaRow rowClanarinaIgracaRow = ((ClanarinaIgracaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1210,7 +1210,7 @@ namespace Dime {
                 base.Columns.Add(this.columnid_clanarine);
                 this.columnid_igraca = new global::System.Data.DataColumn("id_igraca", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_igraca);
-                this.columnuplaceno = new global::System.Data.DataColumn("uplaceno", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnuplaceno = new global::System.Data.DataColumn("uplaceno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuplaceno);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_clanarine,
@@ -1218,6 +1218,7 @@ namespace Dime {
                 this.columnid_clanarine.AllowDBNull = false;
                 this.columnid_igraca.AllowDBNull = false;
                 this.columnuplaceno.AllowDBNull = false;
+                this.columnuplaceno.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1285,7 +1286,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1639,7 +1640,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1917,7 +1918,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2277,7 +2278,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2707,7 +2708,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2985,7 +2986,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3263,7 +3264,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3606,7 +3607,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3772,7 +3773,7 @@ namespace Dime {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TreningPrisustvoRow AddTreningPrisustvoRow(TreningRow parentTreningRowByFK_TreningPrisustvo_Trening, IgracRow parentIgracRowByFK_TreningPrisustvo_Igrac, byte prisustvo) {
+            public TreningPrisustvoRow AddTreningPrisustvoRow(TreningRow parentTreningRowByFK_TreningPrisustvo_Trening, IgracRow parentIgracRowByFK_TreningPrisustvo_Igrac, string prisustvo) {
                 TreningPrisustvoRow rowTreningPrisustvoRow = ((TreningPrisustvoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3826,7 +3827,7 @@ namespace Dime {
                 base.Columns.Add(this.columnid_treninga);
                 this.columnid_igraca = new global::System.Data.DataColumn("id_igraca", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_igraca);
-                this.columnprisustvo = new global::System.Data.DataColumn("prisustvo", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnprisustvo = new global::System.Data.DataColumn("prisustvo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprisustvo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_treninga,
@@ -3834,6 +3835,7 @@ namespace Dime {
                 this.columnid_treninga.AllowDBNull = false;
                 this.columnid_igraca.AllowDBNull = false;
                 this.columnprisustvo.AllowDBNull = false;
+                this.columnprisustvo.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3901,7 +3903,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4179,7 +4181,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4570,7 +4572,7 @@ namespace Dime {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _19008_DBDataSetPrimary ds = new _19008_DBDataSetPrimary();
+                _19008_DBDataSetUpdated ds = new _19008_DBDataSetUpdated();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4737,9 +4739,9 @@ namespace Dime {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public byte uplaceno {
+            public string uplaceno {
                 get {
-                    return ((byte)(this[this.tableClanarinaIgraca.uplacenoColumn]));
+                    return ((string)(this[this.tableClanarinaIgraca.uplacenoColumn]));
                 }
                 set {
                     this[this.tableClanarinaIgraca.uplacenoColumn] = value;
@@ -5501,9 +5503,9 @@ namespace Dime {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public byte prisustvo {
+            public string prisustvo {
                 get {
-                    return ((byte)(this[this.tableTreningPrisustvo.prisustvoColumn]));
+                    return ((string)(this[this.tableTreningPrisustvo.prisustvoColumn]));
                 }
                 set {
                     this[this.tableTreningPrisustvo.prisustvoColumn] = value;
@@ -6165,7 +6167,7 @@ namespace Dime {
         }
     }
 }
-namespace Dime._19008_DBDataSetPrimaryTableAdapters {
+namespace Dime._19008_DBDataSetUpdatedTableAdapters {
     
     
     /// <summary>
@@ -6292,33 +6294,39 @@ namespace Dime._19008_DBDataSetPrimaryTableAdapters {
             tableMapping.ColumnMappings.Add("id_clanarina", "id_clanarina");
             tableMapping.ColumnMappings.Add("mjesec", "mjesec");
             tableMapping.ColumnMappings.Add("rok_uplate", "rok_uplate");
+            tableMapping.ColumnMappings.Add("godina", "godina");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Clanarina] WHERE (([id_clanarina] = @Original_id_clanarina) AN" +
-                "D ([mjesec] = @Original_mjesec) AND ([rok_uplate] = @Original_rok_uplate))";
+                "D ([mjesec] = @Original_mjesec) AND ([rok_uplate] = @Original_rok_uplate) AND ([" +
+                "godina] = @Original_godina))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_clanarina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_clanarina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mjesec", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mjesec", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rok_uplate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rok_uplate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Clanarina] ([mjesec], [rok_uplate]) VALUES (@mjesec, @rok_upla" +
-                "te);\r\nSELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina" +
-                " = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Clanarina] ([mjesec], [rok_uplate], [godina]) VALUES (@mjesec," +
+                " @rok_uplate, @godina);\r\nSELECT id_clanarina, mjesec, rok_uplate, godina FROM Cl" +
+                "anarina WHERE (id_clanarina = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mjesec", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mjesec", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rok_uplate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rok_uplate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Clanarina] SET [mjesec] = @mjesec, [rok_uplate] = @rok_uplate WHERE (([id_clanarina] = @Original_id_clanarina) AND ([mjesec] = @Original_mjesec) AND ([rok_uplate] = @Original_rok_uplate));
-SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id_clanarina)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Clanarina] SET [mjesec] = @mjesec, [rok_uplate] = @rok_uplate, [godina] = @godina WHERE (([id_clanarina] = @Original_id_clanarina) AND ([mjesec] = @Original_mjesec) AND ([rok_uplate] = @Original_rok_uplate) AND ([godina] = @Original_godina));
+SELECT id_clanarina, mjesec, rok_uplate, godina FROM Clanarina WHERE (id_clanarina = @id_clanarina)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mjesec", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mjesec", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rok_uplate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rok_uplate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_clanarina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_clanarina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mjesec", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mjesec", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mjesec", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rok_uplate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rok_uplate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_clanarina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_clanarina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -6326,8 +6334,7 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6336,7 +6343,7 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_clanarina, mjesec, rok_uplate FROM dbo.Clanarina";
+            this._commandCollection[0].CommandText = "SELECT id_clanarina, mjesec, rok_uplate, godina FROM dbo.Clanarina";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6344,7 +6351,7 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.ClanarinaDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.ClanarinaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6357,9 +6364,9 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.ClanarinaDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.ClanarinaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.ClanarinaDataTable dataTable = new _19008_DBDataSetPrimary.ClanarinaDataTable();
+            _19008_DBDataSetUpdated.ClanarinaDataTable dataTable = new _19008_DBDataSetUpdated.ClanarinaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6367,14 +6374,14 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.ClanarinaDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.ClanarinaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "Clanarina");
         }
         
@@ -6397,10 +6404,16 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_clanarina, int Original_mjesec, System.DateTime Original_rok_uplate) {
+        public virtual int Delete(int Original_id_clanarina, string Original_mjesec, System.DateTime Original_rok_uplate, int Original_godina) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_clanarina));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_mjesec));
+            if ((Original_mjesec == null)) {
+                throw new global::System.ArgumentNullException("Original_mjesec");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_mjesec));
+            }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_rok_uplate));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_godina));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6421,9 +6434,15 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int mjesec, System.DateTime rok_uplate) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(mjesec));
+        public virtual int Insert(string mjesec, System.DateTime rok_uplate, int godina) {
+            if ((mjesec == null)) {
+                throw new global::System.ArgumentNullException("mjesec");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(mjesec));
+            }
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(rok_uplate));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(godina));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6444,13 +6463,25 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int mjesec, System.DateTime rok_uplate, int Original_id_clanarina, int Original_mjesec, System.DateTime Original_rok_uplate, int id_clanarina) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(mjesec));
+        public virtual int Update(string mjesec, System.DateTime rok_uplate, int godina, int Original_id_clanarina, string Original_mjesec, System.DateTime Original_rok_uplate, int Original_godina, int id_clanarina) {
+            if ((mjesec == null)) {
+                throw new global::System.ArgumentNullException("mjesec");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(mjesec));
+            }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(rok_uplate));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_clanarina));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_mjesec));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Original_rok_uplate));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(id_clanarina));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(godina));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id_clanarina));
+            if ((Original_mjesec == null)) {
+                throw new global::System.ArgumentNullException("Original_mjesec");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_mjesec));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_rok_uplate));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_godina));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id_clanarina));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6471,8 +6502,8 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int mjesec, System.DateTime rok_uplate, int Original_id_clanarina, int Original_mjesec, System.DateTime Original_rok_uplate) {
-            return this.Update(mjesec, rok_uplate, Original_id_clanarina, Original_mjesec, Original_rok_uplate, Original_id_clanarina);
+        public virtual int Update(string mjesec, System.DateTime rok_uplate, int godina, int Original_id_clanarina, string Original_mjesec, System.DateTime Original_rok_uplate, int Original_godina) {
+            return this.Update(mjesec, rok_uplate, godina, Original_id_clanarina, Original_mjesec, Original_rok_uplate, Original_godina, Original_id_clanarina);
         }
     }
     
@@ -6609,7 +6640,7 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_clanarine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_clanarine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_uplaceno", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_uplaceno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ClanarinaIgraca] ([id_clanarine], [id_igraca], [uplaceno]) VAL" +
@@ -6619,7 +6650,7 @@ SELECT id_clanarina, mjesec, rok_uplate FROM Clanarina WHERE (id_clanarina = @id
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_clanarine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_clanarine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uplaceno", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uplaceno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ClanarinaIgraca] SET [id_clanarine] = @id_clanarine, [id_igraca] = @id_igraca, [uplaceno] = @uplaceno WHERE (([id_clanarine] = @Original_id_clanarine) AND ([id_igraca] = @Original_id_igraca) AND ([uplaceno] = @Original_uplaceno));
@@ -6627,18 +6658,17 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_clanarine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_clanarine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uplaceno", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uplaceno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_clanarine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_clanarine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_uplaceno", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_uplaceno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "uplaceno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6655,7 +6685,7 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.ClanarinaIgracaDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.ClanarinaIgracaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6668,9 +6698,9 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.ClanarinaIgracaDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.ClanarinaIgracaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.ClanarinaIgracaDataTable dataTable = new _19008_DBDataSetPrimary.ClanarinaIgracaDataTable();
+            _19008_DBDataSetUpdated.ClanarinaIgracaDataTable dataTable = new _19008_DBDataSetUpdated.ClanarinaIgracaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6678,14 +6708,14 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.ClanarinaIgracaDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.ClanarinaIgracaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "ClanarinaIgraca");
         }
         
@@ -6708,10 +6738,15 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_clanarine, int Original_id_igraca, byte Original_uplaceno) {
+        public virtual int Delete(int Original_id_clanarine, int Original_id_igraca, string Original_uplaceno) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_clanarine));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id_igraca));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_uplaceno));
+            if ((Original_uplaceno == null)) {
+                throw new global::System.ArgumentNullException("Original_uplaceno");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_uplaceno));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6732,10 +6767,15 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_clanarine, int id_igraca, byte uplaceno) {
+        public virtual int Insert(int id_clanarine, int id_igraca, string uplaceno) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_clanarine));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_igraca));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((byte)(uplaceno));
+            if ((uplaceno == null)) {
+                throw new global::System.ArgumentNullException("uplaceno");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(uplaceno));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6756,13 +6796,23 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_clanarine, int id_igraca, byte uplaceno, int Original_id_clanarine, int Original_id_igraca, byte Original_uplaceno) {
+        public virtual int Update(int id_clanarine, int id_igraca, string uplaceno, int Original_id_clanarine, int Original_id_igraca, string Original_uplaceno) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_clanarine));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_igraca));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(uplaceno));
+            if ((uplaceno == null)) {
+                throw new global::System.ArgumentNullException("uplaceno");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(uplaceno));
+            }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id_clanarine));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_igraca));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(Original_uplaceno));
+            if ((Original_uplaceno == null)) {
+                throw new global::System.ArgumentNullException("Original_uplaceno");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_uplaceno));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6783,7 +6833,7 @@ SELECT id_clanarine, id_igraca, uplaceno FROM ClanarinaIgraca WHERE (id_clanarin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte uplaceno, int Original_id_clanarine, int Original_id_igraca, byte Original_uplaceno) {
+        public virtual int Update(string uplaceno, int Original_id_clanarine, int Original_id_igraca, string Original_uplaceno) {
             return this.Update(Original_id_clanarine, Original_id_igraca, uplaceno, Original_id_clanarine, Original_id_igraca, Original_uplaceno);
         }
     }
@@ -6964,8 +7014,7 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6983,7 +7032,7 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.IgracDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.IgracDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6996,9 +7045,9 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.IgracDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.IgracDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.IgracDataTable dataTable = new _19008_DBDataSetPrimary.IgracDataTable();
+            _19008_DBDataSetUpdated.IgracDataTable dataTable = new _19008_DBDataSetUpdated.IgracDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7006,14 +7055,14 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.IgracDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.IgracDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "Igrac");
         }
         
@@ -7324,8 +7373,7 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7342,7 +7390,7 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.KlubDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.KlubDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7355,9 +7403,9 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.KlubDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.KlubDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.KlubDataTable dataTable = new _19008_DBDataSetPrimary.KlubDataTable();
+            _19008_DBDataSetUpdated.KlubDataTable dataTable = new _19008_DBDataSetUpdated.KlubDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7365,14 +7413,14 @@ SELECT id_igrac, ime, prezime, datum_rodenja, visina, tezina, broj FROM Igrac WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.KlubDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.KlubDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "Klub");
         }
         
@@ -7666,8 +7714,7 @@ SELECT id_korisnik, ime, prezime, email, korisnicko_ime, lozinka, uloga FROM Kor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7685,7 +7732,7 @@ SELECT id_korisnik, ime, prezime, email, korisnicko_ime, lozinka, uloga FROM Kor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.KorisnikDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.KorisnikDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7698,9 +7745,9 @@ SELECT id_korisnik, ime, prezime, email, korisnicko_ime, lozinka, uloga FROM Kor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.KorisnikDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.KorisnikDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.KorisnikDataTable dataTable = new _19008_DBDataSetPrimary.KorisnikDataTable();
+            _19008_DBDataSetUpdated.KorisnikDataTable dataTable = new _19008_DBDataSetUpdated.KorisnikDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7708,14 +7755,14 @@ SELECT id_korisnik, ime, prezime, email, korisnicko_ime, lozinka, uloga FROM Kor
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.KorisnikDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.KorisnikDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "Korisnik");
         }
         
@@ -8135,8 +8182,7 @@ SELECT id_utakmice, id_igraca, minutaza, sb_zabijeni, sb_pokusaji, p2_zabijeni, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8155,7 +8201,7 @@ SELECT id_utakmice, id_igraca, minutaza, sb_zabijeni, sb_pokusaji, p2_zabijeni, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.StatistikaIgracaDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.StatistikaIgracaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8168,9 +8214,9 @@ SELECT id_utakmice, id_igraca, minutaza, sb_zabijeni, sb_pokusaji, p2_zabijeni, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.StatistikaIgracaDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.StatistikaIgracaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.StatistikaIgracaDataTable dataTable = new _19008_DBDataSetPrimary.StatistikaIgracaDataTable();
+            _19008_DBDataSetUpdated.StatistikaIgracaDataTable dataTable = new _19008_DBDataSetUpdated.StatistikaIgracaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8178,14 +8224,14 @@ SELECT id_utakmice, id_igraca, minutaza, sb_zabijeni, sb_pokusaji, p2_zabijeni, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.StatistikaIgracaDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.StatistikaIgracaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "StatistikaIgraca");
         }
         
@@ -8523,8 +8569,7 @@ SELECT id_tipa_treninga, naziv_tipa FROM TipTreninga WHERE (id_tipa_treninga = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8541,7 +8586,7 @@ SELECT id_tipa_treninga, naziv_tipa FROM TipTreninga WHERE (id_tipa_treninga = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.TipTreningaDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.TipTreningaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8554,9 +8599,9 @@ SELECT id_tipa_treninga, naziv_tipa FROM TipTreninga WHERE (id_tipa_treninga = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.TipTreningaDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.TipTreningaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.TipTreningaDataTable dataTable = new _19008_DBDataSetPrimary.TipTreningaDataTable();
+            _19008_DBDataSetUpdated.TipTreningaDataTable dataTable = new _19008_DBDataSetUpdated.TipTreningaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8564,14 +8609,14 @@ SELECT id_tipa_treninga, naziv_tipa FROM TipTreninga WHERE (id_tipa_treninga = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.TipTreningaDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.TipTreningaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "TipTreninga");
         }
         
@@ -8842,8 +8887,7 @@ SELECT id_tipa_utakmice, naziv_tipa FROM TipUtakmice WHERE (id_tipa_utakmice = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8860,7 +8904,7 @@ SELECT id_tipa_utakmice, naziv_tipa FROM TipUtakmice WHERE (id_tipa_utakmice = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.TipUtakmiceDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.TipUtakmiceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8873,9 +8917,9 @@ SELECT id_tipa_utakmice, naziv_tipa FROM TipUtakmice WHERE (id_tipa_utakmice = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.TipUtakmiceDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.TipUtakmiceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.TipUtakmiceDataTable dataTable = new _19008_DBDataSetPrimary.TipUtakmiceDataTable();
+            _19008_DBDataSetUpdated.TipUtakmiceDataTable dataTable = new _19008_DBDataSetUpdated.TipUtakmiceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8883,14 +8927,14 @@ SELECT id_tipa_utakmice, naziv_tipa FROM TipUtakmice WHERE (id_tipa_utakmice = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.TipUtakmiceDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.TipUtakmiceDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "TipUtakmice");
         }
         
@@ -9181,8 +9225,7 @@ SELECT id_trening, datum, vrijeme, napomena, tip_treninga, korisnik FROM Trening
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9200,7 +9243,7 @@ SELECT id_trening, datum, vrijeme, napomena, tip_treninga, korisnik FROM Trening
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.TreningDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.TreningDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9213,9 +9256,9 @@ SELECT id_trening, datum, vrijeme, napomena, tip_treninga, korisnik FROM Trening
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.TreningDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.TreningDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.TreningDataTable dataTable = new _19008_DBDataSetPrimary.TreningDataTable();
+            _19008_DBDataSetUpdated.TreningDataTable dataTable = new _19008_DBDataSetUpdated.TreningDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9223,14 +9266,14 @@ SELECT id_trening, datum, vrijeme, napomena, tip_treninga, korisnik FROM Trening
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.TreningDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.TreningDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "Trening");
         }
         
@@ -9501,7 +9544,7 @@ SELECT id_trening, datum, vrijeme, napomena, tip_treninga, korisnik FROM Trening
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_treninga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_treninga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_prisustvo", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_prisustvo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TreningPrisustvo] ([id_treninga], [id_igraca], [prisustvo]) VA" +
@@ -9511,7 +9554,7 @@ SELECT id_trening, datum, vrijeme, napomena, tip_treninga, korisnik FROM Trening
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_treninga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_treninga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@prisustvo", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@prisustvo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TreningPrisustvo] SET [id_treninga] = @id_treninga, [id_igraca] = @id_igraca, [prisustvo] = @prisustvo WHERE (([id_treninga] = @Original_id_treninga) AND ([id_igraca] = @Original_id_igraca) AND ([prisustvo] = @Original_prisustvo));
@@ -9519,18 +9562,17 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_treninga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_treninga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@prisustvo", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@prisustvo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_treninga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_treninga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_igraca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_igraca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_prisustvo", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_prisustvo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "prisustvo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9547,7 +9589,7 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.TreningPrisustvoDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.TreningPrisustvoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9560,9 +9602,9 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.TreningPrisustvoDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.TreningPrisustvoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.TreningPrisustvoDataTable dataTable = new _19008_DBDataSetPrimary.TreningPrisustvoDataTable();
+            _19008_DBDataSetUpdated.TreningPrisustvoDataTable dataTable = new _19008_DBDataSetUpdated.TreningPrisustvoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9570,14 +9612,14 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.TreningPrisustvoDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.TreningPrisustvoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "TreningPrisustvo");
         }
         
@@ -9600,10 +9642,15 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_treninga, int Original_id_igraca, byte Original_prisustvo) {
+        public virtual int Delete(int Original_id_treninga, int Original_id_igraca, string Original_prisustvo) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_treninga));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id_igraca));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_prisustvo));
+            if ((Original_prisustvo == null)) {
+                throw new global::System.ArgumentNullException("Original_prisustvo");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_prisustvo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9624,10 +9671,15 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_treninga, int id_igraca, byte prisustvo) {
+        public virtual int Insert(int id_treninga, int id_igraca, string prisustvo) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_treninga));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_igraca));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((byte)(prisustvo));
+            if ((prisustvo == null)) {
+                throw new global::System.ArgumentNullException("prisustvo");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(prisustvo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9648,13 +9700,23 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_treninga, int id_igraca, byte prisustvo, int Original_id_treninga, int Original_id_igraca, byte Original_prisustvo) {
+        public virtual int Update(int id_treninga, int id_igraca, string prisustvo, int Original_id_treninga, int Original_id_igraca, string Original_prisustvo) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_treninga));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_igraca));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(prisustvo));
+            if ((prisustvo == null)) {
+                throw new global::System.ArgumentNullException("prisustvo");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(prisustvo));
+            }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id_treninga));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_igraca));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(Original_prisustvo));
+            if ((Original_prisustvo == null)) {
+                throw new global::System.ArgumentNullException("Original_prisustvo");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_prisustvo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9675,7 +9737,7 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte prisustvo, int Original_id_treninga, int Original_id_igraca, byte Original_prisustvo) {
+        public virtual int Update(string prisustvo, int Original_id_treninga, int Original_id_igraca, string Original_prisustvo) {
             return this.Update(Original_id_treninga, Original_id_igraca, prisustvo, Original_id_treninga, Original_id_igraca, Original_prisustvo);
         }
     }
@@ -9833,8 +9895,7 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9851,7 +9912,7 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.UlogaKorisnikaDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.UlogaKorisnikaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9864,9 +9925,9 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.UlogaKorisnikaDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.UlogaKorisnikaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.UlogaKorisnikaDataTable dataTable = new _19008_DBDataSetPrimary.UlogaKorisnikaDataTable();
+            _19008_DBDataSetUpdated.UlogaKorisnikaDataTable dataTable = new _19008_DBDataSetUpdated.UlogaKorisnikaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9874,14 +9935,14 @@ SELECT id_treninga, id_igraca, prisustvo FROM TreningPrisustvo WHERE (id_igraca 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.UlogaKorisnikaDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.UlogaKorisnikaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "UlogaKorisnika");
         }
         
@@ -10187,8 +10248,7 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19008_DB;Persist Securit" +
-                "y Info=True;User ID=19008_User;Password=]RP:3E|[";
+            this._connection.ConnectionString = global::Dime.Properties.Settings.Default._19008_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10206,7 +10266,7 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_19008_DBDataSetPrimary.UtakmicaDataTable dataTable) {
+        public virtual int Fill(_19008_DBDataSetUpdated.UtakmicaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10219,9 +10279,9 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _19008_DBDataSetPrimary.UtakmicaDataTable GetData() {
+        public virtual _19008_DBDataSetUpdated.UtakmicaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _19008_DBDataSetPrimary.UtakmicaDataTable dataTable = new _19008_DBDataSetPrimary.UtakmicaDataTable();
+            _19008_DBDataSetUpdated.UtakmicaDataTable dataTable = new _19008_DBDataSetUpdated.UtakmicaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10229,14 +10289,14 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary.UtakmicaDataTable dataTable) {
+        public virtual int Update(_19008_DBDataSetUpdated.UtakmicaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_19008_DBDataSetPrimary dataSet) {
+        public virtual int Update(_19008_DBDataSetUpdated dataSet) {
             return this.Adapter.Update(dataSet, "Utakmica");
         }
         
@@ -10765,7 +10825,7 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(_19008_DBDataSetPrimary dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(_19008_DBDataSetUpdated dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._ulogaKorisnikaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.UlogaKorisnika.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -10883,7 +10943,7 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(_19008_DBDataSetPrimary dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(_19008_DBDataSetUpdated dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._ulogaKorisnikaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.UlogaKorisnika.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -10989,7 +11049,7 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(_19008_DBDataSetPrimary dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(_19008_DBDataSetUpdated dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._treningPrisustvoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.TreningPrisustvo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -11119,7 +11179,7 @@ SELECT id_utakmica, datum, vrijeme, opis, zabijeni_poeni, primljeni_poeni, tip_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(_19008_DBDataSetPrimary dataSet) {
+        public virtual int UpdateAll(_19008_DBDataSetUpdated dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

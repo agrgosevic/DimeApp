@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpravljanjeUtakmicama));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idutakmicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -214,8 +215,9 @@
             this.Controls.Add(this.btnIzmijeniUtakmicu);
             this.Controls.Add(this.btnDodajUtakmicu);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUpravljanjeUtakmicama";
-            this.Text = "FrmDodajIzmijeniUtakmicu";
+            this.Text = "Utakmice";
             this.Load += new System.EventHandler(this.FrmUpravljanjeUtakmicama_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmUpravljanjeUtakmicama_HelpRequested);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUpravljanjeUtakmicama_KeyDown);
