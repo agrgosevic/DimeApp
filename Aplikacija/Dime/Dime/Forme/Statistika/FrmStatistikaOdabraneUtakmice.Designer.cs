@@ -77,6 +77,7 @@
             this.minutazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idutakmiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvIgraciNaUtakmici = new System.Windows.Forms.DataGridView();
+            this.btnPomoc = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -191,7 +192,7 @@
             // 
             this.btnDodaj.Location = new System.Drawing.Point(12, 476);
             this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(112, 35);
+            this.btnDodaj.Size = new System.Drawing.Size(112, 42);
             this.btnDodaj.TabIndex = 11;
             this.btnDodaj.Text = "Dodaj igrača";
             this.btnDodaj.UseVisualStyleBackColor = true;
@@ -201,7 +202,7 @@
             // 
             this.btnObrisi.Location = new System.Drawing.Point(248, 476);
             this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(112, 35);
+            this.btnObrisi.Size = new System.Drawing.Size(112, 42);
             this.btnObrisi.TabIndex = 12;
             this.btnObrisi.Text = "Obriši igrača";
             this.btnObrisi.UseVisualStyleBackColor = true;
@@ -211,7 +212,7 @@
             // 
             this.btnIzmjeni.Location = new System.Drawing.Point(130, 476);
             this.btnIzmjeni.Name = "btnIzmjeni";
-            this.btnIzmjeni.Size = new System.Drawing.Size(112, 35);
+            this.btnIzmjeni.Size = new System.Drawing.Size(112, 42);
             this.btnIzmjeni.TabIndex = 13;
             this.btnIzmjeni.Text = "Uredi statistiku";
             this.btnIzmjeni.UseVisualStyleBackColor = true;
@@ -550,11 +551,23 @@
             this.dgvIgraciNaUtakmici.TabIndex = 9;
             this.dgvIgraciNaUtakmici.SelectionChanged += new System.EventHandler(this.dgvIgraciNaUtakmici_SelectionChanged);
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Location = new System.Drawing.Point(442, 476);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(42, 42);
+            this.btnPomoc.TabIndex = 15;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmStatistikaOdabraneUtakmice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 523);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnIzmjeni);
             this.Controls.Add(this.btnObrisi);
@@ -570,6 +583,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Utakmica protiv [] [] []";
             this.Load += new System.EventHandler(this.FrmStatistikaOdabraneUtakmice_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmStatistikaOdabraneUtakmice_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).EndInit();
@@ -631,5 +645,6 @@
         private System.Windows.Forms.Label lblIshod;
         private System.Windows.Forms.Label lblPrekrsaji;
         private System.Windows.Forms.TextBox txtPrekrsaji;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

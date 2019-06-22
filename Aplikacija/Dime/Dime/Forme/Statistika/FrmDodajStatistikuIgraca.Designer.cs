@@ -59,6 +59,7 @@
             this.lblSkokovi = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.igracTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter();
+            this.btnPomoc = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -326,11 +327,23 @@
             // 
             this.igracTableAdapter.ClearBeforeFill = true;
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Location = new System.Drawing.Point(478, 539);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(46, 46);
+            this.btnPomoc.TabIndex = 7;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmDodajStatistikuIgraca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 597);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -343,6 +356,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj ili izmjeni statistiku igrača sa utakmice";
             this.Load += new System.EventHandler(this.FrmDodajStatistikuIgraca_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajStatistikuIgraca_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).EndInit();
@@ -386,5 +400,6 @@
         private _19008_DBDataSetPrimary _19008_DBDataSetPrimary;
         private System.Windows.Forms.BindingSource igracBindingSource;
         private _19008_DBDataSetPrimaryTableAdapters.IgracTableAdapter igracTableAdapter;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

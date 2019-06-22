@@ -1,4 +1,5 @@
 ﻿using Dime.Forme.Statistika;
+using Dime.Forme.Statistika.HelpForme;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +50,25 @@ namespace Dime.Forme
                 PrikaziUtakmice();
             }
             
+        }
+
+        private void Pomoc()
+        {
+            if (this.ContainsFocus == true)
+            {
+                HelpFrmStatistikeUtamica helpForma = new HelpFrmStatistikeUtamica();
+                helpForma.ShowDialog();
+            }
+        }
+
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmStatistikeUtakmica_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

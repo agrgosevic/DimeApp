@@ -52,6 +52,7 @@
             this.klubTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.KlubTableAdapter();
             this.tipUtakmiceTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipUtakmiceTableAdapter();
             this.lblPopisUtakmica = new System.Windows.Forms.Label();
+            this.btnPomoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdigraneUtakmice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipUtakmiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetPrimaryBindingSource)).BeginInit();
@@ -235,11 +236,23 @@
             this.lblPopisUtakmica.TabIndex = 2;
             this.lblPopisUtakmica.Text = "Popis odigranih utakmica";
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Location = new System.Drawing.Point(906, 470);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(42, 42);
+            this.btnPomoc.TabIndex = 3;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmStatistikeUtakmica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 523);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.lblPopisUtakmica);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.dgvOdigraneUtakmice);
@@ -251,6 +264,7 @@
             this.Name = "FrmStatistikeUtakmica";
             this.Text = "Odigrane utakmice";
             this.Load += new System.EventHandler(this.FrmStatistikeUtakmica_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmStatistikeUtakmica_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdigraneUtakmice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipUtakmiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetPrimaryBindingSource)).EndInit();
@@ -288,5 +302,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource utakmicaBindingSource1;
         private System.Windows.Forms.Label lblPopisUtakmica;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

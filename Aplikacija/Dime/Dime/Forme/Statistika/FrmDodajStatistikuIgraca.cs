@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dime.Forme.Statistika.HelpForme;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -92,6 +93,25 @@ namespace Dime.Forme.Statistika
                 }
             }
             Close();
+        }
+
+        private void Pomoc()
+        {
+            if (this.ContainsFocus == true)
+            {
+                HelpFrmDodajStatIgraca helpForma = new HelpFrmDodajStatIgraca();
+                helpForma.ShowDialog();
+            }
+        }
+
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmDodajStatistikuIgraca_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Dime.Forme.Aktivnosti;
+using Dime.Forme.Aktivnosti.HelpForme;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -149,6 +150,25 @@ namespace Dime.Forme
                 PrikaziClanarine();
                 ObojiClanarine();
             }
+        }
+
+        private void Pomoc()
+        {
+            if (this.ContainsFocus == true)
+            {
+                HelpFrmPopisAktivnosti helpForma = new HelpFrmPopisAktivnosti();
+                helpForma.ShowDialog();
+            }
+        }
+
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmPopisAktivnosti_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

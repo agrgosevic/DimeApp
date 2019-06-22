@@ -47,6 +47,7 @@
             this.btnDodajIgraca = new System.Windows.Forms.Button();
             this.btnObrisiIgraca = new System.Windows.Forms.Button();
             this.cmbIgraci = new System.Windows.Forms.ComboBox();
+            this.btnPomoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanjeClanarina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).BeginInit();
@@ -212,11 +213,23 @@
             this.cmbIgraci.TabIndex = 7;
             this.cmbIgraci.ValueMember = "id_igrac";
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Location = new System.Drawing.Point(743, 9);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(42, 42);
+            this.btnPomoc.TabIndex = 8;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmStanjeClanarina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 593);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.cmbIgraci);
             this.Controls.Add(this.btnObrisiIgraca);
             this.Controls.Add(this.btnDodajIgraca);
@@ -232,6 +245,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stanje članarina za [] []";
             this.Load += new System.EventHandler(this.FrmStanjeClanarina_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmStanjeClanarina_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanjeClanarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).EndInit();
@@ -262,5 +276,6 @@
         private System.Windows.Forms.Button btnDodajIgraca;
         private System.Windows.Forms.Button btnObrisiIgraca;
         private System.Windows.Forms.ComboBox cmbIgraci;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

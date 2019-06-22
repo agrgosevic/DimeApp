@@ -93,6 +93,30 @@
     <Compile Include="Forme\Aktivnosti\FrmStanjeClanarina.Designer.cs">
       <DependentUpon>FrmStanjeClanarina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmDodajClanarinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmDodajClanarinu.Designer.cs">
+      <DependentUpon>HelpFrmDodajClanarinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmPopisAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmPopisAktivnosti.Designer.cs">
+      <DependentUpon>HelpFrmPopisAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmPregledPrisustva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmPregledPrisustva.Designer.cs">
+      <DependentUpon>HelpFrmPregledPrisustva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmStanjeClanarina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\HelpForme\HelpFrmStanjeClanarina.Designer.cs">
+      <DependentUpon>HelpFrmStanjeClanarina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Igraci\FrmDodajIgraca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +188,24 @@
     </Compile>
     <Compile Include="Forme\Statistika\FrmStatistikeUtakmica.Designer.cs">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Statistika\HelpForme\HelpFrmDodajStatIgraca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Statistika\HelpForme\HelpFrmDodajStatIgraca.Designer.cs">
+      <DependentUpon>HelpFrmDodajStatIgraca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Statistika\HelpForme\HelpFrmStatistikeUtamica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Statistika\HelpForme\HelpFrmStatistikeUtamica.Designer.cs">
+      <DependentUpon>HelpFrmStatistikeUtamica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Statistika\HelpForme\HelpFrmStatOdabraneUtakmice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Statistika\HelpForme\HelpFrmStatOdabraneUtakmice.Designer.cs">
+      <DependentUpon>HelpFrmStatOdabraneUtakmice.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\Treninzi\FrmDodajIzmijeniTrening.cs">
       <SubType>Form</SubType>
@@ -299,6 +341,18 @@
     <EmbeddedResource Include="Forme\Aktivnosti\FrmStanjeClanarina.resx">
       <DependentUpon>FrmStanjeClanarina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Aktivnosti\HelpForme\HelpFrmDodajClanarinu.resx">
+      <DependentUpon>HelpFrmDodajClanarinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Aktivnosti\HelpForme\HelpFrmPopisAktivnosti.resx">
+      <DependentUpon>HelpFrmPopisAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Aktivnosti\HelpForme\HelpFrmPregledPrisustva.resx">
+      <DependentUpon>HelpFrmPregledPrisustva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Aktivnosti\HelpForme\HelpFrmStanjeClanarina.resx">
+      <DependentUpon>HelpFrmStanjeClanarina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Igraci\FrmDodajIgraca.resx">
       <DependentUpon>FrmDodajIgraca.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +388,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Statistika\FrmStatistikeUtakmica.resx">
       <DependentUpon>FrmStatistikeUtakmica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Statistika\HelpForme\HelpFrmDodajStatIgraca.resx">
+      <DependentUpon>HelpFrmDodajStatIgraca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Statistika\HelpForme\HelpFrmStatistikeUtamica.resx">
+      <DependentUpon>HelpFrmStatistikeUtamica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Statistika\HelpForme\HelpFrmStatOdabraneUtakmice.resx">
+      <DependentUpon>HelpFrmStatOdabraneUtakmice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Treninzi\FrmDodajIzmijeniTrening.resx">
       <DependentUpon>FrmDodajIzmijeniTrening.cs</DependentUpon>

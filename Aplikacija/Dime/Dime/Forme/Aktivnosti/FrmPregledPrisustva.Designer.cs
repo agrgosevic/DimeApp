@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPregledPrisustva));
             this.dgvPrisustvo = new System.Windows.Forms.DataGridView();
-            this.lblPopisTreninga = new System.Windows.Forms.Label();
-            this._19008_DBDataSetUpdated = new Dime._19008_DBDataSetUpdated();
-            this.treningPrisustvoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.treningPrisustvoTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.TreningPrisustvoTableAdapter();
-            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.igracTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.IgracTableAdapter();
             this.idtreningaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idigracaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.igracBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._19008_DBDataSetUpdated = new Dime._19008_DBDataSetUpdated();
             this.prisustvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treningPrisustvoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblPopisTreninga = new System.Windows.Forms.Label();
+            this.treningPrisustvoTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.TreningPrisustvoTableAdapter();
+            this.igracTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.IgracTableAdapter();
             this.gbPrisustvo = new System.Windows.Forms.GroupBox();
             this.rbOdsutan = new System.Windows.Forms.RadioButton();
             this.rbPrisutan = new System.Windows.Forms.RadioButton();
@@ -47,10 +47,11 @@
             this.btnObrisiIgraca = new System.Windows.Forms.Button();
             this.btnDodajIgraca = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
+            this.btnPomoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrisustvo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningPrisustvoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).BeginInit();
             this.gbPrisustvo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,39 +78,6 @@
             this.dgvPrisustvo.TabIndex = 0;
             this.dgvPrisustvo.SelectionChanged += new System.EventHandler(this.dgvPrisustvo_SelectionChanged);
             // 
-            // lblPopisTreninga
-            // 
-            this.lblPopisTreninga.AutoSize = true;
-            this.lblPopisTreninga.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPopisTreninga.Location = new System.Drawing.Point(9, 9);
-            this.lblPopisTreninga.Name = "lblPopisTreninga";
-            this.lblPopisTreninga.Size = new System.Drawing.Size(316, 23);
-            this.lblPopisTreninga.TabIndex = 3;
-            this.lblPopisTreninga.Text = "Evidencija prisustva na treningu";
-            // 
-            // _19008_DBDataSetUpdated
-            // 
-            this._19008_DBDataSetUpdated.DataSetName = "_19008_DBDataSetUpdated";
-            this._19008_DBDataSetUpdated.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // treningPrisustvoBindingSource
-            // 
-            this.treningPrisustvoBindingSource.DataMember = "TreningPrisustvo";
-            this.treningPrisustvoBindingSource.DataSource = this._19008_DBDataSetUpdated;
-            // 
-            // treningPrisustvoTableAdapter
-            // 
-            this.treningPrisustvoTableAdapter.ClearBeforeFill = true;
-            // 
-            // igracBindingSource
-            // 
-            this.igracBindingSource.DataMember = "Igrac";
-            this.igracBindingSource.DataSource = this._19008_DBDataSetUpdated;
-            // 
-            // igracTableAdapter
-            // 
-            this.igracTableAdapter.ClearBeforeFill = true;
-            // 
             // idtreningaDataGridViewTextBoxColumn
             // 
             this.idtreningaDataGridViewTextBoxColumn.DataPropertyName = "id_treninga";
@@ -131,12 +99,45 @@
             this.idigracaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idigracaDataGridViewTextBoxColumn.ValueMember = "id_igrac";
             // 
+            // igracBindingSource
+            // 
+            this.igracBindingSource.DataMember = "Igrac";
+            this.igracBindingSource.DataSource = this._19008_DBDataSetUpdated;
+            // 
+            // _19008_DBDataSetUpdated
+            // 
+            this._19008_DBDataSetUpdated.DataSetName = "_19008_DBDataSetUpdated";
+            this._19008_DBDataSetUpdated.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // prisustvoDataGridViewTextBoxColumn
             // 
             this.prisustvoDataGridViewTextBoxColumn.DataPropertyName = "prisustvo";
             this.prisustvoDataGridViewTextBoxColumn.HeaderText = "Prisutan?";
             this.prisustvoDataGridViewTextBoxColumn.Name = "prisustvoDataGridViewTextBoxColumn";
             this.prisustvoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // treningPrisustvoBindingSource
+            // 
+            this.treningPrisustvoBindingSource.DataMember = "TreningPrisustvo";
+            this.treningPrisustvoBindingSource.DataSource = this._19008_DBDataSetUpdated;
+            // 
+            // lblPopisTreninga
+            // 
+            this.lblPopisTreninga.AutoSize = true;
+            this.lblPopisTreninga.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPopisTreninga.Location = new System.Drawing.Point(9, 9);
+            this.lblPopisTreninga.Name = "lblPopisTreninga";
+            this.lblPopisTreninga.Size = new System.Drawing.Size(316, 23);
+            this.lblPopisTreninga.TabIndex = 3;
+            this.lblPopisTreninga.Text = "Evidencija prisustva na treningu";
+            // 
+            // treningPrisustvoTableAdapter
+            // 
+            this.treningPrisustvoTableAdapter.ClearBeforeFill = true;
+            // 
+            // igracTableAdapter
+            // 
+            this.igracTableAdapter.ClearBeforeFill = true;
             // 
             // gbPrisustvo
             // 
@@ -212,11 +213,23 @@
             this.btnSpremi.UseVisualStyleBackColor = true;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Location = new System.Drawing.Point(743, 9);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(42, 42);
+            this.btnPomoc.TabIndex = 12;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmPregledPrisustva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 593);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.cmbIgraci);
             this.Controls.Add(this.btnObrisiIgraca);
             this.Controls.Add(this.btnDodajIgraca);
@@ -231,10 +244,11 @@
             this.Name = "FrmPregledPrisustva";
             this.Text = "Pregled prisustva igrača na treningu održan [] u []";
             this.Load += new System.EventHandler(this.FrmPregledPrisustva_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmPregledPrisustva_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrisustvo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetUpdated)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treningPrisustvoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.igracBindingSource)).EndInit();
             this.gbPrisustvo.ResumeLayout(false);
             this.gbPrisustvo.PerformLayout();
             this.ResumeLayout(false);
@@ -261,5 +275,6 @@
         private System.Windows.Forms.Button btnObrisiIgraca;
         private System.Windows.Forms.Button btnDodajIgraca;
         private System.Windows.Forms.Button btnSpremi;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

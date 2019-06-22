@@ -59,6 +59,7 @@
             this.tipTreningaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.TipTreningaTableAdapter();
             this.clanarinaTableAdapter = new Dime._19008_DBDataSetPrimaryTableAdapters.ClanarinaTableAdapter();
             this.clanarinaTableAdapter1 = new Dime._19008_DBDataSetUpdatedTableAdapters.ClanarinaTableAdapter();
+            this.btnPomoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdrzaniTreninzi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).BeginInit();
@@ -246,9 +247,9 @@
             // 
             // btnOdaberiTrening
             // 
-            this.btnOdaberiTrening.Location = new System.Drawing.Point(12, 518);
+            this.btnOdaberiTrening.Location = new System.Drawing.Point(426, 518);
             this.btnOdaberiTrening.Name = "btnOdaberiTrening";
-            this.btnOdaberiTrening.Size = new System.Drawing.Size(82, 38);
+            this.btnOdaberiTrening.Size = new System.Drawing.Size(82, 42);
             this.btnOdaberiTrening.TabIndex = 4;
             this.btnOdaberiTrening.Text = "Odaberi";
             this.btnOdaberiTrening.UseVisualStyleBackColor = true;
@@ -258,7 +259,7 @@
             // 
             this.btnOdaberiClanarinu.Location = new System.Drawing.Point(952, 518);
             this.btnOdaberiClanarinu.Name = "btnOdaberiClanarinu";
-            this.btnOdaberiClanarinu.Size = new System.Drawing.Size(82, 38);
+            this.btnOdaberiClanarinu.Size = new System.Drawing.Size(82, 42);
             this.btnOdaberiClanarinu.TabIndex = 5;
             this.btnOdaberiClanarinu.Text = "Odaberi";
             this.btnOdaberiClanarinu.UseVisualStyleBackColor = true;
@@ -268,7 +269,7 @@
             // 
             this.btnKreiraj.Location = new System.Drawing.Point(538, 518);
             this.btnKreiraj.Name = "btnKreiraj";
-            this.btnKreiraj.Size = new System.Drawing.Size(124, 38);
+            this.btnKreiraj.Size = new System.Drawing.Size(124, 42);
             this.btnKreiraj.TabIndex = 6;
             this.btnKreiraj.Text = "Kreiraj članarinu";
             this.btnKreiraj.UseVisualStyleBackColor = true;
@@ -278,7 +279,7 @@
             // 
             this.btnIzmjeni.Location = new System.Drawing.Point(668, 518);
             this.btnIzmjeni.Name = "btnIzmjeni";
-            this.btnIzmjeni.Size = new System.Drawing.Size(124, 38);
+            this.btnIzmjeni.Size = new System.Drawing.Size(124, 42);
             this.btnIzmjeni.TabIndex = 7;
             this.btnIzmjeni.Text = "Izmjeni članarinu";
             this.btnIzmjeni.UseVisualStyleBackColor = true;
@@ -288,7 +289,7 @@
             // 
             this.btnObrisi.Location = new System.Drawing.Point(798, 518);
             this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(124, 38);
+            this.btnObrisi.Size = new System.Drawing.Size(124, 42);
             this.btnObrisi.TabIndex = 8;
             this.btnObrisi.Text = "Obriši članarinu";
             this.btnObrisi.UseVisualStyleBackColor = true;
@@ -310,11 +311,23 @@
             // 
             this.clanarinaTableAdapter1.ClearBeforeFill = true;
             // 
+            // btnPomoc
+            // 
+            this.btnPomoc.Location = new System.Drawing.Point(12, 518);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPomoc.Name = "btnPomoc";
+            this.btnPomoc.Size = new System.Drawing.Size(42, 42);
+            this.btnPomoc.TabIndex = 9;
+            this.btnPomoc.Text = "? (F1)";
+            this.btnPomoc.UseVisualStyleBackColor = true;
+            this.btnPomoc.Click += new System.EventHandler(this.btnPomoc_Click);
+            // 
             // FrmPopisAktivnosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 568);
+            this.Controls.Add(this.btnPomoc);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnIzmjeni);
             this.Controls.Add(this.btnKreiraj);
@@ -331,6 +344,7 @@
             this.Name = "FrmPopisAktivnosti";
             this.Text = "Popis aktivnosti";
             this.Load += new System.EventHandler(this.FrmPopisAktivnosti_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmPopisAktivnosti_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdrzaniTreninzi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipTreningaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._19008_DBDataSetPrimary)).EndInit();
@@ -373,5 +387,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mjesecDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn godinaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rokuplateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnPomoc;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dime.Forme.Aktivnosti.HelpForme;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,6 +65,25 @@ namespace Dime.Forme.Aktivnosti
                 }
             }
             Close();
+        }
+
+        private void Pomoc()
+        {
+            if (this.ContainsFocus == true)
+            {
+                HelpFrmDodajClanarinu helpForma = new HelpFrmDodajClanarinu();
+                helpForma.ShowDialog();
+            }
+        }
+
+        private void btnPomoc_Click(object sender, EventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void FrmDodajClanarinu_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }
