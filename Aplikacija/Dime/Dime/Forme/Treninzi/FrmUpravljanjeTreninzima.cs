@@ -17,7 +17,7 @@ namespace Dime.Forme.Treninzi
             InitializeComponent();
         }
 
-        public void PrikaziSveTreninge()
+        public void DohvatiSveTreninge()
         {
             using (var db = new DimeEntities())
             {
@@ -33,21 +33,21 @@ namespace Dime.Forme.Treninzi
             this.korisnikTableAdapter.Fill(this._19008_DBDataSetUpdated.Korisnik);
             // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.TipTreninga' table. You can move, or remove it, as needed.
             this.tipTreningaTableAdapter.Fill(this._19008_DBDataSetUpdated.TipTreninga);
-            PrikaziSveTreninge();
+            DohvatiSveTreninge();
         }
 
         private void btnNoviTrening_Click(object sender, EventArgs e)
         {
             FrmDodajIzmijeniTrening forma = new FrmDodajIzmijeniTrening();
             forma.ShowDialog();
-            PrikaziSveTreninge();
+            DohvatiSveTreninge();
         }
 
         private void btnIzmijeniTrening_Click(object sender, EventArgs e)
         {
             FrmDodajIzmijeniTrening forma = new FrmDodajIzmijeniTrening(treningBindingSource.Current as Trening);
             forma.ShowDialog();
-            PrikaziSveTreninge();
+            DohvatiSveTreninge();
         }
 
         private void btnObrisiTrening_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace Dime.Forme.Treninzi
                     db.Treninzi.Remove(izabraniTrening);
                     db.SaveChanges();
                 }
-                PrikaziSveTreninge();
+                DohvatiSveTreninge();
             }
         }
 
