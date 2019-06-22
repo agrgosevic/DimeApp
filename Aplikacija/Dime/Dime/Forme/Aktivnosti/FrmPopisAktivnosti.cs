@@ -137,5 +137,18 @@ namespace Dime.Forme
                 }
             }
         }
+
+        private void btnOdaberiTrening_Click(object sender, EventArgs e)
+        {
+            Trening odabraniTrening = dgvOdrzaniTreninzi.CurrentRow.DataBoundItem as Trening;
+            if (odabraniTrening != null)
+            {
+                FrmPregledPrisustva forma = new FrmPregledPrisustva(odabraniTrening);
+                forma.ShowDialog();
+                PrikaziTreninge();
+                PrikaziClanarine();
+                ObojiClanarine();
+            }
+        }
     }
 }

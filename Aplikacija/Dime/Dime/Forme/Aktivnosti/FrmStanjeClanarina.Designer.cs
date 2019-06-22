@@ -41,8 +41,8 @@
             this.clanarinaIgracaTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.ClanarinaIgracaTableAdapter();
             this.igracTableAdapter = new Dime._19008_DBDataSetUpdatedTableAdapters.IgracTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbPlaceno = new System.Windows.Forms.RadioButton();
             this.rbNijePlaceno = new System.Windows.Forms.RadioButton();
+            this.rbPlaceno = new System.Windows.Forms.RadioButton();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnDodajIgraca = new System.Windows.Forms.Button();
             this.btnObrisiIgraca = new System.Windows.Forms.Button();
@@ -58,6 +58,8 @@
             // 
             this.dgvStanjeClanarina.AllowUserToAddRows = false;
             this.dgvStanjeClanarina.AllowUserToDeleteRows = false;
+            this.dgvStanjeClanarina.AllowUserToResizeColumns = false;
+            this.dgvStanjeClanarina.AllowUserToResizeRows = false;
             this.dgvStanjeClanarina.AutoGenerateColumns = false;
             this.dgvStanjeClanarina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStanjeClanarina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -69,6 +71,7 @@
             this.dgvStanjeClanarina.Location = new System.Drawing.Point(12, 44);
             this.dgvStanjeClanarina.Name = "dgvStanjeClanarina";
             this.dgvStanjeClanarina.ReadOnly = true;
+            this.dgvStanjeClanarina.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvStanjeClanarina.RowTemplate.Height = 24;
             this.dgvStanjeClanarina.Size = new System.Drawing.Size(567, 537);
             this.dgvStanjeClanarina.TabIndex = 0;
@@ -146,17 +149,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stanje članarine";
             // 
-            // rbPlaceno
-            // 
-            this.rbPlaceno.AutoSize = true;
-            this.rbPlaceno.Location = new System.Drawing.Point(7, 46);
-            this.rbPlaceno.Name = "rbPlaceno";
-            this.rbPlaceno.Size = new System.Drawing.Size(80, 21);
-            this.rbPlaceno.TabIndex = 0;
-            this.rbPlaceno.TabStop = true;
-            this.rbPlaceno.Text = "Plaćeno";
-            this.rbPlaceno.UseVisualStyleBackColor = true;
-            // 
             // rbNijePlaceno
             // 
             this.rbNijePlaceno.AutoSize = true;
@@ -167,6 +159,17 @@
             this.rbNijePlaceno.TabStop = true;
             this.rbNijePlaceno.Text = "Nije plaćeno";
             this.rbNijePlaceno.UseVisualStyleBackColor = true;
+            // 
+            // rbPlaceno
+            // 
+            this.rbPlaceno.AutoSize = true;
+            this.rbPlaceno.Location = new System.Drawing.Point(7, 46);
+            this.rbPlaceno.Name = "rbPlaceno";
+            this.rbPlaceno.Size = new System.Drawing.Size(80, 21);
+            this.rbPlaceno.TabIndex = 0;
+            this.rbPlaceno.TabStop = true;
+            this.rbPlaceno.Text = "Plaćeno";
+            this.rbPlaceno.UseVisualStyleBackColor = true;
             // 
             // btnSpremi
             // 

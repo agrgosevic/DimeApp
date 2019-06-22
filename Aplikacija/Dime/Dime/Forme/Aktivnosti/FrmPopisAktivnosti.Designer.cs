@@ -252,6 +252,7 @@
             this.btnOdaberiTrening.TabIndex = 4;
             this.btnOdaberiTrening.Text = "Odaberi";
             this.btnOdaberiTrening.UseVisualStyleBackColor = true;
+            this.btnOdaberiTrening.Click += new System.EventHandler(this.btnOdaberiTrening_Click);
             // 
             // btnOdaberiClanarinu
             // 

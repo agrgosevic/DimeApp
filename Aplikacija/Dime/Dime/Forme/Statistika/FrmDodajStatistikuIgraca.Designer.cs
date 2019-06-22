@@ -340,6 +340,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDodajStatistikuIgraca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj ili izmjeni statistiku igrača sa utakmice";
             this.Load += new System.EventHandler(this.FrmDodajStatistikuIgraca_Load);
             this.groupBox1.ResumeLayout(false);

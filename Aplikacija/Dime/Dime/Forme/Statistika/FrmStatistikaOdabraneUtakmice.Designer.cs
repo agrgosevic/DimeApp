@@ -567,6 +567,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmStatistikaOdabraneUtakmice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Utakmica protiv [] [] []";
             this.Load += new System.EventHandler(this.FrmStatistikaOdabraneUtakmice_Load);
             this.groupBox1.ResumeLayout(false);
