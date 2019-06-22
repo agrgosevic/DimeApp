@@ -39,7 +39,78 @@ namespace Dime.Forme.Aktivnosti
             this.igracTableAdapter.Fill(this._19008_DBDataSetUpdated.Igrac);
             // TODO: This line of code loads data into the '_19008_DBDataSetUpdated.ClanarinaIgraca' table. You can move, or remove it, as needed.
             //this.clanarinaIgracaTableAdapter.Fill(this._19008_DBDataSetUpdated.ClanarinaIgraca);
+            dgvStanjeClanarina.Columns[0].Visible = false;
+        }
 
+        private void dgvStanjeClanarina_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvStanjeClanarina.Rows.Count > 0)
+            {
+                ClanarinaIgraca odabranaClanarinaIgraca = dgvStanjeClanarina.CurrentRow.DataBoundItem as ClanarinaIgraca;
+                if (odabranaClanarinaIgraca != null)
+                {
+                    using (var db = new DimeEntities())
+                    {
+                        if (odabranaClanarinaIgraca.uplaceno == "Da") rbPlaceno.Checked = true;
+                        else rbNijePlaceno.Checked = true;
+                    }
+                }
+            }
+        }
+
+        private void btnSpremi_Click(object sender, EventArgs e)
+        {
+            if (dgvStanjeClanarina.Rows.Count > 0)
+            {
+                ClanarinaIgraca odabranaClanarinaIgraca = dgvStanjeClanarina.CurrentRow.DataBoundItem as ClanarinaIgraca;
+                if (odabranaClanarinaIgraca != null)
+                {
+                    using (var db = new DimeEntities())
+                    {
+                        db.ClanarineIgraca.Attach(odabranaClanarinaIgraca);
+                        if (rbPlaceno.Checked == true) odabranaClanarinaIgraca.uplaceno = "Da";
+                        else odabranaClanarinaIgraca.uplaceno = "Ne";
+                        db.SaveChanges();
+                    }
+                    PrikaziStanja();
+                }
+            }
+        }
+
+        private void btnDodajIgraca_Click(object sender, EventArgs e)
+        {
+            using (var db = new DimeEntities())
+            {
+                ClanarinaIgraca novaClanarinaIgraca = new ClanarinaIgraca();
+                novaClanarinaIgraca.id_clanarine = Clanarina.id_clanarina;
+                novaClanarinaIgraca.id_igraca = int.Parse(cmbIgraci.SelectedValue.ToString());
+                novaClanarinaIgraca.uplaceno = "Ne";
+
+                db.ClanarineIgraca.Add(novaClanarinaIgraca);
+                db.SaveChanges();
+            }
+            PrikaziStanja();
+        }
+
+        private void btnObrisiIgraca_Click(object sender, EventArgs e)
+        {
+            if (dgvStanjeClanarina.CurrentRow != null)
+            {
+                ClanarinaIgraca odabranaClanarinaIgraca = dgvStanjeClanarina.CurrentRow.DataBoundItem as ClanarinaIgraca;
+                if (odabranaClanarinaIgraca != null)
+                {
+                    if (MessageBox.Show("Jeste li sigurni da želite obrisati igrača iz evidencije članarina?", "Upozorenje!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        using (var db = new DimeEntities())
+                        {
+                            db.ClanarineIgraca.Attach(odabranaClanarinaIgraca);
+                            db.ClanarineIgraca.Remove(odabranaClanarinaIgraca);
+                            db.SaveChanges();
+                        }
+                    }
+                    PrikaziStanja();
+                }
+            }
         }
     }
 }
