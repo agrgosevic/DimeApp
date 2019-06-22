@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDodajIgraca));
             this.btnOdustani = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -194,8 +195,9 @@
             this.Controls.Add(this.txtTezina);
             this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.txtIme);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDodajIgraca";
-            this.Text = "FrmDodajIgraca";
+            this.Text = "Igrač";
             this.Load += new System.EventHandler(this.FrmDodajIgraca_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajIgraca_KeyDown);
             this.ResumeLayout(false);

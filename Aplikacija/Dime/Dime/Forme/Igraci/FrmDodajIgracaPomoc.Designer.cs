@@ -87,7 +87,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDodajIgracaPomoc";
-            this.Text = "FrmDodajIgracaPomoc";
+            this.Text = "Pomoć";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodajIgracaPomoc_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
