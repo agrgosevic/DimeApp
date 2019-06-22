@@ -271,6 +271,7 @@
             this.btnKreiraj.TabIndex = 6;
             this.btnKreiraj.Text = "Kreiraj članarinu";
             this.btnKreiraj.UseVisualStyleBackColor = true;
+            this.btnKreiraj.Click += new System.EventHandler(this.btnKreiraj_Click);
             // 
             // btnIzmjeni
             // 
@@ -280,6 +281,7 @@
             this.btnIzmjeni.TabIndex = 7;
             this.btnIzmjeni.Text = "Izmjeni članarinu";
             this.btnIzmjeni.UseVisualStyleBackColor = true;
+            this.btnIzmjeni.Click += new System.EventHandler(this.btnIzmjeni_Click);
             // 
             // btnObrisi
             // 
@@ -289,6 +291,7 @@
             this.btnObrisi.TabIndex = 8;
             this.btnObrisi.Text = "Obriši članarinu";
             this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // treningTableAdapter
             // 

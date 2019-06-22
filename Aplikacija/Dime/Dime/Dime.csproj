@@ -75,6 +75,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DimeModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Aktivnosti\FrmDodajClanarinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Aktivnosti\FrmDodajClanarinu.Designer.cs">
+      <DependentUpon>FrmDodajClanarinu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Aktivnosti\FrmStanjeClanarina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_19008_DBDataSetUpdated.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forme\Aktivnosti\FrmDodajClanarinu.resx">
+      <DependentUpon>FrmDodajClanarinu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Aktivnosti\FrmStanjeClanarina.resx">
       <DependentUpon>FrmStanjeClanarina.cs</DependentUpon>
     </EmbeddedResource>

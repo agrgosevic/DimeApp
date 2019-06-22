@@ -85,5 +85,57 @@ namespace Dime.Forme
                 ObojiClanarine();
             }
         }
+
+        private void btnKreiraj_Click(object sender, EventArgs e)
+        {
+            FrmDodajClanarinu formaDodaj = new FrmDodajClanarinu();
+            formaDodaj.ShowDialog();
+            PrikaziTreninge();
+            PrikaziClanarine();
+            ObojiClanarine();
+        }
+
+        private void btnIzmjeni_Click(object sender, EventArgs e)
+        {
+            Clanarina odabranaClanarina = dgvPopisClanarina.CurrentRow.DataBoundItem as Clanarina;
+            if (odabranaClanarina != null)
+            {
+                FrmDodajClanarinu formaIzmjeni = new FrmDodajClanarinu(odabranaClanarina);
+                formaIzmjeni.ShowDialog();
+                PrikaziTreninge();
+                PrikaziClanarine();
+                ObojiClanarine();
+            }
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (dgvPopisClanarina.CurrentRow != null)
+            {
+                Clanarina odabranaClanarina = dgvPopisClanarina.CurrentRow.DataBoundItem as Clanarina;
+                if (odabranaClanarina != null)
+                {
+                    using (var db = new DimeEntities())
+                    {
+                        if (db.ClanarineIgraca.Where(c => c.id_clanarine == odabranaClanarina.id_clanarina).Count() == 0)
+                        {
+                            if (MessageBox.Show("Jeste li sigurni da želite obrisati članarinu s popisa članarina?", "Upozorenje!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                    db.Clanarine.Attach(odabranaClanarina);
+                                    db.Clanarine.Remove(odabranaClanarina);
+                                    db.SaveChanges();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nije moguće obrisati članarinu dok nije obrisana evidencija članarina pojedinih igrača!", "Upozorenje!");
+                        }
+                    }
+                    PrikaziTreninge();
+                    PrikaziClanarine();
+                    ObojiClanarine();
+                }
+            }
+        }
     }
 }
