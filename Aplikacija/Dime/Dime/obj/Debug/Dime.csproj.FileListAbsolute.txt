@@ -117,3 +117,10 @@ C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.HelpForme.HelpFrmDodajClanarinu.resources
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.HelpForme.HelpFrmPregledPrisustva.resources
 C:\Users\Luka\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.HelpForme.HelpFrmStanjeClanarina.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.HelpForme.HelpFrmDodajClanarinu.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.HelpForme.HelpFrmPopisAktivnosti.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.HelpForme.HelpFrmPregledPrisustva.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Aktivnosti.HelpForme.HelpFrmStanjeClanarina.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.HelpForme.HelpFrmDodajStatIgraca.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.HelpForme.HelpFrmStatistikeUtamica.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.HelpForme.HelpFrmStatOdabraneUtakmice.resources

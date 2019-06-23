@@ -21,9 +21,9 @@ namespace Dime.Forme.Treninzi
         {
             using (var db = new DimeEntities())
             {
-                var upit = from t in db.Treninzi
+                var listaTreninga = from t in db.Treninzi
                            select t;
-                treningBindingSource.DataSource = upit.ToList();
+                treningBindingSource.DataSource = listaTreninga.ToList();
             }
         }
 
@@ -39,18 +39,22 @@ namespace Dime.Forme.Treninzi
         private void btnNoviTrening_Click(object sender, EventArgs e)
         {
             FrmDodajIzmijeniTrening forma = new FrmDodajIzmijeniTrening();
+            this.Hide();
             forma.ShowDialog();
+            this.Show();
             DohvatiSveTreninge();
         }
 
         private void btnIzmijeniTrening_Click(object sender, EventArgs e)
         {
             FrmDodajIzmijeniTrening forma = new FrmDodajIzmijeniTrening(treningBindingSource.Current as Trening);
+            this.Hide();
             forma.ShowDialog();
+            this.Show();
             DohvatiSveTreninge();
         }
 
-        private void btnObrisiTrening_Click(object sender, EventArgs e)
+        private void ObrisiTrening()
         {
             Trening izabraniTrening = treningBindingSource.Current as Trening;
             if (izabraniTrening != null)
@@ -63,6 +67,11 @@ namespace Dime.Forme.Treninzi
                 }
                 DohvatiSveTreninge();
             }
+        }
+
+        private void btnObrisiTrening_Click(object sender, EventArgs e)
+        {
+            ObrisiTrening();
         }
 
         private void btnPomoć_Click(object sender, EventArgs e)
@@ -86,7 +95,9 @@ namespace Dime.Forme.Treninzi
         private void Pomoc()
         {
             FrmUpravljanjeTreninzimaPomoc formaPomoć = new FrmUpravljanjeTreninzimaPomoc();
+            this.Hide();
             formaPomoć.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -29,7 +29,9 @@ namespace Dime.Forme.Utakmice
         private void btnDodajUtakmicu_Click(object sender, EventArgs e)
         {
             FrmDodajIzmijeniUtakmicu forma = new FrmDodajIzmijeniUtakmicu();
+            this.Hide();
             forma.ShowDialog();
+            this.Show();
             PrikaziSveUtakmice();
         }
 
@@ -47,7 +49,9 @@ namespace Dime.Forme.Utakmice
         private void btnIzmijeniUtakmicu_Click(object sender, EventArgs e)
         {
             FrmDodajIzmijeniUtakmicu forma = new FrmDodajIzmijeniUtakmicu(utakmicaBindingSource.Current as Utakmica);
+            this.Hide();
             forma.ShowDialog();
+            this.Show();
             PrikaziSveUtakmice();
         }
 
@@ -82,7 +86,9 @@ namespace Dime.Forme.Utakmice
         private void Pomoc()
         {
             FrmUpravljanjeUtakmicamaPomoc formaPomoc = new FrmUpravljanjeUtakmicamaPomoc();
+            this.Hide();
             formaPomoc.ShowDialog();
+            this.Show();
         }
 
         private void FrmUpravljanjeUtakmicama_HelpRequested(object sender, HelpEventArgs hlpevent)

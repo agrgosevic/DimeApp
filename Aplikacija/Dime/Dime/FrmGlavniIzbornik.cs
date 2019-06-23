@@ -51,7 +51,9 @@ namespace Dime
         private void btnTreninzi_Click(object sender, EventArgs e)
         {
             FrmUpravljanjeTreninzima forma = new FrmUpravljanjeTreninzima();
+            this.Hide();
             forma.ShowDialog();
+            this.Show();
         }
         private void btnPomoc_Click(object sender, EventArgs e)
         {
@@ -85,7 +87,9 @@ namespace Dime
         private void btnUtakmice_Click(object sender, EventArgs e)
         {
             FrmUpravljanjeUtakmicama forma = new FrmUpravljanjeUtakmicama();
+            this.Hide();
             forma.ShowDialog();
+            this.Show();
         }
     }
 }
