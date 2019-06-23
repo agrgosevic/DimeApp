@@ -448,6 +448,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DimeModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DimeModel.edmx.diagram">
       <DependentUpon>DimeModel.edmx</DependentUpon>
     </None>
