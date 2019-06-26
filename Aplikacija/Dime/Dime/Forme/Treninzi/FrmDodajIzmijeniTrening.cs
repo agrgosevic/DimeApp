@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DimeDLL;
 
 namespace Dime.Forme.Treninzi
 {
     public partial class FrmDodajIzmijeniTrening : Form
     {
+        ProvjeraUnosa provjeraUnosa = new ProvjeraUnosa();
         public FrmDodajIzmijeniTrening()
         {
             InitializeComponent();
@@ -41,33 +43,40 @@ namespace Dime.Forme.Treninzi
             TimeSpan vrijeme = TimeSpan.Parse(v);
             string d = $"{dtpDatum.Value.Year}-{dtpDatum.Value.Month}-{dtpDatum.Value.Day}";
             DateTime dat = DateTime.Parse(d);
-            using (var db = new DimeEntities())
+            if (provjeraUnosa.ProvjeraNapomena(txtNapomena.Text) == true)
             {
-                if (odabranitrening == null)
-                {
-                    Trening noviTrening = new Trening();
-                    noviTrening.datum = dat;
-                    noviTrening.vrijeme = vrijeme;
-                    noviTrening.napomena = txtNapomena.Text;
-                    noviTrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
-                    noviTrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
-
-                    db.Treninzi.Add(noviTrening);
-                    db.SaveChanges();
-                }
-                else
-                {
-                    db.Treninzi.Attach(odabranitrening);
-                    odabranitrening.datum = dat;
-                    odabranitrening.vrijeme = vrijeme;
-                    odabranitrening.napomena = txtNapomena.Text;
-                    odabranitrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
-                    odabranitrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
-                    db.SaveChanges();
-                }
+                MessageBox.Show("Polje 'Napomena' je obavezno unijeti!", "Upozorenje");
+                return;
             }
-            Close();
+            else
+            {
+                using (var db = new DimeEntities())
+                {
+                    if (odabranitrening == null)
+                    {
+                        Trening noviTrening = new Trening();
+                        noviTrening.datum = dat;
+                        noviTrening.vrijeme = vrijeme;
+                        noviTrening.napomena = txtNapomena.Text;
+                        noviTrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
+                        noviTrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
 
+                        db.Treninzi.Add(noviTrening);
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        db.Treninzi.Attach(odabranitrening);
+                        odabranitrening.datum = dat;
+                        odabranitrening.vrijeme = vrijeme;
+                        odabranitrening.napomena = txtNapomena.Text;
+                        odabranitrening.korisnik = int.Parse(cmbKorisnik.SelectedValue.ToString());
+                        odabranitrening.tip_treninga = int.Parse(cmbTipTreninga.SelectedValue.ToString());
+                        db.SaveChanges();
+                    }
+                }
+                Close();
+            }
         }
 
         private void FrmDodajIzmijeniTrening_Load(object sender, EventArgs e)
