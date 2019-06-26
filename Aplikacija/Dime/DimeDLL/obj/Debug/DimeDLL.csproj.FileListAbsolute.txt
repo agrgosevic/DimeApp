@@ -1,0 +1,6 @@
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\DimeDLL\bin\Debug\DimeDLL.dll
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\DimeDLL\bin\Debug\DimeDLL.pdb
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\DimeDLL\obj\Debug\DimeDLL.csprojAssemblyReference.cache
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\DimeDLL\obj\Debug\DimeDLL.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\DimeDLL\obj\Debug\DimeDLL.dll
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\DimeDLL\obj\Debug\DimeDLL.pdb

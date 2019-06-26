@@ -124,3 +124,5 @@ C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.For
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.HelpForme.HelpFrmDodajStatIgraca.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.HelpForme.HelpFrmStatistikeUtamica.resources
 C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\obj\Debug\Dime.Forme.Statistika.HelpForme.HelpFrmStatOdabraneUtakmice.resources
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\bin\Debug\DimeDLL.dll
+C:\Users\Antonio\Documents\GitHub\r19008\Aplikacija\Dime\Dime\bin\Debug\DimeDLL.pdb
