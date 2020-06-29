@@ -6,6 +6,5 @@ Na Wiki stranici detaljno je opisana tehnička i korisnička dokumentacija.
 ## Metodika izrade projekta
 Model izrade projekta bio je vodopadni model. Izabrana je ova vrsta modela jer se izrada projekta i same funkcionalnosti izvršavaju kroz nekoliko faza. Sljedeća faza počinje tek kada je prethodna faza završena. Budući da u vodopadnom modelu probleme mogu predstavljati novi problemi iz prethodnih faza, to nas tjera da dobro provjerimo i odradimo fazu prije nego što idemo u sljedeću. Vodopadni model sastoji se od 5 faza: specifikacija, dizajn, implementacija, testiranje i održavanje.
 
-<p align="center"> 
-<img src="multimedija/logo.png">
-</p>
+![](https://github.com/agrgosevic/DimeApp/blob/master/multimedija/logo.png?raw=true)
+<p align="center"> Slika 1. Logo aplikacije </p>
